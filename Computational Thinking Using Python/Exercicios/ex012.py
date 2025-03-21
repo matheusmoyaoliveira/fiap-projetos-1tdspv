@@ -1,7 +1,3 @@
-# O RM de um aluno da FIAP é composto por 5 dígitos. Sua tarefa é escrever um algoritmo que recebe um RM e retorna a somatória de todos os dígitos do RM. Por exemplo, suponha que o aluno tenha o RM 56395, seu algoritmo deverá imprimir como saída 28 = 5 + 6 + 3 + 9 + 5. Dica: realize várias divisões e restos de divisões por 10.
-<<<<<<< HEAD
-=======
-
 rm = 0
 
 rm = int(input('Digite seu RM: '))
@@ -22,4 +18,3 @@ rest6 = rm5 % 10
 soma = rest1 + rest2 + rest3 + rest4 + rest5 + rest6
 
 print(soma)
->>>>>>> 56a625e927eac895771825447558379fba6ef66e
