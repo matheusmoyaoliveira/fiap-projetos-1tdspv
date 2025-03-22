@@ -25,17 +25,18 @@ public class ex002 {
 
         //Ler o valor do produto
         System.out.println("Valor do produto: ");
-        double valorProduto = leitor.nextDouble();
+        float valorProduto = leitor.nextFloat();
 
         //Ler o desconto do produto
         System.out.println("Digite o percentual de desconto: ");
         double percDesconto = leitor.nextDouble();
 
         //Produto com desconto
-        double desconto = valorProduto * (percDesconto / 100);
+        double valorQuant = (quantidade * valorProduto);
+        double desconto = valorQuant * (percDesconto / 100);
 
         //Valor final do produto
-        double valorFinal = valorProduto - desconto;
+        double valorFinal = valorQuant - desconto;
 
         //Mostrando produto, quantidade e valor total a ser pago
         System.out.println("Produto: " + produto);
