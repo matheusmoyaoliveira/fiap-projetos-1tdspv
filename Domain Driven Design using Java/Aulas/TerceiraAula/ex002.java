@@ -23,8 +23,24 @@ public class ex002 {
         System.out.println("Digite a quantidade de produtos: ");
         int quantidade = leitor.nextInt();
 
+        //Ler o valor do produto
+        System.out.println("Valor do produto: ");
+        double valorProduto = leitor.nextDouble();
 
+        //Ler o desconto do produto
+        System.out.println("Digite o percentual de desconto: ");
+        double percDesconto = leitor.nextDouble();
 
+        //Produto com desconto
+        double desconto = valorProduto * (percDesconto / 100);
+
+        //Valor final do produto
+        double valorFinal = valorProduto - desconto;
+
+        //Mostrando produto, quantidade e valor total a ser pago
+        System.out.println("Produto: " + produto);
+        System.out.println("Quantidade: " + quantidade);
+        System.out.println("Valor Total: R$" + valorFinal);
     }
 
 }
