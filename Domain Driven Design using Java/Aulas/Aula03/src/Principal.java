@@ -23,13 +23,13 @@ public class Principal {
         Scanner fornecedor = new Scanner(System.in);
 
         System.out.println("Nome do fornecedor: ");
-        String nomeF = leitor.next();
+        String nomeF = fornecedor.next();
 
         System.out.println("Telefone: ");
-        String telefone = leitor.next();
+        String telefone = fornecedor.next();
 
         System.out.println("CNPJ: ");
-        String cnpj = leitor.next();
+        String cnpj = fornecedor.next();
 
         //Criar um objeto Produto
         Produto produto = new Produto();
