@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="ID_ESTABELECIMENTO" id="14DDD755-D6D6-A3DC-4D64-4D8118670823">
+<Attribute name="id_estabelecimento" id="14DDD755-D6D6-A3DC-4D64-4D8118670823">
 <createdBy>labsfiap</createdBy>
 <createdTime>2025-03-28 00:38:17 UTC</createdTime>
 <comment><![CDATA[Identificador do estabelecimento, será a chave primária da entidade.]]></comment>
@@ -31,7 +31,7 @@
 <dataTypePrecision>10</dataTypePrecision>
 <ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="DS_RAZAO_SOCIAL" id="9EEB585E-0A41-069F-04F4-1130D802AA06">
+<Attribute name="ds_razao_social" id="9EEB585E-0A41-069F-04F4-1130D802AA06">
 <createdBy>labsfiap</createdBy>
 <createdTime>2025-03-28 00:41:53 UTC</createdTime>
 <comment><![CDATA[Razao social do estabelecimento, esse atributo e obrigatorio.]]></comment>
@@ -47,7 +47,7 @@
 <dataTypeSize>110</dataTypeSize>
 <ownDataTypeParameters>110,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="NR_CNPJ" id="1AE32E43-F587-7897-CC70-0D670C572150">
+<Attribute name="nr_cnpj" id="1AE32E43-F587-7897-CC70-0D670C572150">
 <createdBy>labsfiap</createdBy>
 <createdTime>2025-03-28 00:50:56 UTC</createdTime>
 <comment><![CDATA[Cadastro Nacional de Pessoa Juridica, seu conteudo e obrigatorio]]></comment>
@@ -62,6 +62,71 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>14</dataTypePrecision>
 <ownDataTypeParameters>,14,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_ie" id="39E27AED-6B7C-683C-2BCF-02865AE1A207">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-03-28 00:57:58 UTC</createdTime>
+<comment><![CDATA[Numero de inscricao social do estabelecimento]]></comment>
+<commentInRDBMS><![CDATA[Numero de inscricao social do estabelecimento]]></commentInRDBMS>
+<notes><![CDATA[Numero de inscricao social do estabelecimento]]></notes>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>12</dataTypePrecision>
+<ownDataTypeParameters>,12,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_endereco" id="0CD90F44-4B1F-CD41-B0AF-484DA3EF4CD9">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-03-28 01:41:14 UTC</createdTime>
+<comment><![CDATA[Endereco do estabelecimento para localizacao]]></comment>
+<commentInRDBMS><![CDATA[Endereco do estabelecimento para localizacao]]></commentInRDBMS>
+<notes><![CDATA[Endereco do estabelecimento para localizacao]]></notes>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_tel_empresa" id="A696E574-8B4D-00BD-C443-B79FF5AA3825">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-03-28 01:43:39 UTC</createdTime>
+<comment><![CDATA[Telefone empresarial do estabelecimento para entrar em contato.]]></comment>
+<commentInRDBMS><![CDATA[Telefone empresarial do estabelecimento para entrar em contato.]]></commentInRDBMS>
+<notes><![CDATA[Telefone empresarial do estabelecimento para entrar em contato.]]></notes>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>70</dataTypeSize>
+<ownDataTypeParameters>70,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_num_mesa" id="91F32CDD-371D-360B-554A-E8A2BC612321">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-03-28 01:46:17 UTC</createdTime>
+<comment><![CDATA[Numeros das mesas do estabelecimento, identifcacao de cada mesa]]></comment>
+<commentInRDBMS><![CDATA[Numeros das mesas do estabelecimento, identifcacao de cada mesa]]></commentInRDBMS>
+<notes><![CDATA[Numeros das mesas do estabelecimento, identifcacao de cada mesa]]></notes>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
