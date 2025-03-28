@@ -1,0 +1,164 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="43806432-31A1-4FC5-9459-8A7845C6EE2D" name="T_VB_PRODUTO">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-03-28 01:07:24 UTC</createdTime>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_produto" id="90C55521-3C7C-A727-0AC9-210A94950EFA">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-03-28 01:07:58 UTC</createdTime>
+<comment><![CDATA[Codigo do produto dentro do estabelecimento]]></comment>
+<commentInRDBMS><![CDATA[Codigo do produto dentro do estabelecimento]]></commentInRDBMS>
+<notes><![CDATA[Codigo do produto dentro do estabelecimento]]></notes>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_nome_prod" id="4B87381E-5A0E-E106-2537-B1CB0F98A49D">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-03-28 01:08:29 UTC</createdTime>
+<comment><![CDATA[Nome usado no produto do estabelecimento para pedidos futuros.]]></comment>
+<commentInRDBMS><![CDATA[Nome usado no produto do estabelecimento para pedidos futuros.]]></commentInRDBMS>
+<notes><![CDATA[Nome usado no produto do estabelecimento para pedidos futuros.]]></notes>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_quant_cons" id="0CC28ADD-940A-4F32-D08D-DE6ED0AE20CA">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-03-28 01:50:26 UTC</createdTime>
+<comment><![CDATA[Quantidade de produtos consumidos dentro do estabelcimento.]]></comment>
+<commentInRDBMS><![CDATA[Quantidade de produtos consumidos dentro do estabelcimento.]]></commentInRDBMS>
+<notes><![CDATA[Quantidade de produtos consumidos dentro do estabelcimento.]]></notes>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_tipo" id="30E40B71-258D-4BAC-668D-127417113B22">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-03-28 01:55:35 UTC</createdTime>
+<comment><![CDATA[Tipo do produto do estabelecimento.]]></comment>
+<commentInRDBMS><![CDATA[Tipo do produto do estabelecimento.]]></commentInRDBMS>
+<notes><![CDATA[Tipo do produto do estabelecimento.]]></notes>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_preco_un" id="45FCC833-E2AC-467B-874F-64AD667000B1">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-03-28 01:56:14 UTC</createdTime>
+<comment><![CDATA[Numero do preco da unidade de cada produto.]]></comment>
+<commentInRDBMS><![CDATA[Numero do preco da unidade de cada produto.]]></commentInRDBMS>
+<notes><![CDATA[Numero do preco da unidade de cada produto.]]></notes>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_v_tot_venda_prd" id="CD3A6156-4819-5F33-E232-062D6A045930">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-03-28 01:58:03 UTC</createdTime>
+<comment><![CDATA[Numero da venda total de cada unidade dos produtos.]]></comment>
+<commentInRDBMS><![CDATA[Numero da venda total de cada unidade dos produtos.]]></commentInRDBMS>
+<notes><![CDATA[Numero da venda total de cada unidade dos produtos.]]></notes>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_v_tot_desc" id="9EACF6FE-C881-A62B-93E6-A6FBCC96982F">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-03-28 02:00:38 UTC</createdTime>
+<comment><![CDATA[Numero total das vendas, com o desconto aplicado.]]></comment>
+<commentInRDBMS><![CDATA[Numero total das vendas, com o desconto aplicado.]]></commentInRDBMS>
+<notes><![CDATA[Numero total das vendas, com o desconto aplicado.]]></notes>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_v_tot_geral_v" id="0F4D0EC0-2691-581E-5954-ED8A5DE88C23">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-03-28 02:01:40 UTC</createdTime>
+<comment><![CDATA[Valor total de todas as vendas feitas dos produtos.]]></comment>
+<commentInRDBMS><![CDATA[Valor total de todas as vendas feitas dos produtos.]]></commentInRDBMS>
+<notes><![CDATA[Valor total de todas as vendas feitas dos produtos.]]></notes>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="78E9C559-4BB0-64C0-F719-3BD3E09395C4" name="T_VB_PRODUTO PK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-03-28 01:08:26 UTC</createdTime>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>90C55521-3C7C-A727-0AC9-210A94950EFA</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

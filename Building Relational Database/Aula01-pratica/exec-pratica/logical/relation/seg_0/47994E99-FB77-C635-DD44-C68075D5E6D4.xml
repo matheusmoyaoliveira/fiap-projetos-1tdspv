@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FK_VB_ESTAB_PEDIDO" directorySegmentName="seg_0" id="47994E99-FB77-C635-DD44-C68075D5E6D4">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-03-28 01:43:04 UTC</createdTime>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<sourcePk>569580B5-1BF4-A2A1-06E4-CF68EB70983C</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>1C74E792-22B7-A40D-E6B3-3FDCE547E76A</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>C9770097-AA22-C1B9-A4B2-79F1FE75938F</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

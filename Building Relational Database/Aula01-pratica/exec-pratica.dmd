@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="exec-pratica" id="34D36560-88D4-9CBF-5F04-71A8D286122D" version="3.5">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-03-28 00:30:38 UTC</createdTime>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>34D36560-88D4-9CBF-5F04-71A8D286122D</designId>
+</OSDM_Design>
