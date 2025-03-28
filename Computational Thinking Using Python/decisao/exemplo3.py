@@ -14,4 +14,5 @@ else:
     print(f'Operador {op} inválido!')
     resultado = None #vazio ou nada
 
-print(f'{num_a} {op} {num_b} = {resultado}')
+if resulta != None:
+    print(f'{num_a} {op} {num_b} = {resultado}')
