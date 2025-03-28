@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1C74E792-22B7-A40D-E6B3-3FDCE547E76A" name="T_VB_ESTABELECIMENTO">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-03-28 00:32:06 UTC</createdTime>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_ESTABELECIMENTO" id="14DDD755-D6D6-A3DC-4D64-4D8118670823">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-03-28 00:38:17 UTC</createdTime>
+<comment><![CDATA[Identificador do estabelecimento, será a chave primária da entidade.]]></comment>
+<commentInRDBMS><![CDATA[Identificador do estabelecimento, será a chave primária da entidade.]]></commentInRDBMS>
+<notes><![CDATA[Identificador do estabelecimento, será a chave primária da entidade.]]></notes>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DS_RAZAO_SOCIAL" id="9EEB585E-0A41-069F-04F4-1130D802AA06">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-03-28 00:41:53 UTC</createdTime>
+<comment><![CDATA[Razao social do estabelecimento, esse atributo e obrigatorio.]]></comment>
+<commentInRDBMS><![CDATA[Razao social do estabelecimento, esse atributo e obrigatorio.]]></commentInRDBMS>
+<notes><![CDATA[Razao social do estabelecimento, esse atributo e obrigatorio.]]></notes>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>110</dataTypeSize>
+<ownDataTypeParameters>110,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NR_CNPJ" id="1AE32E43-F587-7897-CC70-0D670C572150">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-03-28 00:50:56 UTC</createdTime>
+<comment><![CDATA[Cadastro Nacional de Pessoa Juridica, seu conteudo e obrigatorio]]></comment>
+<commentInRDBMS><![CDATA[Cadastro Nacional de Pessoa Juridica, seu conteudo e obrigatorio]]></commentInRDBMS>
+<notes><![CDATA[Cadastro Nacional de Pessoa Juridica, seu conteudo e obrigatorio]]></notes>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>14</dataTypePrecision>
+<ownDataTypeParameters>,14,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="569580B5-1BF4-A2A1-06E4-CF68EB70983C" name="T_VB_ESTABELECIMENTO PK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-03-28 00:41:37 UTC</createdTime>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>14DDD755-D6D6-A3DC-4D64-4D8118670823</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
