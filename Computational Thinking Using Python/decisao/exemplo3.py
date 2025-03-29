@@ -9,10 +9,15 @@ elif op == '-':
 elif op == '*':
     resultado = num_a * num_b
 elif op == '/':
+    if num_b != 0:
+        resultado = num_a / num_b
+    else:
+        print('Impossível dividir por 0')
+        resultado = None
     resultado = num_a / num_b
 else:
     print(f'Operador {op} inválido!')
     resultado = None #vazio ou nada
 
-if resulta != None:
+if resultado != None:
     print(f'{num_a} {op} {num_b} = {resultado}')

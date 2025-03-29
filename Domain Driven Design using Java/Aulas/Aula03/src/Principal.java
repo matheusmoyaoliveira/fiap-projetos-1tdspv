@@ -8,7 +8,7 @@ public class Principal {
         Scanner leitor = new Scanner(System.in);
 
         System.out.println("Digite o nome do seu produto: ");
-        String nome = leitor.next();
+        String nome = leitor.next() + leitor.nextLine();
 
         System.out.println("Digite o preço: ");
         float preco = leitor.nextFloat();
@@ -20,16 +20,15 @@ public class Principal {
         boolean disponivel = leitor.nextBoolean();
 
         //Ler os dados do fornecedor
-        Scanner fornecedor = new Scanner(System.in);
 
         System.out.println("Nome do fornecedor: ");
-        String nomeF = fornecedor.next();
+        String nomeF = leitor.next() + leitor.nextLine();
 
         System.out.println("Telefone: ");
-        String telefone = fornecedor.next();
+        String telefone = leitor.next() + leitor.nextLine();
 
         System.out.println("CNPJ: ");
-        String cnpj = fornecedor.next();
+        String cnpj = leitor.next() + leitor.nextLine();
 
         //Criar um objeto Produto
         Produto produto = new Produto();
@@ -41,6 +40,10 @@ public class Principal {
         produto.codigo = codigo;
         produto.disponivel = disponivel;
 
+        //Atribuir o objeto fornecedor dentro do objeto produto
+        produto.fornecedor = fornecedor1;
+
+        //Colocar os dados no fornecedor
         fornecedor1.nome = nomeF;
         fornecedor1.telefone = telefone;
         fornecedor1.cnpj = cnpj;
@@ -52,9 +55,22 @@ public class Principal {
         System.out.println("Código do produto: " + produto.codigo);
         System.out.println("Disponibilidade do produto: " + produto.disponivel);
 
-        System.out.println("Fornecedor: " + fornecedor1.nome);
-        System.out.println("Telefone: " + fornecedor1.telefone);
-        System.out.println("CNPJ: " + fornecedor1.cnpj);
+        //Exibir os dados do fornecedor
+        System.out.println("Fornecedor: " + produto.fornecedor.nome);
+        System.out.println("Telefone: " + produto.fornecedor.telefone);
+        System.out.println("CNPJ: " + produto.fornecedor.cnpj);
+
+        //Aumentar o preço do produto em 20
+        produto.aumentarPreco(20);
+
+        //Exibir o preço do produto
+        System.out.println("Preço atualizado " + produto.preco);
+
+        //Calcular o desconto do produto em 7%
+
+
+        //Exibir o valor do produto com o desconto
+
     }
 
 }
