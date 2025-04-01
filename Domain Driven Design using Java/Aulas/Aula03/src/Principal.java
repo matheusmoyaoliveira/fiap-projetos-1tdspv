@@ -60,17 +60,22 @@ public class Principal {
         System.out.println("Telefone: " + produto.fornecedor.telefone);
         System.out.println("CNPJ: " + produto.fornecedor.cnpj);
 
+        //Pedir para o usuario a porcentagem de aumento
+        System.out.println("Qual o valor em % do aumento?");
+        float aumento = leitor.nextFloat();
+
+
         //Aumentar o preço do produto em 20
-        produto.aumentarPreco(20);
+        produto.aumentarPreco(aumento);
 
         //Exibir o preço do produto
         System.out.println("Preço atualizado " + produto.preco);
 
         //Calcular o desconto do produto em 7%
-
+        float novoValor = produto.calcularDesconto(7);
 
         //Exibir o valor do produto com o desconto
-
+        System.out.println("Preço com desconto: " + novoValor);
     }
 
 }
