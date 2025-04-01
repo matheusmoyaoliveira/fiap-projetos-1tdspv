@@ -20,4 +20,4 @@ match op:
         result = None
 
 if result != None:
-    print(f'Resultad = {result}')
+    print(f'Resultado = {result}')
