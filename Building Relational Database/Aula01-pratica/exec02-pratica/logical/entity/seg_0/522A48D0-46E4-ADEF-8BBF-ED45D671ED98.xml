@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="522A48D0-46E4-ADEF-8BBF-ED45D671ED98" name="T_DEPARTAMENTO">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 00:55:19 UTC</createdTime>
+<ownerDesignName>exec02-pratica</ownerDesignName>
+<engineerTo>
+<item key="A06DB0B8-ECB1-ED98-C3FE-F36E45A5FA12" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="CD_DEPARTAMENTO" id="9AEDFF50-BA29-067B-01CF-3F54EE44CCBC">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 00:55:38 UTC</createdTime>
+<comment><![CDATA[Codigo do departamento, esse atributo gerado automaticamente e sera chave primaria]]></comment>
+<commentInRDBMS><![CDATA[Codigo do departamento, esse atributo gerado automaticamente e sera chave primaria]]></commentInRDBMS>
+<notes><![CDATA[Codigo do departamento, esse atributo gerado automaticamente e sera chave primaria]]></notes>
+<ownerDesignName>exec02-pratica</ownerDesignName>
+<engineerTo>
+<item key="A06DB0B8-ECB1-ED98-C3FE-F36E45A5FA12" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NM_DEPARTAMENTO" id="3DF6F902-56B8-E0A3-AEA3-214A57AF7A22">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 00:56:03 UTC</createdTime>
+<ownerDesignName>exec02-pratica</ownerDesignName>
+<engineerTo>
+<item key="A06DB0B8-ECB1-ED98-C3FE-F36E45A5FA12" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C8C7BBD5-5FEB-C111-6A01-19718AF2AC51" name="T_DEPARTAMENTO PK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 00:57:12 UTC</createdTime>
+<ownerDesignName>exec02-pratica</ownerDesignName>
+<engineerTo>
+<item key="A06DB0B8-ECB1-ED98-C3FE-F36E45A5FA12" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9AEDFF50-BA29-067B-01CF-3F54EE44CCBC</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
