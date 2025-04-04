@@ -7,7 +7,6 @@ public class ContaCorrente {
     //Métodos
     void depositar(double valor){
 
-        saldo = saldo + valor;
     }
 
     void retirar(double valor){
