@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="43806432-31A1-4FC5-9459-8A7845C6EE2D" name="T_VB_PRODUTO">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="68F7FF6D-9256-C989-7C59-69291C91754B" name="T_VB_MESA">
 <createdBy>labsfiap</createdBy>
-<createdTime>2025-03-28 01:07:24 UTC</createdTime>
+<createdTime>2025-04-04 00:39:23 UTC</createdTime>
 <ownerDesignName>exec-pratica</ownerDesignName>
 <engineerTo>
 <item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
@@ -15,53 +15,38 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id_produto" id="90C55521-3C7C-A727-0AC9-210A94950EFA">
+<Attribute name="id_estabelecimento" id="B7B404DE-A041-20E9-2171-4B50C47594D4">
 <createdBy>labsfiap</createdBy>
-<createdTime>2025-03-28 01:07:58 UTC</createdTime>
-<comment><![CDATA[Codigo do produto dentro do estabelecimento]]></comment>
-<commentInRDBMS><![CDATA[Codigo do produto dentro do estabelecimento]]></commentInRDBMS>
-<notes><![CDATA[Codigo do produto dentro do estabelecimento]]></notes>
+<createdTime>2025-04-04 00:40:36 UTC</createdTime>
+<comment><![CDATA[Identificador do estabelecimento, será a chave primária da entidade.]]></comment>
+<generatorID>6DEA7E2F-9629-D243-345D-E10D7A076539</generatorID>
 <ownerDesignName>exec-pratica</ownerDesignName>
 <engineerTo>
 <item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
 </engineerTo>
+<referedAttribute>14DDD755-D6D6-A3DC-4D64-4D8118670823</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nm_produto" id="16245C79-C734-E9D5-FA65-E0956B067B58">
+<Attribute name="id_mesa" id="314A693D-6934-C327-7F1F-AB49B9B9553A">
 <createdBy>labsfiap</createdBy>
-<createdTime>2025-04-04 00:26:47 UTC</createdTime>
+<createdTime>2025-04-04 00:49:42 UTC</createdTime>
 <ownerDesignName>exec-pratica</ownerDesignName>
 <engineerTo>
 <item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>150</dataTypeSize>
-<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ds_tipo" id="6E2B82FE-6A6A-A3E5-78D0-E2E08E716D91">
+<Attribute name="st_mesa" id="E182125B-B9B6-5699-A60F-5B64910F9853">
 <createdBy>labsfiap</createdBy>
-<createdTime>2025-04-04 00:27:30 UTC</createdTime>
-<ownerDesignName>exec-pratica</ownerDesignName>
-<engineerTo>
-<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>40</dataTypeSize>
-<ownDataTypeParameters>40,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="vl_produto" id="1283579B-3EF0-6087-ADC3-FF008F2EC83E">
-<createdBy>labsfiap</createdBy>
-<createdTime>2025-04-04 00:27:51 UTC</createdTime>
+<createdTime>2025-04-04 00:39:33 UTC</createdTime>
 <ownerDesignName>exec-pratica</ownerDesignName>
 <engineerTo>
 <item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
@@ -70,21 +55,36 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>8</dataTypePrecision>
-<ownDataTypeParameters>,8,</ownDataTypeParameters>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="qt_posicao" id="832C17A4-FEC2-FB1E-FB93-A5D7F0FFE11B">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 00:39:49 UTC</createdTime>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="78E9C559-4BB0-64C0-F719-3BD3E09395C4" name="T_VB_PRODUTO PK">
+<identifier id="FECF662D-206E-E984-D373-D1B6C4A13C7E" name="T_VB_MESA PK">
 <createdBy>labsfiap</createdBy>
-<createdTime>2025-03-28 01:08:26 UTC</createdTime>
+<createdTime>2025-04-04 00:40:36 UTC</createdTime>
 <ownerDesignName>exec-pratica</ownerDesignName>
 <engineerTo>
 <item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>90C55521-3C7C-A727-0AC9-210A94950EFA</attributeRef>
+<attributeRef>B7B404DE-A041-20E9-2171-4B50C47594D4</attributeRef>
+<attributeRef>314A693D-6934-C327-7F1F-AB49B9B9553A</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
