@@ -7,9 +7,7 @@ public class Cliente {
 
     //Métodos
     String retornarDados(){
-        nome = nome;
-        cpf = cpf;
-        endereco = endereco;
-        return "";
+
+        return "Nome" + nome + "CPF" + cpf + "Endereço" + endereco;
     }
 }

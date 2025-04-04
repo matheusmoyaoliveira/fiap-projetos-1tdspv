@@ -8,10 +8,7 @@ public class Endereco {
 
     //Métodos
     String retornarEndereco(){
-        logradouro = logradouro;
-        numero = numero;
-        complemento = complemento;
-        cep = cep;
-        return "";
+
+        return "Logradouro" + logradouro + "Numero" + numero + "Compl." + complemento + "CEP" + cep;
     }
 }

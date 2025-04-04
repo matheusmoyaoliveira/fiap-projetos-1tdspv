@@ -5,39 +5,45 @@ public class Main {
 
     public static void main(String[] args) {
 
+        //Instanciando os métodos
+        Cliente cliente = new Cliente();
+        Endereco endereco = new Endereco();
+        ContaCorrente contaCorrente = new ContaCorrente();
+
+
         //Ler todos os dados
         Scanner leitor = new Scanner(System.in);
 
         System.out.println("Digite seu Nome: ");
-        String nome = leitor.nextLine();
+        cliente.nome = leitor.nextLine();
 
         System.out.println("Digite seu CPF: ");
-        String cpf = leitor.nextLine();
+        cliente.cpf = leitor.nextLine();
 
         System.out.println("Digite seu Logradouro: ");
-        String logradouro = leitor.nextLine();
+        endereco.logradouro = leitor.nextLine();
 
         System.out.print("Digite o número da residência: ");
-        short numero = leitor.nextShort();
+        endereco.numero = leitor.nextShort();
         leitor.nextLine();
 
         System.out.println("Digite seu Endereço: ");
-        String endereco = leitor.nextLine();
+        String enderecoCliente = leitor.nextLine();
+        cliente.endereco = endereco;
 
         System.out.println("Digite o complemento: ");
-        String complemento = leitor.nextLine();
+        endereco.complemento = leitor.nextLine();
 
         System.out.println("Digite o CEP: ");
-        String cep = leitor.nextLine();
+        endereco.cep = leitor.nextLine();
 
         System.out.println("Digite o nome do Titular da conta: ");
-        String titular = leitor.nextLine();
+        String titularConta = leitor.nextLine();
+        contaCorrente.titular = cliente;
 
         System.out.println("Digite o Saldo da sua conta: R$ ");
-        double saldo = leitor.nextDouble();
+        contaCorrente.saldo = leitor.nextDouble();
         leitor.nextLine();
-
-        ContaCorrente contaCorrente = new ContaCorrente();
 
         System.out.println("Digite quanto gostaria de depositar: R$ ");
         double novoDeposito = leitor.nextDouble();
@@ -45,7 +51,7 @@ public class Main {
 
         contaCorrente.depositar(novoDeposito);
 
-        double valorFinal = saldo + novoDeposito;
+        double valorFinal = contaCorrente.saldo + novoDeposito;
         System.out.println("Novo Saldo: R$" + valorFinal);
 
         System.out.println("Agora, quanto gostaria de retirar da sua conta? R$ ");
@@ -55,12 +61,12 @@ public class Main {
 
         double saldoFinal = valorFinal - retirarDeposito;
 
-        System.out.println("Nome: " + nome);
-        System.out.println("CPF: " + cpf);
+        System.out.println("Nome: " + cliente.nome);
+        System.out.println("CPF: " + cliente.cpf);
         System.out.println("Endereço: " + endereco);
-        System.out.println("Complemento: " + complemento);
-        System.out.println("CEP: " + cep);
-        System.out.println("Titular da Conta: " + titular);
+        System.out.println("Complemento: " + endereco.complemento);
+        System.out.println("CEP: " + endereco.cep);
+        System.out.println("Titular da Conta: " + titularConta);
         System.out.println("Saldo Final da Conta: R$ " + saldoFinal);
 
 
