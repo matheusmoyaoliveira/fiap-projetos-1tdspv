@@ -1,0 +1,69 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BF8BD575-EB9F-FDC0-CA71-6EE5FB95BC4D" name="T_ATENDIMENTO">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 01:57:38 UTC</createdTime>
+<ownerDesignName>exerc02-pratica</ownerDesignName>
+<engineerTo>
+<item key="A06DB0B8-ECB1-ED98-C3FE-F36E45A5FA12" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="NR_ATENDIMENTO" id="C99C15D9-E3DE-1510-7CDD-902C93978A6E">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 02:00:07 UTC</createdTime>
+<ownerDesignName>exerc02-pratica</ownerDesignName>
+<engineerTo>
+<item key="A06DB0B8-ECB1-ED98-C3FE-F36E45A5FA12" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CD_MEDICO" id="DC058C04-159C-C20D-6AF0-8350E62A4E31">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 02:00:40 UTC</createdTime>
+<generatorID>78F303FA-82FE-AB19-13F0-CD3C96D2D29C</generatorID>
+<ownerDesignName>exerc02-pratica</ownerDesignName>
+<engineerTo>
+<item key="A06DB0B8-ECB1-ED98-C3FE-F36E45A5FA12" value="true"/>
+</engineerTo>
+<referedAttribute>C105D955-0AEF-0E10-EE28-414C1E9CE517</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CD_PACIENTE" id="92597792-902A-F351-EBDA-104BB6401002">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 02:11:38 UTC</createdTime>
+<generatorID>7085C517-1F06-4CDD-E61F-B193D8901350</generatorID>
+<ownerDesignName>exerc02-pratica</ownerDesignName>
+<engineerTo>
+<item key="A06DB0B8-ECB1-ED98-C3FE-F36E45A5FA12" value="true"/>
+</engineerTo>
+<referedAttribute>ABF484AA-2E5E-354F-0A49-882EE61C379D</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E19CE78F-4F46-F152-777A-E43F6DD138F2" name="T_ATENDIMENTO PKv1">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 02:00:22 UTC</createdTime>
+<ownerDesignName>exerc02-pratica</ownerDesignName>
+<engineerTo>
+<item key="A06DB0B8-ECB1-ED98-C3FE-F36E45A5FA12" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C99C15D9-E3DE-1510-7CDD-902C93978A6E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

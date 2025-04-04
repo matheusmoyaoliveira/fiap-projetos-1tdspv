@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FK_MEDICO_ATENDIMENTO" directorySegmentName="seg_0" id="78F303FA-82FE-AB19-13F0-CD3C96D2D29C">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 02:00:40 UTC</createdTime>
+<ownerDesignName>exerc02-pratica</ownerDesignName>
+<engineerTo>
+<item key="A06DB0B8-ECB1-ED98-C3FE-F36E45A5FA12" value="true"/>
+</engineerTo>
+<sourcePk>D68E59D7-D45D-ED58-F4BC-594A8DBF4E50</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>76529251-7056-7549-3871-5A7669EEBB18</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>BF8BD575-EB9F-FDC0-CA71-6EE5FB95BC4D</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

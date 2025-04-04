@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A22F2A21-76D5-1098-BFBE-0D1386513AAC" name="T_LOGIN_RHSTU">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 01:51:18 UTC</createdTime>
+<ownerDesignName>exerc02-pratica</ownerDesignName>
+<engineerTo>
+<item key="A06DB0B8-ECB1-ED98-C3FE-F36E45A5FA12" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="CD_LOGIN_RHSTU" id="C9959DA5-34FB-FEBF-FD5D-BE571BB578C1">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 01:51:29 UTC</createdTime>
+<ownerDesignName>exerc02-pratica</ownerDesignName>
+<engineerTo>
+<item key="A06DB0B8-ECB1-ED98-C3FE-F36E45A5FA12" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CD_FUNCIONARIO" id="99629F81-3FBA-E7E3-729E-3A8999960B31">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 01:51:44 UTC</createdTime>
+<generatorID>5F5487ED-E643-BBCC-5430-9275B3549E40</generatorID>
+<ownerDesignName>exerc02-pratica</ownerDesignName>
+<engineerTo>
+<item key="A06DB0B8-ECB1-ED98-C3FE-F36E45A5FA12" value="true"/>
+</engineerTo>
+<referedAttribute>7DD5EB0D-1D0E-C424-E67C-90C04F9E5B14</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9BF58613-2FA6-663C-2BB7-7964243EC0B5" name="T_LOGIN_RHSTU PK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 01:51:37 UTC</createdTime>
+<ownerDesignName>exerc02-pratica</ownerDesignName>
+<engineerTo>
+<item key="A06DB0B8-ECB1-ED98-C3FE-F36E45A5FA12" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C9959DA5-34FB-FEBF-FD5D-BE571BB578C1</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

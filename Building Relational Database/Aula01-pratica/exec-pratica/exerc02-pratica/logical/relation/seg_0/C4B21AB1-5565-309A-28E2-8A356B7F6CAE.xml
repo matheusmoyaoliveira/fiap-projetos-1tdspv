@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PK_FUNCIONARIO_DEPENDENTE" directorySegmentName="seg_0" id="C4B21AB1-5565-309A-28E2-8A356B7F6CAE">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 01:13:17 UTC</createdTime>
+<ownerDesignName>exerc02-pratica</ownerDesignName>
+<engineerTo>
+<item key="A06DB0B8-ECB1-ED98-C3FE-F36E45A5FA12" value="true"/>
+</engineerTo>
+<sourcePk>9FA9625D-4449-1050-1C72-36E614B07103</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>0862DCD0-7626-CA36-95E7-7874A1F3D976</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>A0BFDE9B-F8CD-1D80-79F7-15545452AE91</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

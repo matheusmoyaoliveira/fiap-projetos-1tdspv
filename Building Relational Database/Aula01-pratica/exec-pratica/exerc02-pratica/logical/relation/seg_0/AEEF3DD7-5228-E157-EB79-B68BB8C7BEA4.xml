@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FK_CLIENTE_PEDIDO" directorySegmentName="seg_0" id="AEEF3DD7-5228-E157-EB79-B68BB8C7BEA4">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 01:55:46 UTC</createdTime>
+<ownerDesignName>exerc02-pratica</ownerDesignName>
+<engineerTo>
+<item key="A06DB0B8-ECB1-ED98-C3FE-F36E45A5FA12" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>C7D9B447-8C59-7F70-775E-E368E219DBC9</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>6A32BDC5-7CCF-95A1-729A-2ABA61789850</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
