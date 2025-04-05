@@ -1,17 +1,25 @@
-m1 = float(input('Digite a sua 1º média: '))
-m2 = float(input('Digite a sua 2º média: '))
-aula = float(input('Quantas aulas teve nesse ano? '))
+# Entrada de dados
+media1 = float(input("Digite a média do 1º semestre: "))
+media2 = float(input("Digite a média do 2º semestre: "))
+total_aulas = int(input("Digite o total de aulas: "))
+aulas_assistidas = int(input("Digite o número de aulas assistidas: "))
 
-mf = 0.4 * m1 + 0.6 * m2 
+# Cálculo da média ponderada
+media_final = (media1 * 4 + media2 * 6) / 10
 
-aula = (aula * 70) / 100
+# Cálculo da frequência
+frequencia = (aulas_assistidas / total_aulas) * 100
 
-faltas = float(aula / 10)
+# Exibe média e frequência
+print(f"\nMédia final: {media_final:.2f}")
+print(f"Frequência: {frequencia:.1f}%")
 
-
-if mf < 4 and faltas > 5:
-    print('Você está reprovado.')
-elif mf >= 5 and mf <= 6:
-    print('Você está de exame')
-elif mf > 7 and faltas < 5:
-    print('Você passou! Parabéns.')
+# Decisão 
+if frequencia <= 70:
+    print("Resultado: Reprovado por falta.")
+elif media_final >= 7:
+    print("Resultado: Aprovado.")
+elif media_final < 4:
+    print("Resultado: Reprovado.")
+else:
+    print("Resultado: Exame.")
