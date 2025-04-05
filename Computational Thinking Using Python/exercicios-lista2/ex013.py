@@ -1,13 +1,10 @@
-dia = int(input('Dia: '))
-mes = int(input('Mês: '))
+ano = int(input('Ano: '))
 
-if dia < 1 or dia > 31 or mes < 1 or mes > 12:
-    print('Isso não é uma data válida.')
-elif mes == 2 and dia > 28:
-    print(f'No mês {mes} é uma data inválida')
-elif dia == 31 and (mes == 4 or mes == 6 or mes == 9 or mes == 11):
-    print(f'No mês {mes} não tem dia 31')
+if ano % 400 == 0:
+    print(f'O ano {ano} é bissexto')
+elif ano % 100 == 0:
+    print(f'Não é bissexto')
+elif ano % 4 == 0:
+    print(f'{ano} é bissexto')
 else:
-    print('Data válida!')
-
-
+    print(f'Não é bissexto')
