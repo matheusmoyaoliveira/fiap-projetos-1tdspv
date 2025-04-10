@@ -1,0 +1,23 @@
+
+--
+-- WhatsApp do HelpDesk FIAP
+--
+11 98170 0028 helpdesk FIAP
+
+--
+-- Oracle SQL DataModeler
+--
+https://fiapcom-my.sharepoint.com/:u:/g/personal/pf0110_fiap_com_br/EYGuaTx7kBhLiAQGyvQ2sUMBsOxvDWLdXVLO4jlUIBhwrw?e=VLxNme
+
+--
+-- Java 15 (data modeler)
+--
+https://www.oracle.com/br/java/technologies/javase-jdk15-downloads.html
+
+--
+-- Oracle SQL*Developer
+--
+https://fiapcom-my.sharepoint.com/:u:/g/personal/pf0110_fiap_com_br/ETNoEKg6N1NPoKONlFpRMsABtyQpiywGz43P381SlptCUw?e=OliTaR
+
+
+
