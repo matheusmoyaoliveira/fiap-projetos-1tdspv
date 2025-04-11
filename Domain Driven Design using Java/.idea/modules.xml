@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Aulas/Aula01/Aula01.iml" filepath="$PROJECT_DIR$/Aulas/Aula01/Aula01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aulas/Aula03/Aula03.iml" filepath="$PROJECT_DIR$/Aulas/Aula03/Aula03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aulas/Aula04/Aula04.iml" filepath="$PROJECT_DIR$/Aulas/Aula04/Aula04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aulas/Aula04-Exercicio01/Aula04-Exercicio01.iml" filepath="$PROJECT_DIR$/Aulas/Aula04-Exercicio01/Aula04-Exercicio01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aulas/Aulas.iml" filepath="$PROJECT_DIR$/Aulas/Aulas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Domain Driven Design using Java.iml" filepath="$PROJECT_DIR$/.idea/Domain Driven Design using Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aulas/Pratica01/Pratica01.iml" filepath="$PROJECT_DIR$/Aulas/Pratica01/Pratica01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aulas/pratica02/pratica02.iml" filepath="$PROJECT_DIR$/Aulas/pratica02/pratica02.iml" />
+    </modules>
+  </component>
+</project>

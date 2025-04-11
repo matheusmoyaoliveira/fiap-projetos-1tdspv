@@ -19,7 +19,13 @@ public class Main {
         System.out.println("Senha: "+ cliente.getSenha());
 
         //Chamar o método para logar
-        boolean churros = cliente.logar("Matheus", "525255");
+        System.out.println("Digite o usuario: ");
+        String usuario = leitor.next();
+
+        System.out.println("Digite a senha: ");
+        String senha = leitor.next();
+
+        boolean churros = cliente.logar(usuario, senha);
         System.out.println("Logou?: " + churros);
     }
 }
