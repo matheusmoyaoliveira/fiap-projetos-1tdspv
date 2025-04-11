@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2EC55B9C-22A8-A2A0-3FD8-EBC323F09EC5" name="T_EMAIL">
+<createdBy>Matt</createdBy>
+<createdTime>2025-04-11 18:08:19 UTC</createdTime>
+<ownerDesignName>cp-01</ownerDesignName>
+<engineerTo>
+<item key="C7786DB7-0C6A-94C4-17EE-27EC2DAF0768" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_PACIENTE" id="BABA9A8D-D52B-B807-7B1F-EB1C150CD873">
+<createdBy>Matt</createdBy>
+<createdTime>2025-04-11 18:09:52 UTC</createdTime>
+<comment><![CDATA[Id do paciente, numero de identificação e chave primária]]></comment>
+<generatorID>06AD5A14-DF00-988C-3750-7EF2F877F262</generatorID>
+<ownerDesignName>cp-01</ownerDesignName>
+<engineerTo>
+<item key="C7786DB7-0C6A-94C4-17EE-27EC2DAF0768" value="true"/>
+</engineerTo>
+<referedAttribute>17F83EAB-D25C-6474-D179-D4FD17A68C60</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_EMAIL" id="FEC76F09-46B9-1760-2F44-12211C3A3C94">
+<createdBy>Matt</createdBy>
+<createdTime>2025-04-11 18:08:26 UTC</createdTime>
+<comment><![CDATA[Email do paciente para plano de saude]]></comment>
+<commentInRDBMS><![CDATA[Email do paciente para plano de saude]]></commentInRDBMS>
+<notes><![CDATA[Email do paciente para plano de saude]]></notes>
+<ownerDesignName>cp-01</ownerDesignName>
+<engineerTo>
+<item key="C7786DB7-0C6A-94C4-17EE-27EC2DAF0768" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>25</dataTypePrecision>
+<ownDataTypeParameters>,25,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="AT_EMAIL" id="DF59DD7C-B707-A57A-D14C-2971E1A0D477">
+<createdBy>Matt</createdBy>
+<createdTime>2025-04-11 18:09:05 UTC</createdTime>
+<comment><![CDATA[Saber se o e-mail está ativo ou não]]></comment>
+<commentInRDBMS><![CDATA[Saber se o e-mail está ativo ou não]]></commentInRDBMS>
+<notes><![CDATA[Saber se o e-mail está ativo ou não]]></notes>
+<ownerDesignName>cp-01</ownerDesignName>
+<engineerTo>
+<item key="C7786DB7-0C6A-94C4-17EE-27EC2DAF0768" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="BC071610-4BA7-4BB8-D1A4-4C4E9E830536" name="T_EMAIL PK">
+<createdBy>Matt</createdBy>
+<createdTime>2025-04-11 18:09:52 UTC</createdTime>
+<ownerDesignName>cp-01</ownerDesignName>
+<engineerTo>
+<item key="C7786DB7-0C6A-94C4-17EE-27EC2DAF0768" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>BABA9A8D-D52B-B807-7B1F-EB1C150CD873</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
