@@ -6,15 +6,17 @@ public class ContaCorrente {
 
     //Métodos
     void depositar(double valor){
-
+        saldo += valor;
     }
 
     void retirar(double valor){
-
+        saldo -= valor;
     }
 
     double retornarSaldo(){
+
         return saldo;
+
     }
 
 }
