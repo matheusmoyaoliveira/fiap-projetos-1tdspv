@@ -21,7 +21,7 @@ public class Main {
         System.out.println("Digite o cep do endereco:");
         endereco.cep = scanner.nextLine();
 
-        System.out.println("==============Cliente=================");
+        System.out.println("============== CLIENTE =================");
 
         System.out.println("Digite o nome do cliente:");
         cliente.nome = scanner.nextLine();
