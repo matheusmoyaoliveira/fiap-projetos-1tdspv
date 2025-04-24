@@ -1,26 +1,14 @@
 body {
-
     background-color: azure;
-
-}
-
-h1 {
+  }
+  
+  .titulo {
+    color: #8A2BE2;
     text-align: center;
-}
-
-.esp {
-
-    background-color: orange;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .paragrafo {
+    color: #8B4513;
+    font-size: 12px;
     text-align: center;
-    text-decoration: dotted;
-    text-shadow: 1px 1px 1px black
-}
-
-.neg {
-    background-color: cadetblue;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
-    text-decoration: solid;
-    text-shadow: 1px 1px 1px black;
-}
+  }
