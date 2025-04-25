@@ -44,7 +44,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>9</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="ID_MEDICO" id="8AFED1F1-B8BE-7254-1938-BEBEE25F0897">
 <createdBy>labsfiap</createdBy>
@@ -59,7 +59,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>20</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="DT_CONSULTA" id="AEF98F8E-2D04-1F6C-EC0D-7A74755B5690">
 <createdBy>labsfiap</createdBy>

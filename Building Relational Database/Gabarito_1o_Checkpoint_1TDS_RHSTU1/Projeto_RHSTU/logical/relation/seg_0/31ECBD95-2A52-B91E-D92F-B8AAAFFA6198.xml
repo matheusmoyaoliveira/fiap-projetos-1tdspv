@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="RHSTU_FORMA_PAGAMENTO" directorySegmentName="seg_0" id="31ECBD95-2A52-B91E-D92F-B8AAAFFA6198">
+<createdBy>Matt</createdBy>
+<createdTime>2025-04-25 03:15:48 UTC</createdTime>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<engineerTo>
+<item key="BD52EFD7-AD57-1D29-FBCE-37428351E3D1" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>F99EA2F2-132C-1E4B-B922-8BD97540E5D1</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>BE2F46F4-F78B-250B-FBC4-B1653378CDCA</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
