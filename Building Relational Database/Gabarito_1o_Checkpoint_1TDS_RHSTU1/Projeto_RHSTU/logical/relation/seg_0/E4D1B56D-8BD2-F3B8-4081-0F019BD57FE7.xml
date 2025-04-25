@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="RHSTU_PACIENTE_CONSULTA" directorySegmentName="seg_0" id="E4D1B56D-8BD2-F3B8-4081-0F019BD57FE7">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-25 02:03:53 UTC</createdTime>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<engineerTo>
+<item key="BD52EFD7-AD57-1D29-FBCE-37428351E3D1" value="true"/>
+</engineerTo>
+<sourcePk>6E644410-7AD5-C7FC-2576-8D927C238CC0</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>506DDC9A-FC9E-D13D-7FAD-ED571E3AEA46</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>CB2D26C3-46B3-EC00-2A73-B9784D01BB75</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
