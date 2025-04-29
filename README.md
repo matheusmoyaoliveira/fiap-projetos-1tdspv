@@ -1,16 +1,45 @@
-# Projetos da FIAP - 1TDSPV
+# 📘 FIAP - Projetos 1TDSPV
 
-Repositório com os projetos e exercícios desenvolvidos durante o curso de Análise e Desenvolvimento de Sistemas na FIAP.
+Repositório contendo os projetos desenvolvidos nas aulas de Análise e Desenvolvimento de Sistemas da FIAP, turma 1TDSPV.
 
-## 💡 Tecnologias
+---
+
+## 🚀 Tecnologias Utilizadas
+
+- Python
 - Java
-- HTML/CSS
-- Lógica de Programação
+- HTML e CSS
+- Banco de Dados (MySQL)
 
-## 📚 Conteúdo
-- Exercícios de lógica
-- Projetos simples de interface
-- Atividades em sala
+---
 
-## 📌 Status
-Ativo – em atualização contínua conforme o curso avança.
+## 📂 Estrutura
+
+```
+fiap-projetos-1tdspv/
+├── projetos-python/
+├── projetos-java/
+├── projetos-html-css/
+└── banco-de-dados/
+```
+
+---
+
+## 🛠️ Como executar
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/matheusmoyaoliveira/fiap-projetos-1tdspv.git
+```
+
+Acesse a pasta desejada e abra os arquivos conforme a linguagem do projeto.
+
+---
+
+## 🧑‍💻 Autor
+
+Matheus Moya Oliveira  
+[LinkedIn](https://www.linkedin.com/in/matheusmoyaoliveira/) | [GitHub](https://github.com/matheusmoyaoliveira)
+
+---
