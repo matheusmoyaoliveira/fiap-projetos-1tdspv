@@ -1,0 +1,20 @@
+JDK, utilizada no desenvolvimento de aplicativos Java;
+	- JAVAC (Compilador, converte o código-fonte em bytecode)
+	- JAVA (Interpreta o bytecode)
+	- JDB (Depura um programa Java)
+	- JAVAP (Decompila um arquivo class do Java)
+	- JAVADOC (Gera informação HTML das classes criadas)
+	- JAVAH (Cria headers que estendem Java para C)
+	- APPLETVIEWER (Executa Applets)
+	- JAR (Empacota e compacta os arquivos da aplicação)
+
+JRE, utilizada para a execução de aplicativos Java
+
+class Produto {
+
+	String nome;
+
+	String nomeProduto; # Não fazer desse jeito
+	String codigoProduto; # Não fazer desse jeito
+
+}

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PK_VB_EMPRESA" directorySegmentName="seg_0" id="C31C9DA8-B6C0-7446-7489-BD650CB46F16">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 00:38:41 UTC</createdTime>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<sourcePk>569580B5-1BF4-A2A1-06E4-CF68EB70983C</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>1C74E792-22B7-A40D-E6B3-3FDCE547E76A</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>A09566D5-6AB5-2A9F-A6BA-7F8731D9A905</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

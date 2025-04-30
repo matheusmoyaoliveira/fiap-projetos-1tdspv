@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="RHSTU_PAGAMENTO_PLANO_SAUDE" directorySegmentName="seg_0" id="E24182BE-EA67-6514-8E8A-0897946AC2BF">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-25 02:07:25 UTC</createdTime>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<engineerTo>
+<item key="BD52EFD7-AD57-1D29-FBCE-37428351E3D1" value="true"/>
+</engineerTo>
+<sourcePk>19ADF929-87F7-5650-0C65-238B08B03D25</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>BE2F46F4-F78B-250B-FBC4-B1653378CDCA</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>79FECE95-CF66-DB38-4C06-AF9CA83F1DA9</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

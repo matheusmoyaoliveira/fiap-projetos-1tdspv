@@ -1,0 +1,116 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C9770097-AA22-C1B9-A4B2-79F1FE75938F" name="T_VB_PEDIDO">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-03-28 01:42:33 UTC</createdTime>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_estabelecimento" id="2BFF9321-8183-4A03-AD55-8856D2039029">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-03-28 01:43:04 UTC</createdTime>
+<comment><![CDATA[Identificador do estabelecimento, será a chave primária da entidade.]]></comment>
+<commentInRDBMS><![CDATA[Identificador do estabelecimento, será a chave primária da entidade.]]></commentInRDBMS>
+<generatorID>47994E99-FB77-C635-DD44-C68075D5E6D4</generatorID>
+<notes><![CDATA[Identificador do estabelecimento, será a chave primária da entidade.]]></notes>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<referedAttribute>14DDD755-D6D6-A3DC-4D64-4D8118670823</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_num_pedido" id="C03163B5-D1E8-E643-172F-6875867CAD3B">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-03-28 02:03:46 UTC</createdTime>
+<comment><![CDATA[Numero de cada pedido dentro do estabelecimento para indicar o produto.]]></comment>
+<commentInRDBMS><![CDATA[Numero de cada pedido dentro do estabelecimento para indicar o produto.]]></commentInRDBMS>
+<notes><![CDATA[Numero de cada pedido dentro do estabelecimento para indicar o produto.]]></notes>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_data_hora_min_atend" id="49C517F7-C263-4FD7-C89F-A4332D4D9C3F">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-03-28 02:05:31 UTC</createdTime>
+<comment><![CDATA[Informacao de data, hora e minutagem do atendente.]]></comment>
+<commentInRDBMS><![CDATA[Informacao de data, hora e minutagem do atendente.]]></commentInRDBMS>
+<notes><![CDATA[Informacao de data, hora e minutagem do atendente.]]></notes>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_nome_atend" id="A9D43087-F376-7F3C-0FDC-D361613A2396">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-03-28 02:07:33 UTC</createdTime>
+<comment><![CDATA[Nome do atendente.]]></comment>
+<commentInRDBMS><![CDATA[Nome do atendente.]]></commentInRDBMS>
+<notes><![CDATA[Nome do atendente.]]></notes>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>70</dataTypeSize>
+<ownDataTypeParameters>70,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_forma_pag" id="A740BB23-ECBB-3782-9F84-AA43E63B3123">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-03-28 02:08:17 UTC</createdTime>
+<comment><![CDATA[Forma de pagamento usada no final antes da saída do cliente]]></comment>
+<commentInRDBMS><![CDATA[Forma de pagamento usada no final antes da saída do cliente]]></commentInRDBMS>
+<notes><![CDATA[Forma de pagamento usada no final antes da saída do cliente]]></notes>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9F154868-56F7-CD47-463E-1FB3708C6763" name="T_VB_PEDIDO_VENDA PK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-03-28 02:05:01 UTC</createdTime>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C03163B5-D1E8-E643-172F-6875867CAD3B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

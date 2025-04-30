@@ -1,0 +1,119 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A09566D5-6AB5-2A9F-A6BA-7F8731D9A905" name="T_VB_ENDERECO">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 00:30:53 UTC</createdTime>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_estabelecimento" id="847DD6BE-35C8-EA48-A71E-821D0AA62BB4">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 00:38:41 UTC</createdTime>
+<comment><![CDATA[Identificador do estabelecimento, será a chave primária da entidade.]]></comment>
+<generatorID>C31C9DA8-B6C0-7446-7489-BD650CB46F16</generatorID>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<referedAttribute>14DDD755-D6D6-A3DC-4D64-4D8118670823</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_endereco" id="E44705FE-E2EB-82DE-DF03-E8F5674963AE">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 00:31:04 UTC</createdTime>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_cep" id="D9B2AC14-D34E-E698-2981-71115BD19576">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 00:31:29 UTC</createdTime>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_logradouro" id="CDAA477A-04A9-CDCC-2789-2003FFD44182">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 00:32:04 UTC</createdTime>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_complemento_numero" id="DFB8C301-02BB-D1A5-5374-F0C1F3813D01">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 00:33:08 UTC</createdTime>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_ponto_referencia" id="C1053A5E-E100-70EE-877E-1921E573CE40">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 00:33:40 UTC</createdTime>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5F280248-FA67-4CA3-E2DF-694E9E47A462" name="T_VB_ENDERECO PK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 00:38:41 UTC</createdTime>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>847DD6BE-35C8-EA48-A71E-821D0AA62BB4</attributeRef>
+<attributeRef>E44705FE-E2EB-82DE-DF03-E8F5674963AE</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

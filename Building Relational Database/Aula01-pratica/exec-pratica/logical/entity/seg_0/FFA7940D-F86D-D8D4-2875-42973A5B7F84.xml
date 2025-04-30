@@ -1,0 +1,108 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FFA7940D-F86D-D8D4-2875-42973A5B7F84" name="T_VB_ITENS_PEDIDO">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 00:35:08 UTC</createdTime>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="nr_pedido" id="68E6932B-BF16-8490-3F49-69DBA7440385">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 00:36:46 UTC</createdTime>
+<comment><![CDATA[Numero de cada pedido dentro do estabelecimento para indicar o produto.]]></comment>
+<generatorID>C195C935-9659-A515-C785-D3E36E3C5309</generatorID>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<referedAttribute>C03163B5-D1E8-E643-172F-6875867CAD3B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_produto" id="742D84E1-3F62-9C24-9230-BF545379C682">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 00:38:06 UTC</createdTime>
+<comment><![CDATA[Codigo do produto dentro do estabelecimento]]></comment>
+<generatorID>BB2CCD64-DEAE-D18F-F9CC-D4080BD2C4CF</generatorID>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<referedAttribute>90C55521-3C7C-A727-0AC9-210A94950EFA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="vl_unitario" id="61A24561-71EA-39E8-E1D9-A46E563FCB61">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 00:35:33 UTC</createdTime>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="qt_consumo" id="2B8C140C-41A7-A954-4C1A-869FAD20AF69">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 00:35:57 UTC</createdTime>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="vl_desconto" id="FE938C76-B4E3-43D9-5EA2-6A994FFB36A8">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 00:36:24 UTC</createdTime>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9844D7F4-7D1A-1F7A-C158-D1DB3F83BBCB" name="T_VB_ITENS_PEDIDO PK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-04 00:36:46 UTC</createdTime>
+<ownerDesignName>exec-pratica</ownerDesignName>
+<engineerTo>
+<item key="61914652-2A27-DB84-4294-AC3C21527FA0" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>68E6932B-BF16-8490-3F49-69DBA7440385</attributeRef>
+<attributeRef>742D84E1-3F62-9C24-9230-BF545379C682</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

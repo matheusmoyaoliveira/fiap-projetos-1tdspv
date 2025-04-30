@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+#fundoPaginaPrincipal {
+  background-color: antiquewhite;
+}
+
+#paginaSobre {
+  background: url('fiap-bg.jpg');
+}
+
+h3 {
+  color: rgb(50, 100, 150, 1);
+}
+
+p {
+  color: blue;
+  font-size: 20px;
+  text-align: left;
+  text-transform: capitalize;
+  text-decoration: overline;
+  line-height: 50px;
+  text-indent: 50px;
+}
+
+h3 {
+  text-decoration: overline underline;
+  text-shadow: 3px 10px 10px #000;
+}
+
+
+#titulo, h1 {
+  color: #1E90FF;
+  text-transform: uppercase;
+  text-decoration: line-through;
+}
+
+.paragrafo {
+  font-size: 100%;
+  font-style: italic
+}
+
+.negrito, a {
+  font-weight: bold;
+}

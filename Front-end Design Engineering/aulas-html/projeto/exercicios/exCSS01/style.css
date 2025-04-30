@@ -1,0 +1,14 @@
+body {
+    background-color: azure;
+  }
+  
+  .titulo {
+    color: #8A2BE2;
+    text-align: center;
+  }
+  
+  .paragrafo {
+    color: #8B4513;
+    font-size: 12px;
+    text-align: center;
+  }

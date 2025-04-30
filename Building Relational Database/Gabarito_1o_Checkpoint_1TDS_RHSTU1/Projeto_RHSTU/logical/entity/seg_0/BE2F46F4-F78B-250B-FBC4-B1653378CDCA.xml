@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BE2F46F4-F78B-250B-FBC4-B1653378CDCA" name="T_RHSTU_FORMA_PAGAMENTO">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-25 01:57:02 UTC</createdTime>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<engineerTo>
+<item key="BD52EFD7-AD57-1D29-FBCE-37428351E3D1" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_FORMA_PAGAMENTO" id="1E6BC81F-5C82-03FC-96F4-F300F832F297">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-25 01:57:25 UTC</createdTime>
+<comment><![CDATA[Id de identificação da forma de pagamento do cliente]]></comment>
+<commentInRDBMS><![CDATA[Id de identificação da forma de pagamento do cliente]]></commentInRDBMS>
+<notes><![CDATA[Id de identificação da forma de pagamento do cliente]]></notes>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<engineerTo>
+<item key="BD52EFD7-AD57-1D29-FBCE-37428351E3D1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="VL_MEIO_DE_PAGAMENTO" id="0C45CA62-F954-A3B0-19CA-1AA5C5FD5E6B">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-25 01:59:38 UTC</createdTime>
+<comment><![CDATA[Meio de pagamento das consultas médicas]]></comment>
+<commentInRDBMS><![CDATA[Meio de pagamento das consultas médicas]]></commentInRDBMS>
+<notes><![CDATA[Meio de pagamento das consultas médicas]]></notes>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<engineerTo>
+<item key="BD52EFD7-AD57-1D29-FBCE-37428351E3D1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="19ADF929-87F7-5650-0C65-238B08B03D25" name="T_RHSTU_FORMA_PAGAMENTO PK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-04-25 02:03:12 UTC</createdTime>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<engineerTo>
+<item key="BD52EFD7-AD57-1D29-FBCE-37428351E3D1" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1E6BC81F-5C82-03FC-96F4-F300F832F297</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
