@@ -14,6 +14,9 @@ public class Teste {
         System.out.println("Digite sua altura: ");
         double altura = leitor.nextDouble();
 
+        System.out.println("Difite sua idade: ");
+        int idade = leitor.nextInt();
+
         Pessoa pessoa1 = new Pessoa(nome, peso, altura, idade);
 
         Pessoa pessoa2 = new Pessoa(nome, peso, altura, idade);
