@@ -4,3 +4,6 @@
 [submodule "ai-sprint-privado"]
 	path = ai-sprint-privado
 	url = https://github.com/matheusmoyaoliveira/ai-sprint-privado.git
+[submodule "Artificial Intelligence & Chatbot/ai-sprint-privado"]
+	path = Artificial Intelligence & Chatbot/ai-sprint-privado
+	url = https://github.com/matheusmoyaoliveira/ai-sprint-privado.git
