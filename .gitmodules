@@ -1,6 +1,3 @@
 [submodule "Artificial Intelligence & Chatbot/cp01-chatbot"]
 	path = Artificial Intelligence & Chatbot/cp01-chatbot
 	url = https://github.com/matheusmoyaoliveira/cp01-chatbot.git
-[submodule "Artificial Intelligence & Chatbot/Artificial Intelligence & Chatbot/ai-sprint-privado"]
-	path = Artificial Intelligence & Chatbot/Artificial Intelligence & Chatbot/ai-sprint-privado
-	url = https://github.com/matheusmoyaoliveira/ai-sprint-privado.git
