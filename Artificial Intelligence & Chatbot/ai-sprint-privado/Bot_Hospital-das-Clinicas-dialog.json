@@ -1,0 +1,1287 @@
+{
+  "intents": [
+    {
+      "intent": "agendar_consulta",
+      "examples": [
+        {
+          "text": "Agendar consulta no Hospital das Clínicas"
+        },
+        {
+          "text": "Agendar consulta para amanhã"
+        },
+        {
+          "text": "Como agendo um retorno?"
+        },
+        {
+          "text": "Como faço para agendar atendimento?"
+        },
+        {
+          "text": "Como faço para agendar uma consulta?"
+        },
+        {
+          "text": "Consulta para amanhã, como faço?"
+        },
+        {
+          "text": "Gostaria de agendar um exame"
+        },
+        {
+          "text": "Gostaria de marcar uma consulta em ortopedia"
+        },
+        {
+          "text": "Marcar atendimento em cardiologia"
+        },
+        {
+          "text": "Marcar consulta médica"
+        },
+        {
+          "text": "Marcar consulta para meu filho"
+        },
+        {
+          "text": "Posso agendar por aqui?"
+        },
+        {
+          "text": "Posso agendar uma consulta agora?"
+        },
+        {
+          "text": "Preciso de uma consulta com cardiologista"
+        },
+        {
+          "text": "Preciso de um médico hoje"
+        },
+        {
+          "text": "Preciso marcar uma consulta médica"
+        },
+        {
+          "text": "Quais dias posso agendar consulta?"
+        },
+        {
+          "text": "Queria marcar um horário com o médico"
+        },
+        {
+          "text": "Quero agendar uma consulta"
+        },
+        {
+          "text": "Quero falar com um especialista"
+        },
+        {
+          "text": "Quero marcar uma consulta"
+        },
+        {
+          "text": "Quero uma consulta com o clínico geral"
+        },
+        {
+          "text": "Quero uma consulta no Hospital das Clínicas"
+        },
+        {
+          "text": "Tem consulta disponível com clínico geral?"
+        }
+      ],
+      "description": "Ajudar a agendar consultas"
+    },
+    {
+      "intent": "cancelar_ou_remarcar",
+      "examples": [
+        {
+          "text": "Como faço para remarcar um atendimento?"
+        },
+        {
+          "text": "Como remarcar um exame?"
+        },
+        {
+          "text": "Consulta marcada para hoje, quero remarcar"
+        },
+        {
+          "text": "Não poderei ir, posso remarcar para outro dia?"
+        },
+        {
+          "text": "Não posso comparecer, posso remarcar?"
+        },
+        {
+          "text": "Posso adiar meu exame?"
+        },
+        {
+          "text": "Preciso cancelar minha consulta"
+        },
+        {
+          "text": "Quero mudar a data do exame"
+        },
+        {
+          "text": "Quero mudar o horário da consulta"
+        },
+        {
+          "text": "Remarcar retorno"
+        },
+        {
+          "text": "Tem como cancelar por aqui?"
+        },
+        {
+          "text": "Tem taxa para cancelar?"
+        }
+      ],
+      "description": "O usuário quer cancelar ou remarcar atendimento."
+    },
+    {
+      "intent": "consultar_resultado",
+      "examples": [
+        {
+          "text": "Como consulto meus exames?"
+        },
+        {
+          "text": "Consulta o resultado pra mim"
+        },
+        {
+          "text": "Já saiu meu hemograma?"
+        },
+        {
+          "text": "Meu exame está pronto?"
+        },
+        {
+          "text": "O exame de sangue foi liberado?"
+        },
+        {
+          "text": "O médico já viu meu resultado?"
+        },
+        {
+          "text": "Onde vejo o resultado da ressonância?"
+        },
+        {
+          "text": "Os exames do laboratório já estão disponíveis?"
+        },
+        {
+          "text": "Quero ver o resultado do meu exame"
+        },
+        {
+          "text": "Resultado do meu raio-x já saiu?"
+        },
+        {
+          "text": "Tenho exames disponíveis?"
+        },
+        {
+          "text": "Ver resultado da tomografia"
+        }
+      ],
+      "description": "Resultado de consultas realizadas"
+    },
+    {
+      "intent": "encerrar_conversa",
+      "examples": [
+        {
+          "text": "Até logo"
+        },
+        {
+          "text": "Até mais"
+        },
+        {
+          "text": "É só isso por hoje"
+        },
+        {
+          "text": "Gratidão"
+        },
+        {
+          "text": "Já sei tudo que precisava"
+        },
+        {
+          "text": "Muito obrigado pela ajuda"
+        },
+        {
+          "text": "Obrigado"
+        },
+        {
+          "text": "Obrigado, encerro por aqui"
+        },
+        {
+          "text": "Por agora está bom"
+        },
+        {
+          "text": "Tchau"
+        },
+        {
+          "text": "Terminamos"
+        },
+        {
+          "text": "Valeu!"
+        }
+      ],
+      "description": "Encerrar o diálogo com o cliente"
+    },
+    {
+      "intent": "informacoes_exames",
+      "examples": [
+        {
+          "text": "Como agendo um exame?"
+        },
+        {
+          "text": "Como faço para fazer um exame de sangue?"
+        },
+        {
+          "text": "Exames são feitos com pedido médico?"
+        },
+        {
+          "text": "Fazem ultrassom?"
+        },
+        {
+          "text": "Onde é o setor de exames?"
+        },
+        {
+          "text": "Pode me informar sobre os exames laboratoriais?"
+        },
+        {
+          "text": "Precisa de jejum para fazer exame?"
+        },
+        {
+          "text": "Quais exames são feitos aí?"
+        },
+        {
+          "text": "Quanto tempo leva para sair o resultado?"
+        },
+        {
+          "text": "Que documentos preciso levar?"
+        },
+        {
+          "text": "Tem exame de ressonância?"
+        },
+        {
+          "text": "Tem tomografia?"
+        }
+      ],
+      "description": "Informações sobre o exame"
+    },
+    {
+      "intent": "informacoes_gerais",
+      "examples": [
+        {
+          "text": "Como faço para chegar no hospital?"
+        },
+        {
+          "text": "É público ou privado?"
+        },
+        {
+          "text": "O hospital abre aos sábados?"
+        },
+        {
+          "text": "Onde fica a recepção principal?"
+        },
+        {
+          "text": "Onde fica o Hospital das Clínicas?"
+        },
+        {
+          "text": "Quais serviços estão disponíveis?"
+        },
+        {
+          "text": "Qual é o telefone de contato?"
+        },
+        {
+          "text": "Qual o horário de funcionamento?"
+        },
+        {
+          "text": "Tem atendimento por convênio?"
+        },
+        {
+          "text": "Tem estacionamento?"
+        },
+        {
+          "text": "Tem farmácia no hospital?"
+        },
+        {
+          "text": "Tem pronto-socorro?"
+        }
+      ],
+      "description": "Informações sobre o hospital"
+    },
+    {
+      "intent": "informar_local",
+      "examples": [
+        {
+          "text": "Ala da ortopedia fica onde?"
+        },
+        {
+          "text": "Como chegar no pronto-socorro?"
+        },
+        {
+          "text": "Como chego na ala pediátrica?"
+        },
+        {
+          "text": "Como vou até a farmácia interna?"
+        },
+        {
+          "text": "Onde é a entrada principal?"
+        },
+        {
+          "text": "Onde é feito o raio-x?"
+        },
+        {
+          "text": "Onde é o ambulatório?"
+        },
+        {
+          "text": "Onde está o setor de imagens?"
+        },
+        {
+          "text": "Onde ficam os exames de sangue?"
+        },
+        {
+          "text": "Onde fica o laboratório?"
+        },
+        {
+          "text": "Preciso achar a UTI"
+        },
+        {
+          "text": "Qual o caminho para a recepção?"
+        }
+      ],
+      "description": "Dúvidas sobre a localização"
+    },
+    {
+      "intent": "reclamacoes_ou_ouvidoria",
+      "examples": [
+        {
+          "text": "Atendimento demorou muito"
+        },
+        {
+          "text": "Como falo com a ouvidoria?"
+        },
+        {
+          "text": "Existe canal de ouvidoria?"
+        },
+        {
+          "text": "Gostaria de elogiar um funcionário"
+        },
+        {
+          "text": "Não fui bem atendido"
+        },
+        {
+          "text": "O atendimento foi ruim"
+        },
+        {
+          "text": "Onde deixo minha reclamação?"
+        },
+        {
+          "text": "Onde posso registrar uma queixa?"
+        },
+        {
+          "text": "Posso dar um feedback?"
+        },
+        {
+          "text": "Queria deixar um comentário"
+        },
+        {
+          "text": "Quero fazer uma reclamação"
+        },
+        {
+          "text": "Tenho uma sugestão"
+        }
+      ],
+      "description": "O usuário quer fazer uma reclamação ou sugestão."
+    },
+    {
+      "intent": "saudacao",
+      "examples": [
+        {
+          "text": "Boa noite"
+        },
+        {
+          "text": "Boa tarde"
+        },
+        {
+          "text": "Bom dia"
+        },
+        {
+          "text": "Como vai?"
+        },
+        {
+          "text": "E aí, tudo bem?"
+        },
+        {
+          "text": "Estou aqui"
+        },
+        {
+          "text": "Oi"
+        },
+        {
+          "text": "Olá"
+        },
+        {
+          "text": "Olá, estou com uma dúvida"
+        },
+        {
+          "text": "Opa!"
+        },
+        {
+          "text": "Preciso de ajuda"
+        },
+        {
+          "text": "Tem alguém aí?"
+        }
+      ],
+      "description": "Intenção criada para iniciar uma conversa com o cliente"
+    }
+  ],
+  "entities": [
+    {
+      "entity": "data_horario",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "amanhã",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "às 14h",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "hoje",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "segunda-feira",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "documento",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "carteirinha do SUS",
+          "synonyms": [
+            "cartão do SUS",
+            "SUS"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "comprovante de agendamento",
+          "synonyms": [
+            "comprovante",
+            "protocolo"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "CPF",
+          "synonyms": [
+            "cadastro de pessoa física"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "guia médica",
+          "synonyms": [
+            "guia",
+            "pedido médico"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "RG",
+          "synonyms": [
+            "documento",
+            "identidade"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "especialidade",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "cardiologia",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "clínico geral",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "neurologia",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "ortopedia",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "pediatria",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "exame",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "hemograma",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "raio-x",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "ressonância",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "tomografia",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "local",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "exame de sangue",
+          "synonyms": [
+            "hemograma",
+            "sangue"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "raio-x",
+          "synonyms": [
+            "radiografia"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "ressonância",
+          "synonyms": [
+            "ressonância magnética"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "tomografia",
+          "synonyms": [
+            " tomografia computadorizada"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "ultrassom",
+          "synonyms": [
+            "ultrassonografia"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "profissional",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "enfermeiro",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "médico",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "recepcionista",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "técnico",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "reclamacoes_ou_ouvidoria",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "critica",
+          "synonyms": [
+            "péssimo",
+            "problema",
+            "reclamação",
+            "ruim"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "elogio",
+          "synonyms": [
+            "excelente",
+            "gostei",
+            "ótimo",
+            "parabéns"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "sugestao",
+          "synonyms": [
+            "ideia",
+            "melhorar",
+            "poderia",
+            "sugestão"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "setor_hospitalar",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "laboratório",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "pronto-socorro",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "recepção",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "UTI",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Bem-vindo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá! Seja bem-vindo ao Hospital das Clínicas. Em que posso te ajudar hoje?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#saudacao",
+      "dialog_node": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "title": "Em outros casos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Eu não entendi. Você pode tentar reformular a frase."
+              },
+              {
+                "text": "Você pode reformular sua afirmação? Eu não estou entendendo."
+              },
+              {
+                "text": "Eu não entendi o sentido."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Em outros casos",
+      "previous_sibling": "node_6_1746690351513",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "Informar Local",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Por favor, informe qual setor ou unidade deseja visitar para que eu possa direcioná-lo corretamente."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#informar_local",
+      "dialog_node": "node_10_1746689989454",
+      "previous_sibling": "node_9_1746688988902"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Seu agendamento foi registrado! Se precisar de ajuda com outra coisa, estou à disposição."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1746687868433",
+      "conditions": "true",
+      "dialog_node": "node_1_1746687894479"
+    },
+    {
+      "type": "standard",
+      "title": "Informações sobre Exames",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Claro! Sobre qual exame você gostaria de saber mais informações? (ex: hemograma, tomografia, raio-x)\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#informacoes_exames",
+      "dialog_node": "node_1_1746688637127",
+      "previous_sibling": "node_4_1746687998223"
+    },
+    {
+      "type": "standard",
+      "title": "Hemograma",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Para o hemograma, é necessário jejum de 8 horas. Traga um documento de identificação no dia do exame.\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1746688637127",
+      "conditions": "@exame:hemograma",
+      "dialog_node": "node_1_1746688672019"
+    },
+    {
+      "type": "standard",
+      "title": "Raio X",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "O exame de raio-x não requer preparo prévio. Evite usar roupas com metais.\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1746688637127",
+      "conditions": "@exame:raio-x",
+      "dialog_node": "node_1_1746688696334",
+      "previous_sibling": "node_1_1746688672019"
+    },
+    {
+      "type": "standard",
+      "title": "Reclamações ou Sugestões",
+      "conditions": "#reclamacoes_ou_ouvidoria",
+      "dialog_node": "node_1_1746690008778",
+      "previous_sibling": "node_10_1746689989454"
+    },
+    {
+      "type": "standard",
+      "title": "Localização",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Estamos localizados na Av. Dr. Enéas Carvalho de Aguiar, 255 - São Paulo. Precisa saber onde fica algum setor específico?\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1746688988902",
+      "conditions": "\"localização\" ||    \"endereço\" ||   \"onde fica\" || \"local\"",
+      "dialog_node": "node_2_1746689506755",
+      "previous_sibling": "node_5_1746689013015"
+    },
+    {
+      "type": "standard",
+      "title": "Data E Horario",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Entendido! Consulta em @data_horario. Você tem preferência por algum profissional?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1746687546152",
+      "conditions": "@data_horario",
+      "dialog_node": "node_3_1746687742901"
+    },
+    {
+      "type": "standard",
+      "title": "Cancelar ou Remarcar",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Entendo. Você deseja cancelar ou remarcar uma consulta? Por favor, informe a data ou especialidade."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#cancelar_ou_remarcar",
+      "dialog_node": "node_3_1746687974542",
+      "previous_sibling": "node_9_1746687367061"
+    },
+    {
+      "type": "standard",
+      "title": "Consulta & Resultado",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Para acessar seus resultados, por favor, informe seu número de documento, como CPF ou número do SUS."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#consultar_resultado",
+      "dialog_node": "node_4_1746687998223",
+      "previous_sibling": "node_3_1746687974542"
+    },
+    {
+      "type": "standard",
+      "title": "Especialidade",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Perfeito! Vamos agendar sua consulta com o setor de @especialidade. Qual horário você prefere?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1746687367061",
+      "conditions": "@especialidade",
+      "dialog_node": "node_5_1746687546152"
+    },
+    {
+      "type": "standard",
+      "title": "Documento",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Documento identificado: @documento. Poderia informar a data ou horário do exame/consulta?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1746688032539",
+      "conditions": "@documento",
+      "dialog_node": "node_5_1746688380424"
+    },
+    {
+      "type": "standard",
+      "title": "Horário de funcionamento",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "O Hospital das Clínicas funciona 24 horas por dia, com pronto-socorro disponível para emergências.\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1746688988902",
+      "conditions": "@data_horario || \"horário\" ||   \"abre\" ||     \"fecha\" ||    \"funcionamento\"",
+      "dialog_node": "node_5_1746689013015"
+    },
+    {
+      "type": "standard",
+      "title": "Documentos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Leve RG, CPF e se possível o cartão do SUS. Para exames ou internações, pode ser necessário a guia médica.\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1746688988902",
+      "conditions": "@documento ||   \"documento\" ||  \"preciso levar\" || \"comprovação\"",
+      "dialog_node": "node_5_1746689635507",
+      "previous_sibling": "node_6_1746689566465"
+    },
+    {
+      "type": "standard",
+      "title": "Contato",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Para entrar em contato com o hospital, ligue para (11) 2661-0000.\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1746688988902",
+      "conditions": "\"telefone\" ||   \"contato\" ||  \"número\" || \"falar\"",
+      "dialog_node": "node_6_1746689566465",
+      "previous_sibling": "node_2_1746689506755"
+    },
+    {
+      "type": "standard",
+      "title": "Convênio",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "O Hospital das Clínicas é público e atende exclusivamente via SUS.\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1746688988902",
+      "conditions": "\"convênio\" ||   \"plano\" ||  \"aceita plano\" || \"SUS\"",
+      "dialog_node": "node_6_1746689678415",
+      "previous_sibling": "node_5_1746689635507"
+    },
+    {
+      "type": "standard",
+      "title": "Elogio",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Agradecemos o elogio! Ficamos felizes em saber que você teve uma boa experiência."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1746690008778",
+      "conditions": "@reclamacoes_ou_ouvidoria:elogio",
+      "dialog_node": "node_6_1746690040965"
+    },
+    {
+      "type": "standard",
+      "title": "Crítica",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sentimos muito pela experiência. Sua crítica será encaminhada para a ouvidoria do hospital."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1746690008778",
+      "conditions": "@reclamacoes_ou_ouvidoria:critica",
+      "dialog_node": "node_6_1746690286393",
+      "previous_sibling": "node_6_1746690040965"
+    },
+    {
+      "type": "standard",
+      "title": "Encerrar Conversa",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Agradecemos o contato. Desejamos melhoras e esperamos vê-lo em breve. Até logo!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#encerrar_conversa",
+      "dialog_node": "node_6_1746690351513",
+      "previous_sibling": "node_1_1746690008778"
+    },
+    {
+      "type": "standard",
+      "title": "Tipo de Resultado",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Consulta para @exame/@especialidade, ótimo! Agora, informe um documento (RG, CPF ou carteirinha do SUS) para que eu possa localizar seu resultado."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1746687998223",
+      "conditions": "@exame || @especialidade",
+      "dialog_node": "node_7_1746688032539"
+    },
+    {
+      "type": "standard",
+      "title": "Data e Horario",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Resultado localizado com base em @documento e @data_horario. Verifique seu resultado acessando o portal ou dirija-se à recepção do hospital.\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1746688380424",
+      "conditions": "@data_horario",
+      "dialog_node": "node_7_1746688400833"
+    },
+    {
+      "type": "standard",
+      "title": "Tomografia",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Para a tomografia, pode ser necessário jejum ou uso de contraste, dependendo da solicitação médica. Chegue com 30 minutos de antecedência.\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1746688637127",
+      "conditions": "@exame:tomografia",
+      "dialog_node": "node_7_1746688874804",
+      "previous_sibling": "node_8_1746688856399"
+    },
+    {
+      "type": "standard",
+      "title": "Sugestão",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sua sugestão é muito importante. Encaminharemos para o setor responsável pela melhoria dos serviços."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1746690008778",
+      "conditions": "@reclamacoes_ou_ouvidoria:sugestao",
+      "dialog_node": "node_7_1746690313906",
+      "previous_sibling": "node_6_1746690286393"
+    },
+    {
+      "type": "standard",
+      "title": "Ressonância",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "O exame de ressonância magnética requer jejum de pelo menos 4 horas. Evite usar objetos metálicos. Caso tenha implantes, comunique o setor de radiologia antes do exame.\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1746688637127",
+      "conditions": "@exame:ressonância",
+      "dialog_node": "node_8_1746688856399",
+      "previous_sibling": "node_1_1746688696334"
+    },
+    {
+      "type": "standard",
+      "title": "Agendamento de Consulta",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Claro! Para qual especialidade você deseja agendar?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#agendar_consulta",
+      "dialog_node": "node_9_1746687367061",
+      "previous_sibling": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "title": "Profissional",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Perfeito! Então, consulta com @profissional da área de @especialidade, agendada para @data_horario."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1746687742901",
+      "conditions": "@profissional",
+      "dialog_node": "node_9_1746687868433"
+    },
+    {
+      "type": "standard",
+      "title": "Informações Gerais",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Claro! O que você gostaria de saber sobre o Hospital das Clínicas?\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#informacoes_gerais",
+      "dialog_node": "node_9_1746688988902",
+      "previous_sibling": "node_1_1746688637127"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": "Você quis dizer:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "Nenhuma das anteriores",
+      "use_connect_to_support_prompt": "Connect to support",
+      "single_answer_clarification_prompt": "Something else"
+    },
+    "human_agent_assist": {
+      "prompt": "Você quis dizer:"
+    }
+  },
+  "learning_opt_out": false,
+  "language": "pt-br",
+  "description": "Dialogo para ajudar os pacientes sobre o app",
+  "name": "Bot_Hospital das Clinicas-dialog"
+}
