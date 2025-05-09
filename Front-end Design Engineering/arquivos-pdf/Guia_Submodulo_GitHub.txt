@@ -21,7 +21,7 @@ Um **submódulo** é um repositório Git dentro de outro repositório Git. Ele �
 
 4. **Adicione o submódulo no caminho desejado:**
    ```bash
-   git submodule add https://github.com/usuario/repositorio-submodulo.git caminho/para/submodulo
+   git submodule add https://github.com/matheusmoyaoliveira/repositorio-submodulo.git caminho/para/submodulo
    ```
    Exemplo:
    ```bash
