@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FK_RHSTU_CONSULTA_PRESCRICAO" directorySegmentName="seg_0" id="D2500F7E-CD31-17F9-9806-85285408F3FD">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-09 01:27:23 UTC</createdTime>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<engineerTo>
+<item key="BD52EFD7-AD57-1D29-FBCE-37428351E3D1" value="true"/>
+</engineerTo>
+<sourcePk>94012AC5-2823-C905-42C8-C02D1BAAFCE4</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>31723517-2989-D028-7B9E-D4C226A4767D</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>E8AAE53C-1B76-5081-A1D0-6A3E320ED46F</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
