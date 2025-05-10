@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Roboto Mono", sans-serif;    
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: aqua;
+    text-align: center;
+
+    padding: 10px;
+    margin-bottom: 45px;
+
+
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px;
+
+}
+
+a {
+    text-decoration: none;
+
+    background-color: azure;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container{
+
+    padding: 20px;
+    border-radius: 5px;
+    background-color: aqua;
+
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+}

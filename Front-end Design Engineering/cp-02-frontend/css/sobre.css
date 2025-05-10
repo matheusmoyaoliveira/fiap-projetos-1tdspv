@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+.aluno {
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 300px;
+    border-radius: 8px;
+}
+img {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 10px 0;
+}
