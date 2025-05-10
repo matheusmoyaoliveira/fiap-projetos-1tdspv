@@ -1,5 +1,6 @@
+opcao = -1
+texto = input('Digite uma frase: ')
 def menu() -> int:
-    opcao = -1
     while opcao != 5:
         o = '''
         1) Converta a frase para maiúscula
@@ -26,5 +27,5 @@ elif opcao != 5:
 
 
 
-texto = input('Digite uma frase: ')
+
 
