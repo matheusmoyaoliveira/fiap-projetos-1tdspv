@@ -5,14 +5,14 @@ public class Vogal {
         //Ler uma palavra
         String palavra = JOptionPane.showInputDialog("Digite uma palavra: ");
 
-        String vogais = "aeiou";
+        // String vogais = "aeiou";
 
-        for (int i = 0; i < vogais.length(); i++) {
+        // for (int i = 0; i < vogais.length(); i++) {
             //Substituir as vogais da palavra
-            palavra = palavra.replace(vogais.charAt(i), '*');
-        }
+        //     palavra = palavra.replace(vogais.charAt(i), '*');
+        // }
 
-
+        palavra = palavra.replaceAll("[aeiou]", "*");
 
         //Exibi a palavra modificada
         JOptionPane.showMessageDialog(null, palavra);
