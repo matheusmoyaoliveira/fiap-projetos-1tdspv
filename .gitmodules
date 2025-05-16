@@ -10,3 +10,6 @@
 [submodule "Computational Thinking Using Python/python-sprint-privado"]
 	path = Computational Thinking Using Python/python-sprint-privado
 	url = https://github.com/matheusmoyaoliveira/python-sprint-privado
+[submodule "Computational Thinking Using Python/cp02-python"]
+	path = Computational Thinking Using Python/cp02-python
+	url = https://github.com/matheusmoyaoliveira/cp02-python
