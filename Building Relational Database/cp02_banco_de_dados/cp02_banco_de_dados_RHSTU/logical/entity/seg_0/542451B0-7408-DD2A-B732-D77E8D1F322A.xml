@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="542451B0-7408-DD2A-B732-D77E8D1F322A" name="T_RHSTU_PAGTO_CONVENIO">
+<createdBy>Matt</createdBy>
+<createdTime>2025-05-16 20:16:49 UTC</createdTime>
+<ownerDesignName>cp02_banco_de_dados_RHSTU</ownerDesignName>
+<engineerTo>
+<item key="BD52EFD7-AD57-1D29-FBCE-37428351E3D1" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_PAGAMENTO" id="1D49B1E2-37B9-669B-BCEF-F3CA1C1CFA71">
+<createdBy>Matt</createdBy>
+<createdTime>2025-05-16 20:20:30 UTC</createdTime>
+<comment><![CDATA[Identificador único]]></comment>
+<generatorID>9A8070DE-0932-329A-4C04-D4ABB6E54C46</generatorID>
+<ownerDesignName>cp02_banco_de_dados_RHSTU</ownerDesignName>
+<engineerTo>
+<item key="BD52EFD7-AD57-1D29-FBCE-37428351E3D1" value="true"/>
+</engineerTo>
+<referedAttribute>D1A8473B-B224-8034-EC55-7B821ABA7FDA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NR_CARTEIRA" id="6FD04D45-08BA-18D8-4EA0-7EB6F2C06D30">
+<createdBy>Matt</createdBy>
+<createdTime>2025-05-16 20:17:12 UTC</createdTime>
+<comment><![CDATA[Número da carteira do convênio]]></comment>
+<commentInRDBMS><![CDATA[Número da carteira do convênio]]></commentInRDBMS>
+<notes><![CDATA[Número da carteira do convênio]]></notes>
+<ownerDesignName>cp02_banco_de_dados_RHSTU</ownerDesignName>
+<engineerTo>
+<item key="BD52EFD7-AD57-1D29-FBCE-37428351E3D1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NR_TRANSACAO" id="83EF9338-1BE3-997A-815A-DCC21A894062">
+<createdBy>Matt</createdBy>
+<createdTime>2025-05-16 20:21:08 UTC</createdTime>
+<comment><![CDATA[Código da transação]]></comment>
+<commentInRDBMS><![CDATA[Código da transação]]></commentInRDBMS>
+<notes><![CDATA[Código da transação]]></notes>
+<ownerDesignName>cp02_banco_de_dados_RHSTU</ownerDesignName>
+<engineerTo>
+<item key="BD52EFD7-AD57-1D29-FBCE-37428351E3D1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DT_TRANSACAO" id="68247600-F484-FAB0-35E3-CF7F11418416">
+<createdBy>Matt</createdBy>
+<createdTime>2025-05-16 20:21:55 UTC</createdTime>
+<comment><![CDATA[Data da transação]]></comment>
+<commentInRDBMS><![CDATA[Data da transação]]></commentInRDBMS>
+<notes><![CDATA[Data da transação]]></notes>
+<ownerDesignName>cp02_banco_de_dados_RHSTU</ownerDesignName>
+<engineerTo>
+<item key="BD52EFD7-AD57-1D29-FBCE-37428351E3D1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DT_VENCIMENTO" id="ED34023A-BADB-B596-4E85-4569778906E4">
+<createdBy>Matt</createdBy>
+<createdTime>2025-05-16 20:22:14 UTC</createdTime>
+<comment><![CDATA[Vencimento da fatura do convênio]]></comment>
+<commentInRDBMS><![CDATA[Vencimento da fatura do convênio]]></commentInRDBMS>
+<notes><![CDATA[Vencimento da fatura do convênio]]></notes>
+<ownerDesignName>cp02_banco_de_dados_RHSTU</ownerDesignName>
+<engineerTo>
+<item key="BD52EFD7-AD57-1D29-FBCE-37428351E3D1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

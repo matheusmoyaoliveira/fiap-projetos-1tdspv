@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6947421A-9878-823E-8493-70F526B765D4" name="T_PESSOA_FISICA">
+<createdBy>Gustavo Padlipskas</createdBy>
+<createdTime>2020-07-27 17:28:03 UTC</createdTime>
+<ownerDesignName>Slide_10</ownerDesignName>
+<engineerTo>
+<item key="11BA9E03-EC11-10C9-753A-C0E836C1D9E8" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="nr_rg" id="92C1671B-5E5D-8F8E-F077-2122094A40F0">
+<createdBy>Gustavo Padlipskas</createdBy>
+<createdTime>2020-07-27 17:28:19 UTC</createdTime>
+<comment><![CDATA[O número do RG da pessoa é informação obrigatória e deve ser armazenado números e letras, podendo receber até 14 caracteres ou numeros.]]></comment>
+<commentInRDBMS><![CDATA[O número do RG da pessoa é informação obrigatória e deve ser armazenado números e letras, podendo receber até 14 caracteres ou numeros.]]></commentInRDBMS>
+<ownerDesignName>Slide_10</ownerDesignName>
+<engineerTo>
+<item key="11BA9E03-EC11-10C9-753A-C0E836C1D9E8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+<ownDataTypeParameters>14,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_cpf" id="065AFC0A-90B7-282C-EA88-9AD9DAD1285A">
+<createdBy>Gustavo Padlipskas</createdBy>
+<createdTime>2020-07-27 17:28:50 UTC</createdTime>
+<comment><![CDATA[O número do CPF  da pessoa é informação obrigatória e deve ser armazenado números , podendo receber até 12 numeros.]]></comment>
+<ownerDesignName>Slide_10</ownerDesignName>
+<engineerTo>
+<item key="11BA9E03-EC11-10C9-753A-C0E836C1D9E8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>12</dataTypePrecision>
+<ownDataTypeParameters>,12,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_sexo" id="8015627C-6293-B404-F397-14EE737049BE">
+<createdBy>Gustavo Padlipskas</createdBy>
+<createdTime>2020-07-27 17:28:36 UTC</createdTime>
+<comment><![CDATA[O sexo da pessoa é informação obrigatória e deve ser armazenado letras no padrão InitCap, podendo receber até 20 caracteres..]]></comment>
+<commentInRDBMS><![CDATA[O sexo da pessoa é informação obrigatória e deve ser armazenado letras no padrão InitCap, podendo receber até 20 caracteres.]]></commentInRDBMS>
+<ownerDesignName>Slide_10</ownerDesignName>
+<engineerTo>
+<item key="11BA9E03-EC11-10C9-753A-C0E836C1D9E8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_nascimento" id="501B9AEE-DD6C-B75A-6E7F-C06D40D1786A">
+<createdBy>Gustavo Padlipskas</createdBy>
+<createdTime>2021-05-25 12:38:37 UTC</createdTime>
+<ownerDesignName>Slide_10</ownerDesignName>
+<engineerTo>
+<item key="11BA9E03-EC11-10C9-753A-C0E836C1D9E8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

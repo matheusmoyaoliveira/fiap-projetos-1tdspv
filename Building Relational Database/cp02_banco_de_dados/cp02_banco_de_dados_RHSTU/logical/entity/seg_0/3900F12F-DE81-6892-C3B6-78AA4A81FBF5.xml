@@ -1,0 +1,66 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3900F12F-DE81-6892-C3B6-78AA4A81FBF5" name="T_UF">
+<createdBy>Matt</createdBy>
+<createdTime>2025-05-16 20:47:29 UTC</createdTime>
+<ownerDesignName>cp02_banco_de_dados_RHSTU</ownerDesignName>
+<engineerTo>
+<item key="BD52EFD7-AD57-1D29-FBCE-37428351E3D1" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_UF" id="68625E15-5BD7-0055-0601-E72FFE96C014">
+<createdBy>Matt</createdBy>
+<createdTime>2025-05-16 20:47:48 UTC</createdTime>
+<comment><![CDATA[Ex: 'SP']]></comment>
+<commentInRDBMS><![CDATA[Ex: 'SP']]></commentInRDBMS>
+<notes><![CDATA[Ex: 'SP']]></notes>
+<ownerDesignName>cp02_banco_de_dados_RHSTU</ownerDesignName>
+<engineerTo>
+<item key="BD52EFD7-AD57-1D29-FBCE-37428351E3D1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NM_ESTADO" id="1F502793-DF33-BF13-6792-E4EA5E5209F8">
+<createdBy>Matt</createdBy>
+<createdTime>2025-05-16 20:48:13 UTC</createdTime>
+<comment><![CDATA[São Paulo]]></comment>
+<commentInRDBMS><![CDATA[São Paulo]]></commentInRDBMS>
+<notes><![CDATA[São Paulo]]></notes>
+<ownerDesignName>cp02_banco_de_dados_RHSTU</ownerDesignName>
+<engineerTo>
+<item key="BD52EFD7-AD57-1D29-FBCE-37428351E3D1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F1734E97-B2B6-F155-5ACA-F77184BE1227" name="T_UF PK">
+<createdBy>Matt</createdBy>
+<createdTime>2025-05-16 20:47:50 UTC</createdTime>
+<ownerDesignName>cp02_banco_de_dados_RHSTU</ownerDesignName>
+<engineerTo>
+<item key="BD52EFD7-AD57-1D29-FBCE-37428351E3D1" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>68625E15-5BD7-0055-0601-E72FFE96C014</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

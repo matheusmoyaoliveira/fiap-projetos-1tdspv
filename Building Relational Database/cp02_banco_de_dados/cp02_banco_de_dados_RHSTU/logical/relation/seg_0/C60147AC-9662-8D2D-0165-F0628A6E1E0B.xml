@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FK_UF" directorySegmentName="seg_0" id="C60147AC-9662-8D2D-0165-F0628A6E1E0B">
+<createdBy>Matt</createdBy>
+<createdTime>2025-05-16 20:49:54 UTC</createdTime>
+<ownerDesignName>cp02_banco_de_dados_RHSTU</ownerDesignName>
+<engineerTo>
+<item key="BD52EFD7-AD57-1D29-FBCE-37428351E3D1" value="true"/>
+</engineerTo>
+<sourcePk>F1734E97-B2B6-F155-5ACA-F77184BE1227</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>3900F12F-DE81-6892-C3B6-78AA4A81FBF5</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>B3647484-E262-DF24-0B8A-E99F774ABC75</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,56 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="22454DB6-E4B7-5DB2-10D4-512BD5E86D4B" name="T_ENGENHEIRO">
+<createdBy>Gustavo Padlipskas</createdBy>
+<createdTime>2020-07-27 17:38:03 UTC</createdTime>
+<ownerDesignName>Slide_20</ownerDesignName>
+<engineerTo>
+<item key="11BA9E03-EC11-10C9-753A-C0E836C1D9E8" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="nr_crea" id="A52FD849-0DB7-CC2E-4996-13A202E3D437">
+<createdBy>Gustavo Padlipskas</createdBy>
+<createdTime>2020-07-27 17:38:03 UTC</createdTime>
+<ownerDesignName>Slide_20</ownerDesignName>
+<engineerTo>
+<item key="11BA9E03-EC11-10C9-753A-C0E836C1D9E8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>12</dataTypePrecision>
+<ownDataTypeParameters>,12,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_registro_crea" id="24A61D97-729C-14A6-03DC-A30A49849C8F">
+<createdBy>Gustavo Padlipskas</createdBy>
+<createdTime>2021-05-24 18:02:32 UTC</createdTime>
+<ownerDesignName>Slide_20</ownerDesignName>
+<engineerTo>
+<item key="11BA9E03-EC11-10C9-753A-C0E836C1D9E8" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="BEE5017F-0B13-F8F5-D47E-1CBA9D4822C5" name="T_ENGENHEIRO PK">
+<createdBy>Gustavo Padlipskas</createdBy>
+<createdTime>2021-05-24 18:08:56 UTC</createdTime>
+<ownerDesignName>Slide_20</ownerDesignName>
+<engineerTo>
+<item key="11BA9E03-EC11-10C9-753A-C0E836C1D9E8" value="true"/>
+</engineerTo>
+<pk>true</pk>
+</identifier>
+</identifiers>
+</Entity>

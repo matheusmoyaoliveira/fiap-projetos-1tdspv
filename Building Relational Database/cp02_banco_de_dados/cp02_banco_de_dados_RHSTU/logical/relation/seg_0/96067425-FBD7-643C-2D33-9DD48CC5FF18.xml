@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FK_RHSTU_PAGTO_CARTAO_DEBITO" directorySegmentName="seg_0" id="96067425-FBD7-643C-2D33-9DD48CC5FF18">
+<createdBy>Matt</createdBy>
+<createdTime>2025-05-16 20:28:29 UTC</createdTime>
+<ownerDesignName>cp02_banco_de_dados_RHSTU</ownerDesignName>
+<engineerTo>
+<item key="BD52EFD7-AD57-1D29-FBCE-37428351E3D1" value="true"/>
+</engineerTo>
+<sourcePk>4C30638B-CC93-37F8-3632-8332F70D08BF</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>201C4E7B-AF56-FCD9-9A1E-3C495687A094</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>1E464CF5-01F7-A31A-9C8D-AB389DCE597A</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

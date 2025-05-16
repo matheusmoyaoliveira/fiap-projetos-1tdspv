@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FK_LOGRADOUROv2" directorySegmentName="seg_0" id="3B1728A4-4C18-85E0-D1D7-23DBA9D85610">
+<createdBy>Matt</createdBy>
+<createdTime>2025-05-16 21:07:31 UTC</createdTime>
+<ownerDesignName>cp02_banco_de_dados_RHSTU</ownerDesignName>
+<engineerTo>
+<item key="BD52EFD7-AD57-1D29-FBCE-37428351E3D1" value="true"/>
+</engineerTo>
+<sourcePk>93D17877-D0B7-1D86-C67C-E0A36C941D0E</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>BF6FD575-202C-C4DB-25DC-CD29A609F2B3</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>506DDC9A-FC9E-D13D-7FAD-ED571E3AEA46</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

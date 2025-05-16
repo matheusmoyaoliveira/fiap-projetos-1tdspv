@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="730D85CC-0FF6-100E-5AC6-3D0F3229EBFB" name="T_PES_JURIDICA">
+<createdBy>Gustavo Padlipskas</createdBy>
+<createdTime>2020-07-27 17:29:32 UTC</createdTime>
+<ownerDesignName>Slide_10</ownerDesignName>
+<engineerTo>
+<item key="11BA9E03-EC11-10C9-753A-C0E836C1D9E8" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="nr_cpnj" id="AE89A1DC-2888-6FEA-D84D-59581C423D57">
+<createdBy>Gustavo Padlipskas</createdBy>
+<createdTime>2020-07-27 17:30:00 UTC</createdTime>
+<comment><![CDATA[O número do CNPJ da pessoa juridica é informação obrigatória e deve ser armazenado no máximo 14 números.]]></comment>
+<commentInRDBMS><![CDATA[O número do CNPJ da pessoa juridica é informação obrigatória e deve ser armazenado no máximo 14 números.]]></commentInRDBMS>
+<ownerDesignName>Slide_10</ownerDesignName>
+<engineerTo>
+<item key="11BA9E03-EC11-10C9-753A-C0E836C1D9E8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>14</dataTypePrecision>
+<ownDataTypeParameters>,14,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_fantasia" id="CBE15338-FB62-5549-886F-C1C87CDDAA22">
+<createdBy>Gustavo Padlipskas</createdBy>
+<createdTime>2020-07-27 17:29:49 UTC</createdTime>
+<ownerDesignName>Slide_10</ownerDesignName>
+<engineerTo>
+<item key="11BA9E03-EC11-10C9-753A-C0E836C1D9E8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_insc_estadual" id="D433DF62-E650-5185-C337-8CD3BA860A64">
+<createdBy>Gustavo Padlipskas</createdBy>
+<createdTime>2020-07-27 17:30:14 UTC</createdTime>
+<comment><![CDATA[O número da Insrição Estadual da pessoa juridica é informação obrigatória e deve ser armazenado no máximo até 11  números.]]></comment>
+<commentInRDBMS><![CDATA[O número da Insrição Estadual da pessoa juridica é informação obrigatória e deve ser armazenado no máximo até 11  números.]]></commentInRDBMS>
+<ownerDesignName>Slide_10</ownerDesignName>
+<engineerTo>
+<item key="11BA9E03-EC11-10C9-753A-C0E836C1D9E8" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<ownDataTypeParameters>,11,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_ramo_atividade" id="DA637384-6036-08D0-E44E-1B774F1EF4BF">
+<createdBy>Gustavo Padlipskas</createdBy>
+<createdTime>2020-07-27 17:30:25 UTC</createdTime>
+<commentInRDBMS><![CDATA[O ramo de atividade da pessoa juridica é informação obrigatória e deve ser armazenado no máximo até 40 caracteres..]]></commentInRDBMS>
+<ownerDesignName>Slide_10</ownerDesignName>
+<engineerTo>
+<item key="11BA9E03-EC11-10C9-753A-C0E836C1D9E8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

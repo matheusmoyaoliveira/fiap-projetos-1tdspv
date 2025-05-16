@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="534CFC3A-F3BF-E51F-D8E8-C4373F871692" name="T PESSOA">
+<createdBy>Gustavo Padlipskas</createdBy>
+<createdTime>2020-07-27 17:26:21 UTC</createdTime>
+<generatorID>4BABE7BC-C099-09C0-05BB-5D93DA2391F8</generatorID>
+<ownerDesignName>Slide_10</ownerDesignName>
+<engineerTo>
+<item key="11BA9E03-EC11-10C9-753A-C0E836C1D9E8" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cd_pessoa" id="6A61F0DC-838A-9092-3C69-B94773684199">
+<createdBy>Gustavo Padlipskas</createdBy>
+<createdTime>2020-07-27 17:26:26 UTC</createdTime>
+<comment><![CDATA[Esse é a chave primária da pessoa. Atributo obrigatório e auto numeração.]]></comment>
+<commentInRDBMS><![CDATA[Esse é a chave primária da pessoa. Atributo obrigatório e auto numeração.]]></commentInRDBMS>
+<ownerDesignName>Slide_10</ownerDesignName>
+<engineerTo>
+<item key="11BA9E03-EC11-10C9-753A-C0E836C1D9E8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_pessoa" id="1248729E-BA72-438F-759E-60ECD9D8D62F">
+<createdBy>Gustavo Padlipskas</createdBy>
+<createdTime>2020-07-27 17:26:42 UTC</createdTime>
+<comment><![CDATA[O nome da pessoa é informação obrigatória e deve ser armazenado no padrão InitCap, podendo receber até 60 caracteres. ]]></comment>
+<commentInRDBMS><![CDATA[O nome da pessoa é informação obrigatória e deve ser armazenado no padrão InitCap, podendo receber até 60 caracteres. ]]></commentInRDBMS>
+<ownerDesignName>Slide_10</ownerDesignName>
+<engineerTo>
+<item key="11BA9E03-EC11-10C9-753A-C0E836C1D9E8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_endereco" id="48B20F9A-45BF-2266-D1C8-D9E3BB1077B7">
+<createdBy>Gustavo Padlipskas</createdBy>
+<createdTime>2020-07-27 17:26:58 UTC</createdTime>
+<comment><![CDATA[O endereco da pessoa é informação obrigatória e deve ser armazenado no padrão InitCap, podendo receber até 60 caracteres. ]]></comment>
+<commentInRDBMS><![CDATA[O endereco da pessoa é informação obrigatória e deve ser armazenado no padrão InitCap, podendo receber até 60 caracteres.  ]]></commentInRDBMS>
+<ownerDesignName>Slide_10</ownerDesignName>
+<engineerTo>
+<item key="11BA9E03-EC11-10C9-753A-C0E836C1D9E8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_telefone" id="73915D40-68AB-AADA-D5ED-51F77AB9468B">
+<createdBy>Gustavo Padlipskas</createdBy>
+<createdTime>2020-07-27 17:27:12 UTC</createdTime>
+<comment><![CDATA[O número do telefone  da pessoa é informação obrigatória e deve ser armazenado no padrão InitCap, podendo receber até 11 números.]]></comment>
+<commentInRDBMS><![CDATA[O número do telefone  da pessoa é informação obrigatória e deve ser armazenado no padrão InitCap, podendo receber até 11 números.]]></commentInRDBMS>
+<ownerDesignName>Slide_10</ownerDesignName>
+<engineerTo>
+<item key="11BA9E03-EC11-10C9-753A-C0E836C1D9E8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<ownDataTypeParameters>,11,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_email" id="F39F18D8-78EB-F3FE-343E-519C1A54DC2D">
+<createdBy>Gustavo Padlipskas</createdBy>
+<createdTime>2020-07-27 17:27:31 UTC</createdTime>
+<comment><![CDATA[O email da pessoa é informação obrigatória e deve ser armazenada em letras minúsculas, podendo receber até 40 caracteres..]]></comment>
+<commentInRDBMS><![CDATA[O email da pessoa é informação obrigatória e deve ser armazenada em letras minúsculas, podendo receber até 40 caracteres.]]></commentInRDBMS>
+<ownerDesignName>Slide_10</ownerDesignName>
+<engineerTo>
+<item key="11BA9E03-EC11-10C9-753A-C0E836C1D9E8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4BF491AD-CC8B-9873-006D-E5D847A7F1AF" name="PK_T_PESSOA">
+<createdBy>Gustavo Padlipskas</createdBy>
+<createdTime>2020-07-27 17:26:41 UTC</createdTime>
+<ownerDesignName>Slide_10</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="11BA9E03-EC11-10C9-753A-C0E836C1D9E8" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>6A61F0DC-838A-9092-3C69-B94773684199</newElementsIDs>
+<usedAttributes>
+<attributeRef>6A61F0DC-838A-9092-3C69-B94773684199</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
