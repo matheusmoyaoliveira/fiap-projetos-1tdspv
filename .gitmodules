@@ -16,3 +16,6 @@
 [submodule "Building Relational Database/cp-01-building-database"]
 	path = Building Relational Database/cp-01-building-database
 	url = https://github.com/matheusmoyaoliveira/cp-01-building-database
+[submodule "Building Relational Database/cp-02-building-database"]
+	path = Building Relational Database/cp-02-building-database
+	url = https://github.com/matheusmoyaoliveira/cp-02-building-database
