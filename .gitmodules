@@ -13,3 +13,6 @@
 [submodule "Computational Thinking Using Python/cp02-python"]
 	path = Computational Thinking Using Python/cp02-python
 	url = https://github.com/matheusmoyaoliveira/cp02-python
+[submodule "Building Relational Database/cp-01-building-database"]
+	path = Building Relational Database/cp-01-building-database
+	url = https://github.com/matheusmoyaoliveira/cp-01-building-database
