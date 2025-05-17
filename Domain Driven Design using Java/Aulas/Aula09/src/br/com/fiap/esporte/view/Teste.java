@@ -10,7 +10,7 @@ public class Teste {
         Endereco endereco = new Endereco();
         //Atribuir valores aos atributos (fixo)
 
-        
+
         pessoaFisica.setEmail("matheusmoya@hotmail.com");
         pessoaFisica.setIdade(27);
 
