@@ -22,3 +22,6 @@
 [submodule "Domain Driven Design using Java/Cp03Java"]
 	path = Domain Driven Design using Java/Cp03Java
 	url = https://github.com/matheusmoyaoliveira/Cp03Java.git
+[submodule "Domain Driven Design using Java/Cp02Java"]
+	path = Domain Driven Design using Java/Cp02Java
+	url = https://github.com/matheusmoyaoliveira/Cp02Java.git
