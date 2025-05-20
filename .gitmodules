@@ -19,3 +19,6 @@
 [submodule "Building Relational Database/cp-02-building-database"]
 	path = Building Relational Database/cp-02-building-database
 	url = https://github.com/matheusmoyaoliveira/cp-02-building-database
+[submodule "Domain Driven Design using Java/Cp03Java"]
+	path = Domain Driven Design using Java/Cp03Java
+	url = https://github.com/matheusmoyaoliveira/Cp03Java.git
