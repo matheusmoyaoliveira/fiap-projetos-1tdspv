@@ -7,4 +7,16 @@ public class Produto {
     public Produto(int codigo) {
         this.codigo = codigo;
     }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public int getPreco() {
+        return preco;
+    }
+
+    public void setPreco(int preco) {
+        this.preco = preco;
+    }
 }
