@@ -9,7 +9,7 @@ def menu() -> int:
 
 def cadastra_pergunta(lista: list):
     num = int(input("Número: "))
-    enum = input("Enunciado: ")
+    enun = input("Enunciado: ")
     tipo = input("Tipo: ")
     alternativas = None
     if tipo != 'aberta':
@@ -23,18 +23,18 @@ def cadastra_pergunta(lista: list):
             aux = input(f"alt {i}: ")
     
     lista.append(num)
-    lista.append(enum)
+    lista.append(enun)
     lista.append(tipo)
     lista.append(alternativas)
 
 def monta_alternativas(opcoes: list) -> str:
     resp = ""
-    opcoes = "abcdefghijk"
+    letras = "abcdefghijk"
     i = 0
     while i < len(opcoes):
-        resp = resp + f"\t{opcoes[i]}) {opcoes[i]}\n"
+        resp = resp + f"\t{letras[i]}) {opcoes[i]}\n"   
         i = i + 1
-    return resp 
+    return resp
 
 def aplica_enquete(perguntas: list, respostas: list):
     i = 0
@@ -49,7 +49,11 @@ def aplica_enquete(perguntas: list, respostas: list):
         i = i + 4
 
 
-lista = []
+
+#INICIO PROGRAMA (main)
+lista = [1, 'O que é Objeto?', 'aberta', None, 2, 
+    'Em Java, quais desses tipos representam números inteiros?', 'unica', 
+    ['int, short, byte', 'long, float', 'bigint, bigfloat', 'double, char'], 3, 'Assinale as alternativas incorretas?', 'multipla', ['a palavra reservada new serve para criar uma nova variavel', 'extends significa uma extensão de telefone', 'implements é um recurso da linguagem Java', 'enum define tipos fixos dentro do java', 'o construtor cria o objeto e inicializa seus atributos']]
 respostas = []
 opcao = 0
 while opcao != 5:
@@ -61,5 +65,8 @@ while opcao != 5:
     elif opcao == 3:
         print("apaga pergunta")
     elif opcao == 4:
-        aplica_enquete(lista, resposta)
+        aplica_enquete(lista, respostas)
     elif opcao == 5:
+        print("saindo do sistema")
+    else:
+        print("opcao invalida")
