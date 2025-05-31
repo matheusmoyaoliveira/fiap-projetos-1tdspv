@@ -28,3 +28,6 @@
 [submodule "Artificial Intelligence & Chatbot/gs0iachatbot"]
 	path = Artificial Intelligence & Chatbot/gs0iachatbot
 	url = https://github.com/matheusmoyaoliveira/gs-iachatbot.git
+[submodule "Artificial Intelligence & Chatbot/gs-iachatbot"]
+	path = Artificial Intelligence & Chatbot/gs-iachatbot
+	url = https://github.com/matheusmoyaoliveira/gs-iachatbot.git
