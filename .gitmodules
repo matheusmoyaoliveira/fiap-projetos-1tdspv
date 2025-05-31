@@ -25,3 +25,6 @@
 [submodule "Domain Driven Design using Java/Cp02Java"]
 	path = Domain Driven Design using Java/Cp02Java
 	url = https://github.com/matheusmoyaoliveira/Cp02Java.git
+[submodule "Artificial Intelligence & Chatbot/gs0iachatbot"]
+	path = Artificial Intelligence & Chatbot/gs0iachatbot
+	url = https://github.com/matheusmoyaoliveira/gs-iachatbot.git
