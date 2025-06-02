@@ -31,3 +31,6 @@
 [submodule "Artificial Intelligence & Chatbot/gs-iachatbot"]
 	path = Artificial Intelligence & Chatbot/gs-iachatbot
 	url = https://github.com/matheusmoyaoliveira/gs-iachatbot.git
+[submodule "Computational Thinking Using Python/gs-python"]
+	path = Computational Thinking Using Python/gs-python
+	url = https://github.com/matheusmoyaoliveira/gs-python.git
