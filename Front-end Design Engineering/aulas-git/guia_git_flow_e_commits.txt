@@ -1,0 +1,51 @@
+
+==============================
+GUIA DE GIT FLOW E PADRÕES DE COMMIT
+==============================
+
+✅ PADRÕES DE COMMIT (baseado no repositório iuricode/padroes-de-commits):
+
+- feat: Nova funcionalidade
+- fix: Correção de bug
+- docs: Documentação (README, comentários)
+- test: Testes unitários ou de integração
+- build: Mudanças em scripts de build ou dependências
+- perf: Melhorias de desempenho
+- style: Estilo de código (formatação, lint)
+- refactor: Refatoração sem alterar comportamento
+- chore: Tarefas de manutenção geral
+- ci: Configuração de CI/CD
+- raw: Alterações em dados/brutos
+- cleanup: Limpeza de código comentado
+
+Principais para uso diário: feat, fix, docs, test, style, refactor, chore, ci
+
+==============================
+
+✅ PREFIXOS DE BRANCHES (Git Flow):
+
+- feature/ → novas funcionalidades (ex: feature/login-system)
+- bugfix/ → correções baseadas em release ou develop (ex: bugfix/corrigir-login)
+- hotfix/ → correções imediatas críticas na main (ex: hotfix/erro02-correcao-banco)
+- release/ → preparação para versão de release (ex: release/v1.0)
+- develop → branch principal de desenvolvimento integrado
+- main → branch da versão de produção estável
+
+DICA: Use letras minúsculas, separação por hífen (-), sem espaços
+
+==============================
+
+💡 FLUXO RECOMENDADO DE GIT FLOW:
+
+1. Comece no branch 'develop'
+2. Crie um branch feature/nome-do-recurso
+3. Faça commits com prefixos corretos — ex: feat: criar classe Conta
+4. Dê merge da feature para develop (via pull request)
+5. Crie branch release/v1.0 quando estiver pronto pra subir
+6. Após testes, dê merge de release/v1.0 para main e develop
+7. Marque a tag/release v1.0 na branch main
+8. Se encontrar bug crítico, crie hotfix/descricao e dê merge em main e develop
+
+==============================
+
+💾 Use esse guia em todos os projetos para manter organização e padrão profissional.
