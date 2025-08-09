@@ -16,6 +16,11 @@ public class Frutas {
 
     }
 
+    @Override
+    public String toString() {
+        return nome + " | " + cor + " | R$" + preco ;
+    }
+
     public String getCor() {
         return cor;
     }

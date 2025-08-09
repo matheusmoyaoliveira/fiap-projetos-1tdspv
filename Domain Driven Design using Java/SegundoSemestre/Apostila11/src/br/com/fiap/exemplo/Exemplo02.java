@@ -20,27 +20,45 @@ public class Exemplo02 {
         List<Frutas> frutas = new ArrayList<>();
 
         //Pedir para o usuario inserir uma fruta na lista
-        System.out.println("Digite o nome de uma fruta: ");
-        nome = leitor.next();
+        int opcao = -1;
 
-        System.out.println("Digite a cor dessa fruta: ");
-        cor = leitor.next();
+        while (opcao != 0) {
+            System.out.println("1 - Cadastrar Fruta");
+            System.out.println("2 - Listar Frutas");
+            System.out.println("3 - Remover Frutas");
+            System.out.println("4 - Total de frutas cadastradas");
+            System.out.println("0 - Sair");
+            System.out.println("Digite a opção: ");
+            opcao = leitor.nextInt();
 
-        System.out.println("Digite o preço: ");
-        preco = leitor.nextDouble();
-        leitor.nextLine();
+            if (opcao == 1) {
+                System.out.println("Digite o nome de uma fruta: ");
+                nome = leitor.next();
 
-        Frutas fruta = new Frutas(nome, cor, preco);
+                System.out.println("Digite a cor dessa fruta: ");
+                cor = leitor.next();
 
-        frutas.add(fruta);
+                System.out.println("Digite o preço: ");
+                preco = leitor.nextDouble();
+                leitor.nextLine();
 
-        //Exibir todas as frutas na lista
+                Frutas fruta = new Frutas(nome, cor, preco);
 
-        for (Frutas f : frutas) {
-            System.out.println("Fruta: " + f.getNome());
-            System.out.println("Cor: " + f.getCor());
-            System.out.println("Preço: " + f.getPreco());
+                frutas.add(fruta);
+            } else if (opcao == 2) {
+                for (int i = 0; i < frutas.size(); i++) {
+                    System.out.println(i + " - " + frutas.get(i));
+                    break;
+                }
+            } else if (opcao == 3) {
+                System.out.println("Digite o nome da fruta que deseja remover: ");
+                int posicao = leitor.nextInt();
+                frutas.remove(posicao);
+            } else if (opcao == 4) {
+                System.out.println("Total: " + frutas.size());
+            }
         }
+        //Exibir todas as frutas na lista
 
         leitor.close();
 
