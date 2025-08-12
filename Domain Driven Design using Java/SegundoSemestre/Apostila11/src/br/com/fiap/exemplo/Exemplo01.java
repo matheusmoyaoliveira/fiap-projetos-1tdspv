@@ -11,7 +11,7 @@ public class Exemplo01 {
         List<String> frutas = new ArrayList<>();
         frutas.add("Manga");
         frutas.add("Uva");
-
+        frutas.add("Manga");
         //Adicionar uma fruta na segunda posição
         frutas.add(1, "Morango");
 
