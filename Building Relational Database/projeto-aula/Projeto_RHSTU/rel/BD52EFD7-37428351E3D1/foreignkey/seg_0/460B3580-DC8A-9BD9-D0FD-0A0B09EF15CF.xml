@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="460B3580-DC8A-9BD9-D0FD-0A0B09EF15CF" containerWithKeyObject="3430AA0D-4847-FE2E-63D9-9DF17BA5FDD1" localFKIndex="11DE5498-BA8D-312D-7089-874022630E4E" name="FK_STU_FORMA_PAGTO_CONSULTA">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-08-15 00:35:51 UTC</createdTime>
+<generatorID>33B1FD0C-37C4-29F6-FEE9-93488DD3F096</generatorID>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<referredTableLongName>T_RHSTU_FORMA_PAGAMENTO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>803C1830-C34D-A517-07E0-73D5A105ED6B</referredTableID>
+<keyObject>698C2BB8-B9F6-2C25-650C-E5E5FC3401A3</keyObject>
+<referredKeyID>698C2BB8-B9F6-2C25-650C-E5E5FC3401A3</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_FORMA_PAGTO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

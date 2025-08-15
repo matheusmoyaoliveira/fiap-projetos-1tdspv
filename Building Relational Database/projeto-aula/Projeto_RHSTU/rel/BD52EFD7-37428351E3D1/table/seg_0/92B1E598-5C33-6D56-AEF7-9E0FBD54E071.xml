@@ -1,0 +1,145 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="92B1E598-5C33-6D56-AEF7-9E0FBD54E071" name="T_RHSTU_TELEFONE_PACIENTE">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-08-15 00:35:51 UTC</createdTime>
+<generatorID>C5153E1A-0C36-99E4-0FDF-BD7427056DA5</generatorID>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_PACIENTE" id="7C6326B1-6550-5B48-6FBD-A24C06E74B80">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-08-15 00:35:51 UTC</createdTime>
+<comment><![CDATA[Esse atributo irá receber a chave primária do paciente. Esse número é sequencial e gerado automaticamente pelo sistema. Seu conteúdo é obrigatório.]]></comment>
+<commentInRDBMS><![CDATA[Esse atributo irá receber a chave primária do paciente. Esse número é sequencial e gerado automaticamente pelo sistema. Seu conteúdo é obrigatório.]]></commentInRDBMS>
+<generatorID>B9084DB1-DCD1-09AB-CE95-9CC3B7060678</generatorID>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="838E84F8-7B49-83F6-66F1-0748FB636D26" referredColumn="B6D52CC0-3364-2EC2-DC77-A79CCF8DB9B9"/>
+</associations>
+</Column>
+<Column name="ID_TELEFONE" id="3D82198F-AA11-93ED-557A-95FE0B068C42">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-08-15 00:35:51 UTC</createdTime>
+<comment><![CDATA[Esse atributo irá receber a chave primária do telefone do paciente. Esse número é sequencial iniciando com 1 a partir do id do paciente e é  gerado automaticamente pelo sistema. Seu conteúdo é obrigatório.]]></comment>
+<commentInRDBMS><![CDATA[Esse atributo irá receber a chave primária do telefone do paciente. Esse número é sequencial iniciando com 1 a partir do id do paciente e é  gerado automaticamente pelo sistema. Seu conteúdo é obrigatório.]]></commentInRDBMS>
+<generatorID>E2A7759F-F71D-BA2E-6CB9-54A708AF5648</generatorID>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NR_DDI" id="D5DC0B68-F539-C067-79EE-DD1C04DFC965">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-08-15 00:35:51 UTC</createdTime>
+<comment><![CDATA[Este atributo irá receber o número do DDI do telefone do  paciente. Seu conteudo é obrigatório]]></comment>
+<commentInRDBMS><![CDATA[Este atributo irá receber o número do DDI do telefone do  paciente. Seu conteudo é obrigatório.]]></commentInRDBMS>
+<generatorID>51C7512B-A456-EC5E-42FA-78F75E2201C5</generatorID>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NR_DDD" id="E63AFC41-E617-1E8E-A6D4-CC1D036995C7">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-08-15 00:35:51 UTC</createdTime>
+<comment><![CDATA[Esse atributo irá receber o número do DDD do telefone paciente.  Seu conteúdo é obrigatório.]]></comment>
+<commentInRDBMS><![CDATA[Esse atributo irá receber o número do DDD do telefone paciente.  Seu conteúdo é obrigatório.]]></commentInRDBMS>
+<generatorID>6058B28E-F6D9-0905-716D-9DA1C28FF102</generatorID>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NR_TELEFONE" id="7050B3CA-B1B2-9253-D9D4-6AEC27CFE1F3">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-08-15 00:35:51 UTC</createdTime>
+<comment><![CDATA[Esse atributo irá receber o número do telefone do  DDD do telefone paciente.  Seu conteúdo é obrigatório.]]></comment>
+<commentInRDBMS><![CDATA[Esse atributo irá receber o número do telefone do  DDD do telefone paciente.  Seu conteúdo é obrigatório.]]></commentInRDBMS>
+<generatorID>AF2C2E10-E44F-75CA-4643-5E1316EB704B</generatorID>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TP_TELEFONE" id="3F1AE4F3-56E5-BDD1-4E77-3F02D0E037AD">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-08-15 00:35:51 UTC</createdTime>
+<comment><![CDATA[Esse atributo irá receber o tipo do  telefone  do telefone paciente.  Seu conteúdo é obrigatório e os valores possiveis são: Comercial, Residencial, Recado e Celular]]></comment>
+<commentInRDBMS><![CDATA[Esse atributo irá receber o tipo do  telefone  do telefone paciente.  Seu conteúdo é obrigatório e os valores possiveis são: Comercial, Residencial, Recado e Celular]]></commentInRDBMS>
+<generatorID>EC5B421C-2398-8D05-F32A-8C0EBDF07BDE</generatorID>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ST_TELEFONE" id="7C07DFB7-5FD8-476B-C0CB-A54E8D2F193E">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-08-15 00:35:51 UTC</createdTime>
+<comment><![CDATA[Esse atributo irá receber o status do telefone do paciente.  Seu conteúdo é obrigatório e deve possuir os seguintes valores: (A)tivo ou (I)nativo.]]></comment>
+<commentInRDBMS><![CDATA[Esse atributo irá receber o status do telefone do paciente.  Seu conteúdo é obrigatório e deve possuir os seguintes valores: (A)tivo ou (I)nativo.]]></commentInRDBMS>
+<generatorID>2EE0DBDD-953B-1496-ECD5-15DBC330FBBE</generatorID>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<constraintName>UK_RHSTU_STATUS_TELEF_PACIENTE</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="A" description="Status ativo e operante do telefone do paciente."/>
+<valueDef value="I" description="Status inativo e inoperante do telefone do paciente."/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="554E47C4-8964-F664-7606-FB5F5357C1EC" name="PK_RHSTU_TELEFONE_PACIENTE">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-08-15 00:35:51 UTC</createdTime>
+<generatorID>5AA0F023-B3CA-8221-2E61-F3D956BF0F34</generatorID>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3D82198F-AA11-93ED-557A-95FE0B068C42"/>
+<colUsage columnID="7C6326B1-6550-5B48-6FBD-A24C06E74B80"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="29699FCE-D477-01B1-34EA-9AD9371B2689" name="FK_RHSTU_PACIENTE_TELEF">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-08-15 00:35:51 UTC</createdTime>
+<generatorID>8BCC4E83-DAA8-181A-7DE9-422F9A8742E1</generatorID>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7C6326B1-6550-5B48-6FBD-A24C06E74B80"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

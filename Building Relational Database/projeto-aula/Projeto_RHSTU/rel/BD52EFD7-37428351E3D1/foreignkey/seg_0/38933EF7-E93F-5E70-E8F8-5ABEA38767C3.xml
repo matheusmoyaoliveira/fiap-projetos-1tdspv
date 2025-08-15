@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="38933EF7-E93F-5E70-E8F8-5ABEA38767C3" containerWithKeyObject="871E048D-1CEC-5E2C-8F6D-AC55B8532D04" localFKIndex="226076C3-E9B2-5C67-C69D-D7A620CF2D60" name="FK_PKD_ESTADO_CIDADE">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-08-15 00:35:51 UTC</createdTime>
+<generatorID>7A44CA83-2567-601B-3A93-654A32B8C4FE</generatorID>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<referredTableLongName>T_RHSTU_ESTADO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>597B6481-7106-BD76-57B5-1DA3CE43AD37</referredTableID>
+<keyObject>CAAA2F4F-28D3-17D8-2951-FF3F0E76C795</keyObject>
+<referredKeyID>CAAA2F4F-28D3-17D8-2951-FF3F0E76C795</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_ESTADO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
