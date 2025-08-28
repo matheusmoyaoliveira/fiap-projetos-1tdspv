@@ -37,3 +37,6 @@
 [submodule "Domain Driven Design using Java/SegundoSemestre/Cp04-java"]
 	path = Domain Driven Design using Java/SegundoSemestre/Cp04-java
 	url = https://github.com/matheusmoyaoliveira/Cp04-java
+[submodule "Artificial Intelligence & Chatbot/cp04-chatbot"]
+	path = Artificial Intelligence & Chatbot/cp04-chatbot
+	url = https://github.com/matheusmoyaoliveira/cp04-chatbot
