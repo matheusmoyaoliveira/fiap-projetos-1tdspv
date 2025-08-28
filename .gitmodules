@@ -34,3 +34,6 @@
 [submodule "Computational Thinking Using Python/gs-python"]
 	path = Computational Thinking Using Python/gs-python
 	url = https://github.com/matheusmoyaoliveira/gs-python.git
+[submodule "Domain Driven Design using Java/SegundoSemestre/Cp04-java"]
+	path = Domain Driven Design using Java/SegundoSemestre/Cp04-java
+	url = https://github.com/matheusmoyaoliveira/Cp04-java

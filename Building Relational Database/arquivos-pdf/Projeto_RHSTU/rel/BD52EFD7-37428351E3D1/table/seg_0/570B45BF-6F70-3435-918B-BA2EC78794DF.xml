@@ -1,0 +1,161 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="570B45BF-6F70-3435-918B-BA2EC78794DF" name="T_RHSTU_PRESCICAO_MEDICA">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-08-15 00:35:51 UTC</createdTime>
+<generatorID>D392555C-7206-A975-2B61-A8268A878BA6</generatorID>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_PRESCRICAO_MEDICA" id="1CAD3ACF-07E0-DFB4-225B-9D6EDB1A0522">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-08-15 00:35:51 UTC</createdTime>
+<generatorID>06450B3D-258A-9A48-AE2A-5E0D6CA8C185</generatorID>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>SQ_RHSTU_PRESCRICAO_MEDICA</autoIncrementSequenceName>
+<autoIncrementTriggerName>TG_RHSTU_PRESCRICAO_MEDICA</autoIncrementTriggerName>
+</Column>
+<Column name="ID_UNID_HOSPITAL" id="ACF4646B-EF5C-25B1-DA7D-573D04CEA23C">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-08-15 00:35:51 UTC</createdTime>
+<comment><![CDATA[Esse atributo irá receber a chave primária da Unidade Hospitalar. Esse número é sequencia e gerado automaticamente pelo sistema. Seu conteúdo é obrigatório.]]></comment>
+<generatorID>2A69C009-B838-E04E-4FF5-3DBE5E4EBA04</generatorID>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2E177EE3-C80B-9E4A-4ECD-B7B44A7B495C" referredColumn="A675200D-40F2-CA46-3FFC-19662753B355"/>
+</associations>
+</Column>
+<Column name="NR_CONSULTA" id="F1C49084-AE7D-469D-709A-82AE07DCF0A9">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-08-15 00:35:51 UTC</createdTime>
+<generatorID>88C91FA8-2D56-602D-977A-466442B3F658</generatorID>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2E177EE3-C80B-9E4A-4ECD-B7B44A7B495C" referredColumn="2C4F57C6-4966-D874-A4C7-F7342AF58493"/>
+</associations>
+</Column>
+<Column name="ID_MEDICAMENTO" id="DDAC8A2E-0C38-F937-AB0C-AAC3D863AD85">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-08-15 00:35:51 UTC</createdTime>
+<generatorID>51247351-12CE-622C-F252-6F6E4EDBC3FA</generatorID>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="67366FED-1D01-CB7E-FCA4-BB061383B573" referredColumn="63DC9B0D-B8C2-16EB-9AFF-CC2FC4113E36"/>
+</associations>
+</Column>
+<Column name="DS_POSOLOGIA" id="0143FBF6-E538-61C2-CA98-7E8983BC56D8">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-08-15 00:35:51 UTC</createdTime>
+<generatorID>BEA532CF-A4B1-B5C3-B589-A6CC5BEDF284</generatorID>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DS_VIA" id="45EAD96C-3352-9FD8-A19F-FFE523073E41">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-08-15 00:35:51 UTC</createdTime>
+<generatorID>CCA1487C-3E75-48FF-4219-E9538B0053A5</generatorID>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DS_OBSERVACAO_USO" id="B6D8D2A4-860E-E644-1359-7E2AD8BB5468">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-08-15 00:35:51 UTC</createdTime>
+<generatorID>29516629-E8F4-0DF0-1A75-070FEAC6367F</generatorID>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="QT_MEDICAMENTO" id="516551F9-330E-FA97-12F4-DF287853B361">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-08-15 00:35:51 UTC</createdTime>
+<generatorID>0B9BB64A-5932-18FA-DA89-C9EAC303F72A</generatorID>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>4</dataTypeScale>
+<ownDataTypeParameters>,10,4</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="23F1B6EA-4FF4-BC9D-F039-18E3B615F8FA" name="PK_RHSTU_PRESCICAO_MEDICA">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-08-15 00:35:51 UTC</createdTime>
+<generatorID>4A73F3F3-7F8F-C401-A3E6-E44EA223D576</generatorID>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1CAD3ACF-07E0-DFB4-225B-9D6EDB1A0522"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7AC10FBF-BCDE-3DB9-CEFE-0E1B3016B722" name="FK_STU_CONSULTA_PRESC_MEDICA">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-08-15 00:35:51 UTC</createdTime>
+<generatorID>83E26DE5-CFC7-0393-6E33-ADB73D0FD6E6</generatorID>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F1C49084-AE7D-469D-709A-82AE07DCF0A9"/>
+<colUsage columnID="ACF4646B-EF5C-25B1-DA7D-573D04CEA23C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D5A2E457-1C73-B930-95D1-6CE8714C2B51" name="FK_STU_MEDICAMENTO_PM">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-08-15 00:35:51 UTC</createdTime>
+<generatorID>E71B8DAC-5B82-7B25-D969-CE67BC49AF03</generatorID>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DDAC8A2E-0C38-F937-AB0C-AAC3D863AD85"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

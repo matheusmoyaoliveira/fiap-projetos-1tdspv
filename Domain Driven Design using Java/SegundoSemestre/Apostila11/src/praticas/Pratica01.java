@@ -12,7 +12,6 @@ public class Pratica01 {
 
         List<Aluno> aluno = new ArrayList<>();
 
-
         Scanner leitor = new Scanner(System.in);
 
         System.out.println("Quantos alunos deseja cadastrar? ");

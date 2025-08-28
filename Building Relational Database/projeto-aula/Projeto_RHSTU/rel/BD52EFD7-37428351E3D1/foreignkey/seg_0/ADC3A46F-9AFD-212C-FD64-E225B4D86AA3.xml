@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="ADC3A46F-9AFD-212C-FD64-E225B4D86AA3" containerWithKeyObject="1B787036-5B74-27C4-4F11-25915AF57316" localFKIndex="E65D2E0E-3F78-52B1-AEF4-D42FEDDF34FA" name="FK_RHSTU_TIPO_CONTATO">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-08-15 00:35:51 UTC</createdTime>
+<generatorID>20403068-9FFF-7A08-63D5-13C205008336</generatorID>
+<ownerDesignName>Projeto_RHSTU</ownerDesignName>
+<referredTableLongName>T_RHSTU_TIPO_CONTATO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>BF0AE686-8B6D-2716-AB16-CC78A2D5BD72</referredTableID>
+<keyObject>3DEA6571-64EA-8303-6089-636873043A7F</keyObject>
+<referredKeyID>3DEA6571-64EA-8303-6089-636873043A7F</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_TIPO_CONTATO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
