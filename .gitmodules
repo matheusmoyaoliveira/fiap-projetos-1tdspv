@@ -40,3 +40,6 @@
 [submodule "Artificial Intelligence & Chatbot/cp04-chatbot"]
 	path = Artificial Intelligence & Chatbot/cp04-chatbot
 	url = https://github.com/matheusmoyaoliveira/cp04-chatbot
+[submodule "Computational Thinking Using Python/cp04-python"]
+	path = Computational Thinking Using Python/cp04-python
+	url = https://github.com/matheusmoyaoliveira/cp04-python
