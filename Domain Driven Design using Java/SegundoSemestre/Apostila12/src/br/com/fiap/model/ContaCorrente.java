@@ -1,30 +1,27 @@
 package br.com.fiap.model;
 
-import java.util.Scanner;
+import br.com.fiap.util.ValidacaoNumero;
 
 public class ContaCorrente {
 
     private double saldo;
 
-    //Criar método depositar
-    public void depositarSaldo(double valor) {
-        if (valor <= 0) {
-            throw new ArithmeticException("Valor negativo ou 0 não da para depositar");
-        }
-
+    //Criar o método depositar
+    public void depositar(double valor) throws Exception {
+        ValidacaoNumero.validarMaiorQueZero(valor);
         saldo += valor;
-
     }
 
-    //Criar método sacar
-    public void sacarSaldo(double valor){
-        if (valor > saldo) {
-            throw new ArithmeticException("Saldo insuficiente para saque!");
-        }
+    //Criar o método retirar
+    public void retirar(double valor) throws Exception {
+        ValidacaoNumero.validarMaiorQueZero(valor);
+        ValidacaoNumero.validarMaiorOuIgualAZero(saldo - valor);
         saldo -= valor;
     }
 
-    public double getSaldo() {
+    //Criar o método retornar saldo
+    public double getSaldo(){
         return saldo;
     }
+
 }

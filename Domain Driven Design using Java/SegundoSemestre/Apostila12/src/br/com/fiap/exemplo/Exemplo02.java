@@ -1,82 +1,52 @@
 package br.com.fiap.exemplo;
+
 import br.com.fiap.model.ContaCorrente;
 
-import java.io.IOException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Exemplo02 {
 
     public static void main(String[] args) {
-
-        Scanner leitor = new Scanner(System.in);
+        //Instanciar a classe ContaCorrente
         ContaCorrente cc = new ContaCorrente();
 
-        int opcao;
-
-       do {
-            System.out.println("1 - Depositar");
-            System.out.println("2 - Sacar");
-            System.out.println("3 - Exibir saldo");
-            System.out.println("0 -  Sair");
-            opcao = leitor.nextInt();
-            leitor.nextLine();
-
-            switch (opcao){
-                case 1:
-                    try {
-                        System.out.println("Digite o valor que gostaria de depositar: R$");
+        Scanner leitor = new Scanner(System.in);
+        int opcao = -1;
+        do {
+            try {
+                System.out.println("Escolha: \n1-Depositar \n2-Retirar \n3-Exibir Saldo \n0-Sair");
+                opcao = leitor.nextInt();
+                switch (opcao) {
+                    case 1:
+                        //Depositar um valor na conta (usuário insere o valor)
+                        System.out.println("Digite o valor para depositar");
                         double valor = leitor.nextDouble();
-                        cc.depositarSaldo(valor);
-
-                        System.out.println("Valor depositado com sucesso!");
-
-                        System.out.println("Seu novo saldo depois do depósito é de: R$" + cc.getSaldo());
-                    } catch (ArithmeticException e) {
-                        System.err.println("Erro: " + e);
-                    }
-
-                case 2:
-                    try {
-                        double valor;
-                        double saldo;
-                        System.out.println("Digite o valor que gostaria de sacar: R$");
+                        cc.depositar(valor);
+                        break;
+                    case 2:
+                        //Retirar um valor da conta (usuário insere o valor)
+                        System.out.println("Digite o valor para retirada");
                         valor = leitor.nextDouble();
-
-                        cc.sacarSaldo(valor);
-
-                        System.out.println("Seu novo saldo depois do saque é de: R$" + cc.getSaldo());
-
-                    } catch (ArithmeticException e) {
-                        System.err.println("Erro: " + e);
-                    }
-                case 3:
-                    System.out.println("Sald atual: R$" + cc.getSaldo());
-
-                case 4:
-                    System.out.println("Finalizando programa...");
-                    break;
+                        cc.retirar(valor);
+                        break;
+                    case 3:
+                        //Exibir o saldo
+                        System.out.println("Saldo atual: " + cc.getSaldo());
+                        break;
+                    case 0:
+                        System.out.println("Saindo do sistema");
+                        break;
+                    default:
+                        System.out.println("Opção inválida");
+                }
+            } catch (InputMismatchException e){
+                leitor.next();
+                System.err.println("Valor inválido");
+            } catch (Exception e) {
+                System.err.println(e.getMessage());
             }
         } while(opcao != 0);
-
-        //Instanciar a conta corrente
-
-
-        //Depositar um valor na conta
-
-
-
-
-
-        //Exibir o saldo
-
-
-        //Retirar um valor da conta
-
-
-
-        //Exibir saldo
-
-
 
     }//main
 }//class
