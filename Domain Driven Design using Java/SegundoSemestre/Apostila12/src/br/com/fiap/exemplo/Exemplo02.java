@@ -1,5 +1,7 @@
 package br.com.fiap.exemplo;
 
+import br.com.fiap.exception.SaldoInsuficienteException;
+import br.com.fiap.exception.ValorNegativoException;
 import br.com.fiap.model.ContaCorrente;
 
 import java.util.InputMismatchException;
@@ -43,8 +45,10 @@ public class Exemplo02 {
             } catch (InputMismatchException e){
                 leitor.next();
                 System.err.println("Valor inválido");
-            } catch (Exception e) {
+            } catch (SaldoInsuficienteException | ValorNegativoException e) {
                 System.err.println(e.getMessage());
+            } catch (Exception e) {
+                System.err.println("Erro genérico.. procure o admin");
             }
         } while(opcao != 0);
 
