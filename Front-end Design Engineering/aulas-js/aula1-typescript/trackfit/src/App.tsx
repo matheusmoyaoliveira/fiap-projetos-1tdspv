@@ -1,3 +1,4 @@
+
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Layout } from "./components/layout";
 import { AddWorkout } from "./pages/add-workout";
@@ -15,6 +16,27 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
+
+import { useState } from "react";
+import { Header } from "./components/header";
+import type { Workout } from "./types/workout"
+import { WorkoutList } from "./components/workout-list";
+import { WorkoutForm } from "./components/workout-form";
+
+function App() {
+  const [list, setList] = useState<Workout[]>([]);
+
+  function addWorkout(workout:Workout) {
+    setList((prev) => [...prev, workout])
+  }
+
+  return (
+    <>
+      <Header />
+      <WorkoutForm onAdd={addWorkout}/>
+      <WorkoutList workoutList={list} />
+    </>
+
   );
 }
 
