@@ -1,11 +1,12 @@
 package br.com.fiap;
+
 import br.com.fiap.factory.ConnectionFactory;
 
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.sql.Connection;
 
-public class ExemploAtualizacao {
+public class ExemploRemocao {
 
     public static void main(String[] args) {
         try {
@@ -14,14 +15,15 @@ public class ExemploAtualizacao {
             //Obter um Statement
             Statement stm = conn.createStatement();
             //Executar o comando SQL
-            stm.executeUpdate("update t_produto " +
-                    "set vl_produto = 1000 where cd_produto = 1");
+            stm.executeUpdate("delete from t_produto where ds_produto = 'Livro de programação'");
 
-            System.out.println("Produto atualizado");
+            System.out.println("Deletado com sucesso!");
+
             //Fechar a conexão
             conn.close();
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
+
 }
