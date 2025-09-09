@@ -13,7 +13,7 @@ public class ExemploCadastro {
             Statement stm = conn.createStatement();
 
             //Inserir um produto no banco de dados
-            String sql = "create table tb_aluno " +
+            String sqlCreate = "create table tb_aluno " +
                           "(id int primary key not null, " +
                           "rm int not null, " +
                           "nome varchar2(100) not null, " +
