@@ -1,40 +1,35 @@
 package br.com.fiap;
-import java.sql.*;
+
+import br.com.fiap.factory.ConnectionFactory;
+
+import javax.swing.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class ExemploCadastro {
-    public static void main(String[] args) {
-        try {
-            Class.forName("oracle.jdbc.driver.OracleDriver"); // registra o driver
-            Connection conn = DriverManager.getConnection(
-                    "jdbc:oracle:thin:@oracle.fiap.com.br:1521:orcl", "rm562822", "130997");
-            System.out.println("Conectado!");
 
-            // Criar um objeto statemment
-            Statement stm = conn.createStatement();
+    public static void main(String[] args) {
+
+        try {
+            Connection conexao = ConnectionFactory.getConnection();
+
+            System.out.println("Conectado com sucesso!");
+
+            //Criar um objeto Statement
+            Statement stm = conexao.createStatement();
 
             //Inserir um produto no banco de dados
-            String sqlCreate = "create table tb_aluno " +
-                          "(id int primary key not null, " +
-                          "rm int not null, " +
-                          "nome varchar2(100) not null, " +
-                          "ativo number(1) not null, " +
-                          "nota1 number(3,1) not null, " +
-                          "nota2 number(3,1) not null)";
+            stm.executeUpdate("insert into t_produto (cd_produto, nm_produto, ds_produto, vl_produto) " +
+                    "values (2, 'Livro Java Como Programar', 'Livro para aprender a programar Java', 250.50)");
 
-            String sqlInsert1 = "insert into tb_aluno (id, rm, nome, ativo, nota1, nota2) " +
-                    "values(1, 562822, 'Matheus Moya de Oliveira', 1, 10.0, 9.0)";
+            System.out.println("Cadastrado com sucessso");
 
-            stm.executeUpdate(sqlInsert1);
-
-            System.out.println("Tabela criada!");
-
-            conn.close(); // fecha a conexão
-        } catch (ClassNotFoundException e) {
-            System.out.println("O driver JDBC não foi encontrado");
-            e.printStackTrace();
-        } catch (SQLException e) {
-            System.out.println("Não foi possível conectar no banco de dados");
+            //Fecha a conexão
+            conexao.close();
+        } catch (ClassNotFoundException | SQLException e){
             e.printStackTrace();
         }
-    }
-}
+    }//main
+}//class

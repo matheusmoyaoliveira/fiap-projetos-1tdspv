@@ -10,20 +10,17 @@ public class ExemploRemocao {
 
     public static void main(String[] args) {
         try {
-            //Obter a conexão com banco de dados
-            Connection conn = ConnectionFactory.getConnection();
-            //Obter um Statement
-            Statement stm = conn.createStatement();
+            //Obter a conexão com o banco
+            Connection conexao = ConnectionFactory.getConnection();
+            //Obter o Statement
+            Statement stm = conexao.createStatement();
             //Executar o comando SQL
-            stm.executeUpdate("delete from t_produto where ds_produto = 'Livro de programação'");
-
-            System.out.println("Deletado com sucesso!");
-
+            stm.executeUpdate("delete from t_produto " +
+                    "where cd_produto = 1");
             //Fechar a conexão
-            conn.close();
-        } catch (SQLException | ClassNotFoundException e) {
+            conexao.close();
+        } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
-    }
-
-}
+    }//main
+}//class

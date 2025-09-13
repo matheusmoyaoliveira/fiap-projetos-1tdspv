@@ -11,33 +11,25 @@ public class ExemploPesquisa {
 
     public static void main(String[] args) {
         try {
-            //Obter a conexão com banco de dados
-            Connection conn = ConnectionFactory.getConnection();
-            //Obter um Statement
-            Statement stm = conn.createStatement();
-            //Executar o comando SQL
-            ResultSet resultSet = stm.executeQuery("select * from tb_aluno");
-
+            //Obter a conexão
+            Connection conexao = ConnectionFactory.getConnection();
+            //Statement
+            Statement stm = conexao.createStatement();
+            //Executar o comando
+            ResultSet rs =
+                    stm.executeQuery("select * from t_produto");
             //Recuperar os dados do banco para exibir
-
-            while (resultSet.next()) {
-
-                Integer id = resultSet.getInt("id");
-                Integer rm = resultSet.getInt("rm");
-                String nome = resultSet.getString("nome");
-                boolean ativo = resultSet.getBoolean("ativo");
-                double nota1 = resultSet.getDouble("nota1");
-                double nota2 = resultSet.getDouble("nota2");
-
-                System.out.println(id + " " + rm + " " + nome + " " + ativo + " " + nota1 + " " + nota2);
-
+            while (rs.next()){
+                int codigo = rs.getInt("cd_produto");
+                String nome = rs.getString("nm_produto");
+                String descricao = rs.getString("ds_produto");
+                double valor = rs.getDouble("vl_produto");
+                System.out.println(codigo + " " + nome + " " + descricao + " " + valor);
             }
-
             //Fechar a conexão
-            conn.close();
-        } catch (SQLException | ClassNotFoundException e) {
+            conexao.close();
+        }catch (ClassNotFoundException | SQLException e){
             e.printStackTrace();
         }
-    }
-
-}
+    }//main
+}//class
