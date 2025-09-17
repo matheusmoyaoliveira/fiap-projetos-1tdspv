@@ -1,28 +1,30 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Layout } from "./components/layout";
-import { NotFound } from "./pages/not-found";
 import { lazy, Suspense } from "react";
-import { Loading } from "./components/loading";
-import { Fallback } from "./components/fallback";
 import { ErrorBoundary } from "react-error-boundary";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Fallback } from "./components/fallback";
+import { Layout } from "./components/layout";
+import { Loading } from "./components/loading";
+import { NotFound } from "./pages/not-found";
 
-const Home = lazy(() => 
-  import('./pages/home').then((m) => ({default: m.Home}))
+const Home = lazy(() =>
+  import("./pages/home").then((m) => ({ default: m.Home }))
 );
 
-const AddWorkout = lazy(() => 
-  import('./pages/add-workout').then((m) => ({default: m.AddWorkout}))
+const AddWorkout = lazy(() =>
+  import("./pages/add-workout").then((m) => ({ default: m.AddWorkout }))
 );
 
-const WorkoutDetails = lazy (() =>
-  import('./pages/workout-details').then((m) => ({default: m.WorkoutDetails}))
+const WorkoutDetails = lazy(() =>
+  import("./pages/workout-details").then((m) => ({
+    default: m.WorkoutDetails,
+  }))
 );
 
 function App() {
   return (
     <BrowserRouter>
-    <ErrorBoundary FallbackComponent={Fallback}>
-        <Suspense fallback ={<Loading />}>
+      <ErrorBoundary FallbackComponent={Fallback}>
+        <Suspense fallback={<Loading />}>
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
