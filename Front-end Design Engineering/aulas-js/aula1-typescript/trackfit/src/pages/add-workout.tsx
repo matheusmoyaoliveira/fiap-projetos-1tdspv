@@ -6,6 +6,7 @@ import type { Workout } from "../types/workout";
 export function AddWorkout() {
   const [workouts, setWorkouts] = useState<Workout[]>([]);
 
+  // Renderiza somente uma vez
   const workoutTotal = useMemo(() => {
     return workouts.length;
   }, [workouts]);
@@ -23,8 +24,21 @@ export function AddWorkout() {
     return `${hours}:${minutes}`;
   }, [workouts]);
 
+  // Renderiza somente uma vez
   const addWorkout = useCallback((workout: Workout) => {
     setWorkouts((prev) => [...prev, workout]);
+  }, []);
+
+  const removeWorkout = useCallback((id: string) => {
+    const workoutToDelete = workouts.findIndex((value) => {
+      return value.id === id;
+    });
+
+    const updatedWorkouts = [...workouts];
+
+    updatedWorkouts.splice(workoutToDelete, 1);
+
+    setWorkouts(updatedWorkouts);
   }, []);
 
   return (
@@ -41,7 +55,7 @@ export function AddWorkout() {
 
       <WorkoutForm onAdd={addWorkout} />
 
-      <WorkoutList workoutList={workouts} />
+      <WorkoutList removeWorkout={removeWorkout} workoutList={workouts} />
     </>
   );
 }
