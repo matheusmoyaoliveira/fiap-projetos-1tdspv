@@ -20,7 +20,6 @@ const WorkoutDetails = lazy(() =>
   }))
 );
 
-
 function App() {
   return (
     <BrowserRouter>
