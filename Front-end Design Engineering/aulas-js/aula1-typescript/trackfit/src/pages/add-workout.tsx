@@ -10,6 +10,9 @@ export function AddWorkout() {
     return workouts.length;
   }, [workouts]);
 
+  // renderiza todas as vezes que o componente é chamado
+  // const workoutTotal2 = workouts.length;
+
   const workoutMinutes = useMemo(() => {
     let workoutMinutes: number = 0;
 
@@ -27,6 +30,24 @@ export function AddWorkout() {
     setWorkouts((prev) => [...prev, workout]);
   }, []);
 
+  const removeWorkout = useCallback((id: string) => {
+    const workoutToDelete = workouts.findIndex((value) => {
+      return value.id === id;
+    });
+
+    const updatedWorkouts = [...workouts];
+
+    updatedWorkouts.splice(workoutToDelete, 1);
+
+    setWorkouts(updatedWorkouts);
+
+  }, [])
+
+  // renderiza todas as vezes que o componente é chamado
+  // function addWorkout2(workout: Workout) {
+  //   setWorkouts((prev) => [...prev, workout]);
+  // }
+
   return (
     <>
       <h2 className="font-bold text-blue-800 text-xl mb-3">
@@ -41,7 +62,7 @@ export function AddWorkout() {
 
       <WorkoutForm onAdd={addWorkout} />
 
-      <WorkoutList workoutList={workouts} />
+      <WorkoutList removeWorkout={removeWorkout} workoutList={workouts} />
     </>
   );
 }
