@@ -7,15 +7,23 @@ interface WorkoutResumeProps {
 
 export function WorkoutResume({ workout }: WorkoutResumeProps) {
   return (
-    <div className="w-3/5 round-lg shadow px-3 py-4 flex flex-col gap-5 mb-3 bg-white">
-      <div className="flex justify-between ">
-        <h2 className="font-bold text-gray-600 ">{workout.title}</h2>
+    <div className="w-3/5 rounded-lg shadow px-3 py-4 flex flex-col gap-5 mb-3 bg-white">
+      <div className="flex justify-between">
+        <h2 className="font-bold text-gray-600">{workout.title}</h2>
 
-        <Link to={`/workout/${workout.id}`} 
-        state={{ workout }} 
-        className="text-blue-600 font-bold hover:underline rounded border border-blue-600 p-2">
-          detalhes
-        </Link>
+        <div className="flex flex-col gap-2">
+          <Link
+            to={`/workout/${workout.id}`}
+            state={{ workout }}
+            className="text-blue-600 font-bold hover:underline rounded border border-blue-600 p-2"
+          >
+            detalhes
+          </Link>
+
+          <button className="bg-red-600 border text-white rounded p-2">
+            Remover treino
+          </button>
+        </div>
       </div>
 
       <h3>Data: {workout.date}</h3>
