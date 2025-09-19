@@ -6,6 +6,7 @@ interface WorkoutListProps {
 }
 
 export function WorkoutList({ workoutList }: WorkoutListProps) {
+
     return (
         <>
             {workoutList.map((value) => {
