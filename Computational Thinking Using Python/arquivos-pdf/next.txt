@@ -1,0 +1,20 @@
+📌 2. O que faz o next(...)
+
+O next serve para pegar o próximo item de um iterador (ou seja, de algo que dá para percorrer em sequência).
+No nosso caso:
+
+paciente = next((p for p in pacientes if p["telefone"] == telefone), None)
+
+
+Aqui temos:
+
+(p for p in pacientes if p["telefone"] == telefone) → isso é um generator expression. Ele cria um iterador que percorre a lista de pacientes e vai entregando um paciente por vez que tenha o telefone igual ao que buscamos.
+
+next(..., None) → pega o primeiro item encontrado.
+
+Se achar um paciente com aquele telefone, devolve o dicionário do paciente.
+
+Se não achar nenhum, devolve None (por causa do segundo argumento do next).
+
+➡️ Então essa linha significa:
+procura na lista pacientes o primeiro paciente cujo telefone bate com telefone; se não achar, retorna None.

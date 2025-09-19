@@ -1,0 +1,19 @@
+📌 1. O que significa o "r" no with open(...)
+
+Quando você abre um arquivo em Python com open, você precisa dizer o modo de abertura.
+
+"r" → read → abrir para leitura (não deixa escrever).
+
+"w" → write → abre para escrita (apaga o conteúdo e cria do zero).
+
+"a" → append → abre para acrescentar no final.
+
+"r+" → abre para leitura e escrita ao mesmo tempo.
+
+No seu caso:
+
+with open("src/pacientes.json", "r", encoding="utf-8") as f:
+
+
+➡️ Quer dizer: abra o arquivo pacientes.json somente para leitura, usando UTF-8.
+A gente usa só leitura porque queremos carregar os dados atuais (não sobrescrever nada).
