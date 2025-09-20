@@ -106,3 +106,142 @@ Random Forest / Gradient Boosting
 Conjuntos de várias árvores → mais robusto, maior precisão.
 
 Mais pesados, menos interpretáveis.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+📦 Bibliotecas usadas
+
+sklearn.linear_model.LinearRegression
+
+Classe que cria o modelo de Regressão Linear.
+
+sklearn.model_selection.train_test_split
+
+Função para dividir os dados em treino (para aprender) e teste (para avaliar).
+
+sklearn.metrics.mean_squared_error
+
+Mede o erro quadrático médio → quanto menor, melhor.
+
+sklearn.metrics.r2_score
+
+Mede o R², que mostra quanto o modelo explica dos dados (varia de 0 a 1).
+
+📜 Código linha por linha
+X_train, X_test, y_train, y_test = train_test_split(features_scaled, target, test_size=0.2, random_state=42)
+
+
+Divide os dados em treino e teste.
+
+test_size=0.2 → 20% vai para teste, 80% para treino.
+
+random_state=42 → garante que a divisão seja sempre a mesma (reprodutibilidade).
+
+modelo_lr = LinearRegression()
+
+
+Cria um modelo de Regressão Linear vazio (sem estar treinado ainda).
+
+modelo_lr vai aprender a relação entre X (features) e y (target).
+
+modelo_lr.fit(X_train, y_train)
+
+
+Treina o modelo: o algoritmo calcula os coeficientes (os “pesos” de cada variável) que melhor se ajustam aos dados.
+
+y_pred = modelo_lr.predict(X_test)
+
+
+Faz previsões no conjunto de teste → o modelo usa o que aprendeu para prever preços de casas que ele nunca viu.
+
+mse = mean_squared_error(y_test, y_pred)
+
+
+Calcula o Erro Quadrático Médio (MSE):
+
+𝑀
+𝑆
+𝐸
+=
+1
+𝑛
+∑
+(
+𝑦
+𝑟
+𝑒
+𝑎
+𝑙
+−
+𝑦
+𝑝
+𝑟
+𝑒
+𝑣
+𝑖
+𝑠
+𝑡
+𝑜
+)
+2
+MSE=
+n
+1
+	​
+
+∑(y
+real
+	​
+
+−y
+previsto
+	​
+
+)
+2
+
+Quanto menor, mais próximo as previsões estão dos valores reais.
+
+r2 = r2_score(y_test, y_pred)
+
+
+Calcula o R² (Coeficiente de Determinação):
+
+Varia de 0 a 1.
+
+Exemplo: 
+𝑅
+2
+=
+0.99
+R
+2
+=0.99 → o modelo explica 99% da variação dos preços.
+
+print("Erro Quadrático Médio (MSE):", mse)
+print("Coeficiente de Determinação (R²):", r2)
+
+Mostra os resultados de avaliação do modelo.
+
+📊 Interpretação dos seus resultados
+
+MSE ≈ 101 milhões → parece grande, mas lembre que os preços estão na casa de centenas de milhares/milhões.
+
+R² ≈ 0.998 → altíssimo → significa que o modelo conseguiu explicar 99,8% da variação dos preços das casas 🎯.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+🐍 Como ficaria sem o mean_squared_error
+# diferença entre valores reais e previstos
+erros = y_test - y_pred  
+
+# eleva ao quadrado cada diferença
+erros_quadrado = erros ** 2  
+
+# soma tudo
+soma_erros = erros_quadrado.sum()  
+
+# divide pelo número de amostras (n)
+mse_manual = soma_erros / len(y_test)  
+
+print("MSE calculado manualmente:", mse_manual)
+
+
+🔹 Esse cálculo vai dar exatamente o mesmo resultado do mean_squared_error.
+🔹 A função pronta só economiza linhas e evita erro humano.
