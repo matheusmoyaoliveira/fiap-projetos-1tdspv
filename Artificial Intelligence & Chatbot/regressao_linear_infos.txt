@@ -245,3 +245,184 @@ print("MSE calculado manualmente:", mse_manual)
 
 🔹 Esse cálculo vai dar exatamente o mesmo resultado do mean_squared_error.
 🔹 A função pronta só economiza linhas e evita erro humano.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+📌 Cálculo manual do R² (Coeficiente de Determinação)
+
+A fórmula é:
+
+𝑅
+2
+=
+1
+−
+Soma dos Erros ao Quadrado (SSE)
+Soma Total ao Quadrado (SST)
+R
+2
+=1−
+Soma Total ao Quadrado (SST)
+Soma dos Erros ao Quadrado (SSE)
+	​
+
+
+Onde:
+
+SSE (Sum of Squared Errors) → soma dos erros do modelo:
+
+𝑆
+𝑆
+𝐸
+=
+∑
+(
+𝑦
+𝑟
+𝑒
+𝑎
+𝑙
+−
+𝑦
+𝑝
+𝑟
+𝑒
+𝑣
+𝑖
+𝑠
+𝑡
+𝑜
+)
+2
+SSE=∑(y
+real
+	​
+
+−y
+previsto
+	​
+
+)
+2
+
+SST (Total Sum of Squares) → variabilidade total dos dados em relação à média:
+
+𝑆
+𝑆
+𝑇
+=
+∑
+(
+𝑦
+𝑟
+𝑒
+𝑎
+𝑙
+−
+𝑦
+ˉ
+)
+2
+SST=∑(y
+real
+	​
+
+−
+y
+ˉ
+	​
+
+)
+2
+
+𝑦
+ˉ
+y
+ˉ
+	​
+
+ é a média dos valores reais.
+
+👉 Intuição:
+
+Se o modelo fosse “burro” e previsse só a média, ele teria SST como erro.
+
+O R² mede o quanto o modelo melhorou em relação a isso.
+
+🐍 Código do R² manual
+# valores reais e previstos
+y_real = y_test
+y_previsto = y_pred
+
+# média dos valores reais
+y_media = y_real.mean()
+
+# soma dos erros ao quadrado (SSE)
+sse = ((y_real - y_previsto) ** 2).sum()
+
+# soma total ao quadrado (SST)
+sst = ((y_real - y_media) ** 2).sum()
+
+# cálculo do R²
+r2_manual = 1 - (sse / sst)
+
+print("R² calculado manualmente:", r2_manual)
+
+
+🔹 Esse resultado deve ser idêntico ao r2_score.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+📌 Modelos de Regressão usados
+1. Regressão Linear
+
+📖 O modelo mais simples e clássico.
+
+Ele tenta ajustar uma reta (ou plano, ou hiperplano) que melhor explica a relação entre as variáveis (X → preço).
+
+Funciona muito bem quando a relação é linear.
+
+Resultado no seu caso:
+
+R² = 0.9984 → o modelo explica 99,84% da variação do preço.
+
+MSE ≈ 101 milhões → erro médio ainda baixo considerando os preços na casa dos milhões.
+
+2. Árvore de Decisão (DecisionTreeRegressor)
+
+📖 Funciona como uma série de perguntas “se-então” (if-else).
+Ex:
+
+"O tamanho da casa é maior que 3000 pés²?"
+
+"Se sim → segue para a direita, se não → vai para a esquerda."
+
+Muito flexível, mas pode decorar os dados de treino (overfitting), perdendo generalização.
+
+Resultado no seu caso:
+
+R² = 0.9850 → já é bom, mas menor que a regressão linear.
+
+MSE ≈ 966 milhões → erro bem maior → a árvore não conseguiu generalizar tão bem aqui.
+
+3. Random Forest (RandomForestRegressor)
+
+📖 É um conjunto de várias Árvores de Decisão treinadas em subconjuntos diferentes dos dados.
+
+O resultado final é a média das previsões de todas as árvores.
+
+Isso reduz o risco de overfitting e melhora a precisão.
+
+Resultado no seu caso:
+
+R² = 0.9938 → excelente, quase tão bom quanto a regressão linear.
+
+MSE ≈ 396 milhões → erro bem menor que a árvore isolada, mas maior que a regressão linear.
+
+📊 Interpretação Geral
+
+Melhor modelo nesse dataset → Regressão Linear
+
+Tem maior R² (0.9984) e menor MSE (101M).
+
+Faz sentido: os dados parecem ter uma relação quase perfeitamente linear entre atributos e preço (ex: o scatterplot que você fez mostrou isso).
+
+Árvore de Decisão → ficou pior, porque tentou criar cortes rígidos nos dados.
+
+Random Forest → melhorou em relação à árvore, mas ainda não bateu a regressão linear (provavelmente porque os dados já são lineares, então o modelo simples funciona melhor).
