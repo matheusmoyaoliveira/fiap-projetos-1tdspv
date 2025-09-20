@@ -1,0 +1,14 @@
+Regressão Logística → usada quando a saída é sim/não (classificação binária).
+Exemplo: prever se um cliente vai cancelar a assinatura.
+
+KNN (K-Nearest Neighbors) → olha para os vizinhos mais próximos.
+Exemplo: prever o preço de uma casa olhando casas parecidas ao redor.
+
+SVM (Support Vector Machine) → cria uma “fronteira ótima” para separar classes.
+Exemplo: separar se um tumor é maligno ou benigno.
+
+Redes Neurais → usadas para problemas muito complexos (imagens, voz, texto).
+Exemplo: reconhecimento facial, tradução automática.
+
+Gradient Boosting (XGBoost, LightGBM, CatBoost) → modelos em que árvores aprendem uma atrás da outra para corrigir erros da anterior.
+Exemplo: campeões em competições do Kaggle, muito poderosos em dados tabulares.
