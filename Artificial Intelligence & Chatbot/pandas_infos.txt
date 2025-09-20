@@ -4,7 +4,7 @@ Mostra a dimensão do DataFrame → (número_de_linhas, número_de_colunas).
 
 Exemplo: (1000, 8) → significa que o dataset tem 1000 registros e 8 colunas.
 ⚠️ Não mostra máximo e mínimo (isso é no df.describe()).
---------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------
 🔹 df.head()
 
 Mostra as 5 primeiras linhas do dataset (por padrão).
@@ -12,7 +12,7 @@ Mostra as 5 primeiras linhas do dataset (por padrão).
 Serve para conferir rapidamente se o arquivo foi lido certo, ver colunas e alguns valores.
 
 Você pode passar outro número, ex.: df.head(10) para ver 10 linhas.
---------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------
 🔹 df.info()
 
 Mostra um resumo das colunas:
@@ -24,7 +24,7 @@ Tipo de dado (int64, float64, object = texto)
 Quantos valores não nulos (Non-Null Count)
 
 Serve para identificar valores ausentes e tipos das variáveis.
---------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------
 👉 Então a correção do que você disse:
 
 df.shape → tamanho (linhas, colunas), não máximo/mínimo.
@@ -32,7 +32,7 @@ df.shape → tamanho (linhas, colunas), não máximo/mínimo.
 df.head() → sim, mostra os primeiros registros com os dados e colunas.
 
 df.info() → sim, mostra resumo das colunas, tipos e valores não nulos.
---------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------
 🔹 df.describe() e df.describe().T
 df.describe()
 
@@ -75,20 +75,125 @@ Em df.describe(), as estatísticas (mean, min, max) aparecem como linhas.
 Em df.describe().T, essas estatísticas viram colunas, e cada variável (coluna do dataset) fica organizada em linhas.
 
 👉 É só uma questão de formato visual — fica mais legível para datasets com muitas colunas.
---------------------------------------------------------------------------------------------------------------------
-df.isnull() → retorna uma matriz booleana (True se for nulo).
+--------------------------------------------------------------------------------------------------------------------------------------------------
+📌 df.isnull().sum()
 
-.sum() → soma os True’s, ou seja, quantos valores nulos cada coluna tem.
+Verifica quantos valores nulos existem em cada coluna.
 
-👉 Se aparecer tudo 0, significa que não há valores faltando.
+Resultado → tudo 0 → não há valores faltantes no dataset.
 
-df.duplicated() → retorna True para linhas iguais.
+📌 df.duplicated().sum()
 
-.sum() → mostra quantas duplicadas existem.
+Verifica quantas linhas duplicadas existem no dataset.
 
-👉 Se o resultado for 0, não há linhas repetidas.
+Resultado → 0 → não há registros repetidos.
 
-df.dtypes
+📌 df.dtypes
 
-👉 Aqui você já viu no info(), mas é bom reforçar — às vezes números podem estar como texto (object).
---------------------------------------------------------------------------------------------------------------------
+Mostra os tipos de dados de cada coluna.
+
+Resultado: temos apenas int64 e float64.
+👉 Isso é bom, porque significa que não temos números salvos como texto (object).
+--------------------------------------------------------------------------------------------------------------------------------------------------
+🔹 Parte 1 — df_clean
+df_clean = df.copy()
+
+O df.copy() cria uma cópia independente do df.
+
+Isso evita que a gente altere o dataset original sem querer.
+
+Assim, se algo der errado no tratamento, ainda temos o df intacto.
+
+👉 Resumo: df_clean = versão “limpa” do dataset, que a gente vai mexer.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+🔹 Parte 2 — Quartis e IQR
+Q1 = df_clean['House_Price'].quantile(0.25)
+Q3 = df_clean['House_Price'].quantile(0.75)
+IQR = Q3 - Q1
+
+Q1 (1º quartil, 25%) → valor abaixo do qual estão 25% dos dados.
+
+Q3 (3º quartil, 75%) → valor abaixo do qual estão 75% dos dados.
+
+IQR (Interquartile Range) = Q3 – Q1 → intervalo entre 25% e 75% dos valores.
+
+👉 Esse intervalo mostra onde está a “maioria” dos dados, ignorando extremos.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+🔹 Parte 3 — Limites para outliers
+limite_inferior = Q1 - 1.5 * IQR
+limite_superior = Q3 + 1.5 * IQR
+
+A regra clássica de estatística é:
+
+Valores abaixo de Q1 – 1.5×IQR → considerados outliers baixos.
+
+Valores acima de Q3 + 1.5×IQR → considerados outliers altos.
+
+👉 Assim definimos a faixa “aceitável” para os preços de casas.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+🔹 Parte 4 — Filtragem dos dados
+df_clean = df_clean[(df_clean['House_Price'] >= limite_inferior) &
+                    (df_clean['House_Price'] <= limite_superior)]
+
+Mantém só as linhas dentro da faixa aceitável.
+
+Se houvesse preços muito estranhos (ex.: uma casa por 1 real ou 50 milhões), seriam removidos.
+
+👉 No seu caso, como o dataset é sintético e bem construído, nenhum dado foi removido (por isso Formato antes e Formato depois são iguais).
+--------------------------------------------------------------------------------------------------------------------------------------------------
+🔹 Parte 5 — StandardScaler (nova biblioteca)
+from sklearn.preprocessing import StandardScaler
+
+
+Isso vem da biblioteca scikit-learn (sklearn) → a principal para machine learning no Python.
+
+O StandardScaler serve para padronizar os dados numéricos.
+
+scaler = StandardScaler()
+features_scaled = scaler.fit_transform(features)
+
+
+fit_transform() → primeiro calcula a média e desvio padrão de cada coluna, depois aplica a transformação.
+
+Cada variável vira uma escala com:
+
+média = 0
+
+desvio padrão = 1
+
+👉 Isso é útil porque alguns modelos (ex.: Regressão Linear, Redes Neurais, SVM) funcionam melhor quando todas as variáveis estão na mesma escala.
+Exemplo:
+
+Square_Footage → milhares (ex.: 2000, 3000).
+
+Num_Bedrooms → só até 5.
+Se não escalarmos, o modelo dá mais importância para variáveis “grandes”.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+🔹 O que é X e y?
+
+X (features/atributos) → todas as colunas usadas para prever algo.
+Ex.: Square_Footage, Num_Bedrooms, Lot_Size, etc.
+
+y (target/variável alvo) → o que queremos prever.
+Ex.: House_Price (preço da casa).
+
+👉 Resumindo:
+
+X = entrada (características)
+
+y = saída (resposta que queremos prever)
+--------------------------------------------------------------------------------------------------------------------------------------------------
+📝 Explicação
+
+drop("House_Price", axis=1) → remove a coluna House_Price do DataFrame para formar X.
+
+axis=1 → significa “remover coluna” (se fosse axis=0, removeria linhas).
+
+y = df_clean["House_Price"] → seleciona só a coluna do preço como alvo.
+
+.shape → mostra o tamanho:
+
+X terá (1000, 7) → 1000 linhas, 7 colunas (as features).
+
+y terá (1000,) → 1000 valores, 1 coluna.
+--------------------------------------------------------------------------------------------------------------------------------------------------

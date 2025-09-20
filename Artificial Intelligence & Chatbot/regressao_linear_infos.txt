@@ -1,0 +1,108 @@
+🔹 O que é Regressão Linear?
+
+É um modelo matemático que tenta encontrar uma linha (ou plano, ou hiperplano) que melhor descreve a relação entre as variáveis independentes (X) e a variável dependente (y).
+
+👉 Fórmula geral:
+
+𝑦
+=
+𝛽
+0
++
+𝛽
+1
+𝑥
+1
++
+𝛽
+2
+𝑥
+2
++
+.
+.
+.
++
+𝛽
+𝑛
+𝑥
+𝑛
+y=β
+0
+	​
+
++β
+1
+	​
+
+x
+1
+	​
+
++β
+2
+	​
+
+x
+2
+	​
+
++...+β
+n
+	​
+
+x
+n
+	​
+
+
+𝑦
+y → o que queremos prever (ex.: preço da casa).
+
+𝑥
+𝑖
+x
+i
+	​
+
+ → as variáveis explicativas (metragem, quartos, ano, etc.).
+
+𝛽
+𝑖
+β
+i
+	​
+
+ → coeficientes ajustados pelo modelo (peso de cada variável).
+
+𝛽
+0
+β
+0
+	​
+
+ → intercepto (valor base).
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+🔹 Diferença para outros modelos de regressão
+
+Regressão Linear
+
+Simples, rápida e fácil de interpretar.
+
+Assume que a relação entre X e y é linear.
+
+Exemplo: quanto maior a metragem (Square_Footage), maior o preço → linha reta.
+
+Árvore de Decisão Regressora
+
+Divide os dados em “ramos” (se o número de quartos > 3, vá para a direita, senão para a esquerda).
+
+Não assume linearidade.
+
+Funciona bem em dados mais complexos, mas pode superajustar (overfitting).
+
+Random Forest / Gradient Boosting
+
+Conjuntos de várias árvores → mais robusto, maior precisão.
+
+Mais pesados, menos interpretáveis.

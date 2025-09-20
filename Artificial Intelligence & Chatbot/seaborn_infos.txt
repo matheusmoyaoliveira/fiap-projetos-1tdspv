@@ -14,3 +14,4 @@ Pontos fora dos bigodes = outliers (valores muito fora do padrão).
 
 👉 No seu gráfico, só House_Price aparece destacado (porque está em outra escala, muito maior que as demais variáveis).
 Se plotarmos cada variável em separado, fica mais fácil de enxergar outliers nas outras.
+-----------------------------------------------------------------------------------------------------------------------
