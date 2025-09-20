@@ -1,0 +1,94 @@
+🔹 df.shape
+
+Mostra a dimensão do DataFrame → (número_de_linhas, número_de_colunas).
+
+Exemplo: (1000, 8) → significa que o dataset tem 1000 registros e 8 colunas.
+⚠️ Não mostra máximo e mínimo (isso é no df.describe()).
+--------------------------------------------------------------------------------------------------------------------
+🔹 df.head()
+
+Mostra as 5 primeiras linhas do dataset (por padrão).
+
+Serve para conferir rapidamente se o arquivo foi lido certo, ver colunas e alguns valores.
+
+Você pode passar outro número, ex.: df.head(10) para ver 10 linhas.
+--------------------------------------------------------------------------------------------------------------------
+🔹 df.info()
+
+Mostra um resumo das colunas:
+
+Nome da coluna
+
+Tipo de dado (int64, float64, object = texto)
+
+Quantos valores não nulos (Non-Null Count)
+
+Serve para identificar valores ausentes e tipos das variáveis.
+--------------------------------------------------------------------------------------------------------------------
+👉 Então a correção do que você disse:
+
+df.shape → tamanho (linhas, colunas), não máximo/mínimo.
+
+df.head() → sim, mostra os primeiros registros com os dados e colunas.
+
+df.info() → sim, mostra resumo das colunas, tipos e valores não nulos.
+--------------------------------------------------------------------------------------------------------------------
+🔹 df.describe() e df.describe().T
+df.describe()
+
+É um método do Pandas que gera estatísticas descritivas apenas para colunas numéricas (por padrão).
+
+Ele retorna:
+
+count → número de valores não nulos (quantos registros válidos).
+
+mean → média.
+
+std → desvio padrão (o quanto os valores variam em torno da média).
+
+min → menor valor.
+
+25%, 50%, 75% → quartis (valores que dividem o conjunto em 4 partes).
+
+50% é a mediana.
+
+max → maior valor.
+
+Exemplo da coluna House_Price no seu dataset:
+
+mean ≈ 618 mil → preço médio.
+
+min ≈ 40 mil → menor preço.
+
+max ≈ 1.1 milhão → maior preço.
+
+std ≈ 253 mil → preços bem dispersos.
+
+df.describe().T
+
+O .T significa transpose (transposição de matriz).
+
+Ele inverte linhas e colunas:
+
+Em df.describe(), as estatísticas (mean, min, max) aparecem como linhas.
+
+Em df.describe().T, essas estatísticas viram colunas, e cada variável (coluna do dataset) fica organizada em linhas.
+
+👉 É só uma questão de formato visual — fica mais legível para datasets com muitas colunas.
+--------------------------------------------------------------------------------------------------------------------
+df.isnull() → retorna uma matriz booleana (True se for nulo).
+
+.sum() → soma os True’s, ou seja, quantos valores nulos cada coluna tem.
+
+👉 Se aparecer tudo 0, significa que não há valores faltando.
+
+df.duplicated() → retorna True para linhas iguais.
+
+.sum() → mostra quantas duplicadas existem.
+
+👉 Se o resultado for 0, não há linhas repetidas.
+
+df.dtypes
+
+👉 Aqui você já viu no info(), mas é bom reforçar — às vezes números podem estar como texto (object).
+--------------------------------------------------------------------------------------------------------------------
