@@ -1,4 +1,4 @@
-package br.com.fiap.gym.model;
+package main.br.com.fiap.gym.model;
 
 public class Cliente {
 

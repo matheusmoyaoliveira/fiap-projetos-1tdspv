@@ -1,4 +1,4 @@
-package br.com.fiap.gym.exception;
+package main.br.com.fiap.gym.exception;
 
 public class EntidadeNaoEncontradaException extends Exception{
 

@@ -1,4 +1,4 @@
-package br.com.fiap.gym.factory;
+package main.br.com.fiap.gym.factory;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
