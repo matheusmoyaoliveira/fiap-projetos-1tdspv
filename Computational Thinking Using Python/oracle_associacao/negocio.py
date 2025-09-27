@@ -9,15 +9,19 @@ def cadastra_empresa(empresa: dict):
     
 if __name__ == "__main__":
     dado = {
-        "nome": "Localiza Aluguel de Carros",
-        "documento": "85.728.082/0001-82",
-        "telefone": "(11) 82343-9202",
-        "url": "www.localiza.com",
+        "nome": "HERTZ",
+        "documento": "55.728.082/0001-82",
+        "telefone": "(11) 72343-9202",
+        "url": "www.hertz.com",
         "veiculos": [
-            {"placa": "GWR-2I38", "montadora": "FIAT", "modelo": "Pulse", "ano": 2023},
-            {"placa": "HRT-0E65", "montadora": "Honda", "modelo": "HRV", "ano": 2024},
-            {"placa": "CHK-5F72", "montadora": "GM", "modelo": "Onix", "ano": 2021}  
+            {"placa": "HWR-2I38", "montadora": "Audi", "modelo": "Q3", "ano": 2020},
+            {"placa": "KJR-0E65", "montadora": "BMW", "modelo": "325i", "ano": 2023},
+            {"placa": "EHK-5F90", "montadora": "Mercedes", "modelo": "C160", "ano": 2025}  
         ]
     }
 
     cadastra_empresa(dado)
+
+    resultados = banco.consulta_tudo()
+    for info in resultados:
+        print(info)
