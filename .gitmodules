@@ -46,3 +46,6 @@
 [submodule "Artificial Intelligence & Chatbot/cp05-chatbot"]
 	path = Artificial Intelligence & Chatbot/cp05-chatbot
 	url = https://github.com/matheusmoyaoliveira/cp05-chatbot
+[submodule "Domain Driven Design using Java/java-sprint-3"]
+	path = Domain Driven Design using Java/java-sprint-3
+	url = https://github.com/matheusmoyaoliveira/java-sprint-3.git
