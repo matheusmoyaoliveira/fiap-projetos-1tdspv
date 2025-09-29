@@ -52,3 +52,6 @@
 [submodule "Domain Driven Design using Java/Cp04-java"]
 	path = Domain Driven Design using Java/Cp04-java
 	url = https://github.com/matheusmoyaoliveira/Cp04-java.git
+[submodule "Computational Thinking Using Python/python-sprint-privado-3"]
+	path = Computational Thinking Using Python/python-sprint-privado-3
+	url = https://github.com/matheusmoyaoliveira/python-sprint-privado-3.git
