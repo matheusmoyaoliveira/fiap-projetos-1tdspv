@@ -1,11 +1,13 @@
-import { useCallback, useMemo, useState } from "react";
+import { useMemo } from "react";
 import { WorkoutForm } from "../components/workout-form";
-import { WorkoutList } from "../components/workout-list";
 import type { Workout } from "../types/workout";
 
-export function AddWorkout() {
-  const [workouts, setWorkouts] = useState<Workout[]>([]);
+interface AddWorkoutProps {
+  workouts: Workout[];
+  onAdd: (workout: Workout) => void;
+}
 
+export function AddWorkout({ onAdd, workouts }: AddWorkoutProps) {
   // Renderiza somente uma vez
   const workoutTotal = useMemo(() => {
     return workouts.length;
@@ -24,23 +26,6 @@ export function AddWorkout() {
     return `${hours}:${minutes}`;
   }, [workouts]);
 
-  // Renderiza somente uma vez
-  const addWorkout = useCallback((workout: Workout) => {
-    setWorkouts((prev) => [...prev, workout]);
-  }, []);
-
-  const removeWorkout = useCallback((id: string) => {
-    const workoutToDelete = workouts.findIndex((value) => {
-      return value.id === id;
-    });
-
-    const updatedWorkouts = [...workouts];
-
-    updatedWorkouts.splice(workoutToDelete, 1);
-
-    setWorkouts(updatedWorkouts);
-  }, []);
-
   return (
     <>
       <h2 className="font-bold text-blue-800 text-xl mb-3">
@@ -53,9 +38,7 @@ export function AddWorkout() {
 
       <p>Tempo de treino: {workoutMinutes} horas</p>
 
-      <WorkoutForm onAdd={addWorkout} />
-
-      <WorkoutList removeWorkout={removeWorkout} workoutList={workouts} />
+      <WorkoutForm onAdd={onAdd} />
     </>
   );
 }

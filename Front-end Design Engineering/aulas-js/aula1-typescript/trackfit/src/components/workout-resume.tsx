@@ -12,7 +12,7 @@ export function WorkoutResume({ workout, removeWorkout }: WorkoutResumeProps) {
       <div className="flex justify-between">
         <h2 className="font-bold text-gray-600">{workout.title}</h2>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 items-center justify-center">
           <Link
             to={`/workout/${workout.id}`}
             state={{ workout }}
@@ -31,6 +31,7 @@ export function WorkoutResume({ workout, removeWorkout }: WorkoutResumeProps) {
       </div>
 
       <h3>Data: {workout.date}</h3>
+      <p>Anotações: {workout.notes}</p>
     </div>
   );
 }
