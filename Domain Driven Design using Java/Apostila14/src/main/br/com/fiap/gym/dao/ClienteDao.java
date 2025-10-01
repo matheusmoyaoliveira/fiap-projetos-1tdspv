@@ -21,14 +21,13 @@ public class ClienteDao {
     public void cadastrar(Cliente cliente) throws SQLException {
         //Criar o comando SQL
         PreparedStatement stmt = conexao.prepareStatement("insert into t_tdspv_cliente (cd_cliente, nm_cliente," +
-                "nr_telefone, nr_cpf, st_ativo, vl_peso) values (?,?,?,?,?,?)");
+                "nr_telefone, nr_cpf, st_ativo, vl_peso) values (sq_t_tdspv_cliente.nextval,?,?,?,?,?)");
         //Setar os valores dos parametros no comando SQL
         stmt.setInt(1, cliente.getCodigo());
         stmt.setString(2, cliente.getNome());
         stmt.setString(3, cliente.getTelefone());
         stmt.setString(4, cliente.getCpf());
         stmt.setBoolean(5, cliente.isAtivo());
-        stmt.setDouble(6, cliente.getPeso());
         //Executa o comando SQL
         stmt.executeUpdate();
     }
