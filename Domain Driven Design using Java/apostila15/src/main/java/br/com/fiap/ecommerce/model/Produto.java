@@ -10,6 +10,17 @@ public class Produto {
     private double valor;
     private LocalDate dataValidade;
 
+    public Produto(int codigo, String nome, int quantidade, double valor, LocalDate dataValidade) {
+        this.codigo = codigo;
+        this.nome = nome;
+        this.quantidade = quantidade;
+        this.valor = valor;
+        this.dataValidade = dataValidade;
+    }
+
+    public Produto() {
+    }
+
     public int getCodigo() {
         return codigo;
     }
