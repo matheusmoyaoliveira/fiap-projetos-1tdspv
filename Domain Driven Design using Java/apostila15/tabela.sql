@@ -7,5 +7,3 @@ create table t_tdspv_produto (
 );
 
 create sequence sq_tdspv_produto start with 1 increment by 1 nocache;
-
-select * from t_tdspv_produto;
