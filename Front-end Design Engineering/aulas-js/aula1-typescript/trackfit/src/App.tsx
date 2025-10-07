@@ -51,7 +51,7 @@ function App() {
               <Route
                 index
                 element={
-                  <Home workouts={workouts} removeWorkouts={removeWorkout} />
+                  <Home />
                 }
               />
               <Route

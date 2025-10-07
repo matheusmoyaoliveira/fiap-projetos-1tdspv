@@ -1,0 +1,4 @@
+GET: recupera informações de um recurso
+POST: cria um novo recurso
+PUT: atualiza um recurso
+DELETE: deleta um recurso
