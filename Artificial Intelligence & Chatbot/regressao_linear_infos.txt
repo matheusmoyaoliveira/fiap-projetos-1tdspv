@@ -1,0 +1,428 @@
+🔹 O que é Regressão Linear?
+
+É um modelo matemático que tenta encontrar uma linha (ou plano, ou hiperplano) que melhor descreve a relação entre as variáveis independentes (X) e a variável dependente (y).
+
+👉 Fórmula geral:
+
+𝑦
+=
+𝛽
+0
++
+𝛽
+1
+𝑥
+1
++
+𝛽
+2
+𝑥
+2
++
+.
+.
+.
++
+𝛽
+𝑛
+𝑥
+𝑛
+y=β
+0
+	​
+
++β
+1
+	​
+
+x
+1
+	​
+
++β
+2
+	​
+
+x
+2
+	​
+
++...+β
+n
+	​
+
+x
+n
+	​
+
+
+𝑦
+y → o que queremos prever (ex.: preço da casa).
+
+𝑥
+𝑖
+x
+i
+	​
+
+ → as variáveis explicativas (metragem, quartos, ano, etc.).
+
+𝛽
+𝑖
+β
+i
+	​
+
+ → coeficientes ajustados pelo modelo (peso de cada variável).
+
+𝛽
+0
+β
+0
+	​
+
+ → intercepto (valor base).
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+🔹 Diferença para outros modelos de regressão
+
+Regressão Linear
+
+Simples, rápida e fácil de interpretar.
+
+Assume que a relação entre X e y é linear.
+
+Exemplo: quanto maior a metragem (Square_Footage), maior o preço → linha reta.
+
+Árvore de Decisão Regressora
+
+Divide os dados em “ramos” (se o número de quartos > 3, vá para a direita, senão para a esquerda).
+
+Não assume linearidade.
+
+Funciona bem em dados mais complexos, mas pode superajustar (overfitting).
+
+Random Forest / Gradient Boosting
+
+Conjuntos de várias árvores → mais robusto, maior precisão.
+
+Mais pesados, menos interpretáveis.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+📦 Bibliotecas usadas
+
+sklearn.linear_model.LinearRegression
+
+Classe que cria o modelo de Regressão Linear.
+
+sklearn.model_selection.train_test_split
+
+Função para dividir os dados em treino (para aprender) e teste (para avaliar).
+
+sklearn.metrics.mean_squared_error
+
+Mede o erro quadrático médio → quanto menor, melhor.
+
+sklearn.metrics.r2_score
+
+Mede o R², que mostra quanto o modelo explica dos dados (varia de 0 a 1).
+
+📜 Código linha por linha
+X_train, X_test, y_train, y_test = train_test_split(features_scaled, target, test_size=0.2, random_state=42)
+
+
+Divide os dados em treino e teste.
+
+test_size=0.2 → 20% vai para teste, 80% para treino.
+
+random_state=42 → garante que a divisão seja sempre a mesma (reprodutibilidade).
+
+modelo_lr = LinearRegression()
+
+
+Cria um modelo de Regressão Linear vazio (sem estar treinado ainda).
+
+modelo_lr vai aprender a relação entre X (features) e y (target).
+
+modelo_lr.fit(X_train, y_train)
+
+
+Treina o modelo: o algoritmo calcula os coeficientes (os “pesos” de cada variável) que melhor se ajustam aos dados.
+
+y_pred = modelo_lr.predict(X_test)
+
+
+Faz previsões no conjunto de teste → o modelo usa o que aprendeu para prever preços de casas que ele nunca viu.
+
+mse = mean_squared_error(y_test, y_pred)
+
+
+Calcula o Erro Quadrático Médio (MSE):
+
+𝑀
+𝑆
+𝐸
+=
+1
+𝑛
+∑
+(
+𝑦
+𝑟
+𝑒
+𝑎
+𝑙
+−
+𝑦
+𝑝
+𝑟
+𝑒
+𝑣
+𝑖
+𝑠
+𝑡
+𝑜
+)
+2
+MSE=
+n
+1
+	​
+
+∑(y
+real
+	​
+
+−y
+previsto
+	​
+
+)
+2
+
+Quanto menor, mais próximo as previsões estão dos valores reais.
+
+r2 = r2_score(y_test, y_pred)
+
+
+Calcula o R² (Coeficiente de Determinação):
+
+Varia de 0 a 1.
+
+Exemplo: 
+𝑅
+2
+=
+0.99
+R
+2
+=0.99 → o modelo explica 99% da variação dos preços.
+
+print("Erro Quadrático Médio (MSE):", mse)
+print("Coeficiente de Determinação (R²):", r2)
+
+Mostra os resultados de avaliação do modelo.
+
+📊 Interpretação dos seus resultados
+
+MSE ≈ 101 milhões → parece grande, mas lembre que os preços estão na casa de centenas de milhares/milhões.
+
+R² ≈ 0.998 → altíssimo → significa que o modelo conseguiu explicar 99,8% da variação dos preços das casas 🎯.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+🐍 Como ficaria sem o mean_squared_error
+# diferença entre valores reais e previstos
+erros = y_test - y_pred  
+
+# eleva ao quadrado cada diferença
+erros_quadrado = erros ** 2  
+
+# soma tudo
+soma_erros = erros_quadrado.sum()  
+
+# divide pelo número de amostras (n)
+mse_manual = soma_erros / len(y_test)  
+
+print("MSE calculado manualmente:", mse_manual)
+
+
+🔹 Esse cálculo vai dar exatamente o mesmo resultado do mean_squared_error.
+🔹 A função pronta só economiza linhas e evita erro humano.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+📌 Cálculo manual do R² (Coeficiente de Determinação)
+
+A fórmula é:
+
+𝑅
+2
+=
+1
+−
+Soma dos Erros ao Quadrado (SSE)
+Soma Total ao Quadrado (SST)
+R
+2
+=1−
+Soma Total ao Quadrado (SST)
+Soma dos Erros ao Quadrado (SSE)
+	​
+
+
+Onde:
+
+SSE (Sum of Squared Errors) → soma dos erros do modelo:
+
+𝑆
+𝑆
+𝐸
+=
+∑
+(
+𝑦
+𝑟
+𝑒
+𝑎
+𝑙
+−
+𝑦
+𝑝
+𝑟
+𝑒
+𝑣
+𝑖
+𝑠
+𝑡
+𝑜
+)
+2
+SSE=∑(y
+real
+	​
+
+−y
+previsto
+	​
+
+)
+2
+
+SST (Total Sum of Squares) → variabilidade total dos dados em relação à média:
+
+𝑆
+𝑆
+𝑇
+=
+∑
+(
+𝑦
+𝑟
+𝑒
+𝑎
+𝑙
+−
+𝑦
+ˉ
+)
+2
+SST=∑(y
+real
+	​
+
+−
+y
+ˉ
+	​
+
+)
+2
+
+𝑦
+ˉ
+y
+ˉ
+	​
+
+ é a média dos valores reais.
+
+👉 Intuição:
+
+Se o modelo fosse “burro” e previsse só a média, ele teria SST como erro.
+
+O R² mede o quanto o modelo melhorou em relação a isso.
+
+🐍 Código do R² manual
+# valores reais e previstos
+y_real = y_test
+y_previsto = y_pred
+
+# média dos valores reais
+y_media = y_real.mean()
+
+# soma dos erros ao quadrado (SSE)
+sse = ((y_real - y_previsto) ** 2).sum()
+
+# soma total ao quadrado (SST)
+sst = ((y_real - y_media) ** 2).sum()
+
+# cálculo do R²
+r2_manual = 1 - (sse / sst)
+
+print("R² calculado manualmente:", r2_manual)
+
+
+🔹 Esse resultado deve ser idêntico ao r2_score.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+📌 Modelos de Regressão usados
+1. Regressão Linear
+
+📖 O modelo mais simples e clássico.
+
+Ele tenta ajustar uma reta (ou plano, ou hiperplano) que melhor explica a relação entre as variáveis (X → preço).
+
+Funciona muito bem quando a relação é linear.
+
+Resultado no seu caso:
+
+R² = 0.9984 → o modelo explica 99,84% da variação do preço.
+
+MSE ≈ 101 milhões → erro médio ainda baixo considerando os preços na casa dos milhões.
+
+2. Árvore de Decisão (DecisionTreeRegressor)
+
+📖 Funciona como uma série de perguntas “se-então” (if-else).
+Ex:
+
+"O tamanho da casa é maior que 3000 pés²?"
+
+"Se sim → segue para a direita, se não → vai para a esquerda."
+
+Muito flexível, mas pode decorar os dados de treino (overfitting), perdendo generalização.
+
+Resultado no seu caso:
+
+R² = 0.9850 → já é bom, mas menor que a regressão linear.
+
+MSE ≈ 966 milhões → erro bem maior → a árvore não conseguiu generalizar tão bem aqui.
+
+3. Random Forest (RandomForestRegressor)
+
+📖 É um conjunto de várias Árvores de Decisão treinadas em subconjuntos diferentes dos dados.
+
+O resultado final é a média das previsões de todas as árvores.
+
+Isso reduz o risco de overfitting e melhora a precisão.
+
+Resultado no seu caso:
+
+R² = 0.9938 → excelente, quase tão bom quanto a regressão linear.
+
+MSE ≈ 396 milhões → erro bem menor que a árvore isolada, mas maior que a regressão linear.
+
+📊 Interpretação Geral
+
+Melhor modelo nesse dataset → Regressão Linear
+
+Tem maior R² (0.9984) e menor MSE (101M).
+
+Faz sentido: os dados parecem ter uma relação quase perfeitamente linear entre atributos e preço (ex: o scatterplot que você fez mostrou isso).
+
+Árvore de Decisão → ficou pior, porque tentou criar cortes rígidos nos dados.
+
+Random Forest → melhorou em relação à árvore, mas ainda não bateu a regressão linear (provavelmente porque os dados já são lineares, então o modelo simples funciona melhor).

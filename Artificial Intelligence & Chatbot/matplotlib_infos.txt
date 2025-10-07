@@ -1,0 +1,24 @@
+🔹 plt (Matplotlib)
+
+plt é a forma abreviada de matplotlib.pyplot.
+
+É a biblioteca principal para gráficos no Python.
+
+Comandos que você rodou:
+
+plt.figure(figsize=(12, 8)) → cria uma área de desenho com tamanho definido.
+
+plt.suptitle("Distribuição das variáveis") → adiciona título.
+
+plt.show() → exibe o gráfico.
+
+👉 O df.hist() já chama o Matplotlib internamente, mas você pode adicionar personalizações extras com plt.
+----------------------------------------------------------------------------------------------------------
+📌 plt.xticks(rotation=45)
+
+Ajusta a rotação dos nomes do eixo X.
+
+Como temos várias colunas, os nomes poderiam ficar sobrepostos.
+
+rotation=45 → gira os rótulos em 45°, deixando mais legível.
+----------------------------------------------------------------------------------------------------------

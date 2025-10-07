@@ -1,0 +1,17 @@
+📌 sns.boxplot(data=df)
+
+Boxplot é um gráfico estatístico que ajuda a visualizar distribuições e outliers.
+
+Interpretação do boxplot:
+
+Caixa = intervalo entre o 1º quartil (25%) e 3º quartil (75%).
+
+Linha dentro da caixa = mediana (50%).
+
+“Bigodes” (linhas que saem da caixa) = variabilidade normal dos dados.
+
+Pontos fora dos bigodes = outliers (valores muito fora do padrão).
+
+👉 No seu gráfico, só House_Price aparece destacado (porque está em outra escala, muito maior que as demais variáveis).
+Se plotarmos cada variável em separado, fica mais fácil de enxergar outliers nas outras.
+-----------------------------------------------------------------------------------------------------------------------

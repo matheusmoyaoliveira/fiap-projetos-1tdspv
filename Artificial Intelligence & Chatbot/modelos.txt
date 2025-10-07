@@ -1,0 +1,26 @@
+| Modelo                                              | Tipo                               | Quando usar                                                   | Vantagens                                                 | Desvantagens                                                    | Exemplo prático                                              |
+| --------------------------------------------------- | ---------------------------------- | ------------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------ |
+| **Regressão Linear**                                | Regressão                          | Relação quase linear entre X e y (contínuo). Pouco ruído.     | Simples, rápido, interpretável.                           | Não funciona bem em relações não lineares. Sensível a outliers. | Prever salário com base em anos de experiência.              |
+| **Regressão Logística**                             | Classificação                      | Variável alvo binária (sim/não, 0/1).                         | Interpretação fácil (probabilidades). Rápida.             | Só para classificação. Não capta relações complexas.            | Prever se um cliente vai cancelar assinatura.                |
+| **Árvore de Decisão**                               | Regressão e Classificação          | Relações não lineares, regras claras.                         | Fácil de interpretar. Captura interações entre variáveis. | Overfitting se a árvore ficar muito profunda.                   | Aprovação de crédito: “Se idade > 25 e renda > X → aprova”.  |
+| **Random Forest**                                   | Regressão e Classificação          | Dados grandes, complexos e com ruído.                         | Mais robusto que árvore única. Reduz overfitting.         | Mais lento. Difícil interpretar.                                | Prever fraude em cartões de crédito.                         |
+| **KNN (K-Nearest Neighbors)**                       | Regressão e Classificação          | Dados pequenos/médios. Problemas em que similaridade importa. | Simples, não precisa de treino.                           | Lento em grandes bases. Depende de normalização.                | Classificar uma fruta (maçã/laranja) com base em cor e peso. |
+| **SVM (Support Vector Machine)**                    | Classificação (às vezes Regressão) | Quando os dados têm fronteiras claras de separação.           | Funciona bem em espaços de alta dimensão. Robusto.        | Difícil interpretar. Lento em grandes bases.                    | Detectar spam em e-mails (spam vs não spam).                 |
+| **Redes Neurais (MLP, CNN, RNN, etc.)**             | Regressão e Classificação          | Problemas muito complexos (imagens, voz, texto).              | Extremamente poderosas.                                   | Exigem muito dado e poder computacional. Difíceis de explicar.  | Reconhecimento facial, tradução automática.                  |
+| **Gradient Boosting (XGBoost, LightGBM, CatBoost)** | Regressão e Classificação          | Dados tabulares com relações complexas.                       | Alta performance. Vence competições.                      | Mais difícil de configurar (muitos hiperparâmetros).            | Previsão de churn, scoring de crédito, vendas futuras.       |
+sos em dados tabulares.
+
+
+🔹 Como pensar na escolha:
+
+Preciso de algo rápido, simples e explicável? → Regressão Linear / Logística.
+
+Tenho poucos dados e quero regras claras? → Árvore de Decisão.
+
+Tenho dados grandes, complexos e quero precisão? → Random Forest ou Gradient Boosting.
+
+Meu problema envolve imagens, texto ou áudio? → Redes Neurais.
+
+Quero prever baseando em “similaridade”? → KNN.
+
+Meus dados se separam bem em “fronteiras”? → SVM.

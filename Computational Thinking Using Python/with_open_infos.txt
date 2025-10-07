@@ -1,0 +1,11 @@
+📌 1. O que significa o "r" no with open(...)
+
+Quando você abre um arquivo em Python com open, você precisa dizer o modo de abertura.
+
+"r" → read → abrir para leitura (não deixa escrever).
+
+"w" → write → abre para escrita (apaga o conteúdo e cria do zero).
+
+"a" → append → abre para acrescentar no final.
+
+"r+" → abre para leitura e escrita ao mesmo tempo.

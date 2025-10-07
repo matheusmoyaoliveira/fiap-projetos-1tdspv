@@ -43,3 +43,15 @@
 [submodule "Computational Thinking Using Python/cp04-python"]
 	path = Computational Thinking Using Python/cp04-python
 	url = https://github.com/matheusmoyaoliveira/cp04-python
+[submodule "Artificial Intelligence & Chatbot/cp05-chatbot"]
+	path = Artificial Intelligence & Chatbot/cp05-chatbot
+	url = https://github.com/matheusmoyaoliveira/cp05-chatbot
+[submodule "Domain Driven Design using Java/java-sprint-3"]
+	path = Domain Driven Design using Java/java-sprint-3
+	url = https://github.com/matheusmoyaoliveira/java-sprint-3.git
+[submodule "Domain Driven Design using Java/Cp04-java"]
+	path = Domain Driven Design using Java/Cp04-java
+	url = https://github.com/matheusmoyaoliveira/Cp04-java.git
+[submodule "Computational Thinking Using Python/python-sprint-privado-3"]
+	path = Computational Thinking Using Python/python-sprint-privado-3
+	url = https://github.com/matheusmoyaoliveira/python-sprint-privado-3.git
