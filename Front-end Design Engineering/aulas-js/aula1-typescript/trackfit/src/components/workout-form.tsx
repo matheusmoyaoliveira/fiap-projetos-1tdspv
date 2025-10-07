@@ -99,4 +99,3 @@ export function WorkoutForm({ onAdd }: WorkoutFormProps) {
     </form>
   );
 }
-
