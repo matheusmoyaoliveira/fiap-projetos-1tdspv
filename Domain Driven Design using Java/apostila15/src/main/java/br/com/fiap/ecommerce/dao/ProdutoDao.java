@@ -16,6 +16,17 @@ public class ProdutoDao {
     @Inject
     private DataSource dataSource;
 
+    public void deletar(int codigo) throws SQLException, EntidadeNaoEncontradaException {
+        try (Connection conexao = dataSource.getConnection()) {
+            PreparedStatement stmt = conexao.prepareStatement("delete from t_tdspv_produto where cd_produto = ?");
+
+            stmt.setInt(1, codigo);
+            if (stmt.executeUpdate() == 0)
+                throw new EntidadeNaoEncontradaException("Não tem produto para apagar");
+
+        }
+    }
+
     public List<Produto> listar() throws SQLException {
         try (Connection conexao = dataSource.getConnection()){
             PreparedStatement stmt = conexao.prepareStatement("select * from t_tdspv_produto");
