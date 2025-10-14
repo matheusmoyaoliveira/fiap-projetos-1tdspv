@@ -1,22 +1,9 @@
-import { useEffect, useState } from "react";
+import { useContext } from "react";
 import { WorkoutList } from "../components/workout-list";
-import type { Workout } from "../types/workout";
-
+import { WorkoutsContext } from "../context/workout-context";
 
 export function Home() {
-  const [workouts, setWorkouts] = useState<Workout[]>([]);
-
-  useEffect(() => {
-
-    fetch('http://localhost:4000/workouts', {
-      method: "GET",
-      headers: {
-        'Content-type': "application/json",
-      },
-    })
-      .then((data) => data.json())
-      .then((data: Workout[]) => setWorkouts(data))
-  }, [])
+  const { workouts } = useContext(WorkoutsContext);
 
   return (
     <>

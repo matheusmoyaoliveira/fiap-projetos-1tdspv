@@ -1,12 +1,15 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { WorkoutsContext } from "../context/workout-context";
 import type { Workout } from "../types/workout";
 
 interface WorkoutResumeProps {
   workout: Workout;
-  removeWorkout?: (id: string) => void;
 }
 
-export function WorkoutResume({ workout, removeWorkout }: WorkoutResumeProps) {
+export function WorkoutResume({ workout }: WorkoutResumeProps) {
+  const { removeWorkout } = useContext(WorkoutsContext);
+
   return (
     <div className="w-3/5 rounded-lg shadow px-3 py-4 flex flex-col gap-5 mb-3 bg-white">
       <div className="flex justify-between">
@@ -22,7 +25,7 @@ export function WorkoutResume({ workout, removeWorkout }: WorkoutResumeProps) {
           </Link>
 
           <button
-          //  onClick={() => removeWorkout(workout.id)}
+            onClick={() => removeWorkout(workout.id)}
             className="bg-red-600 border text-white rounded p-2"
           >
             Remover treino

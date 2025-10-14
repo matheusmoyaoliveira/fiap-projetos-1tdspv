@@ -1,10 +1,10 @@
-import { lazy, Suspense, useCallback, useState } from "react";
+import { lazy, Suspense } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Fallback } from "./components/fallback";
 import { Layout } from "./components/layout";
 import { Loading } from "./components/loading";
-import type { Workout } from "./types/workout";
+import { WorkoutsProvider } from "./context/workout-context";
 
 const Home = lazy(() =>
   import("./pages/home").then((m) => ({ default: m.Home }))
@@ -23,48 +23,23 @@ const WorkoutDetails = lazy(() =>
 );
 
 function App() {
-  const [workouts, setWorkouts] = useState<Workout[]>([]);
-
-  const removeWorkout = useCallback((id: string) => {
-    const workoutToDelete = workouts.findIndex((value) => {
-      return value.id === id;
-    });
-
-    const updatedWorkouts = [...workouts];
-
-    updatedWorkouts.splice(workoutToDelete, 1);
-
-    setWorkouts(updatedWorkouts);
-  }, []);
-
-  // Renderiza somente uma vez
-  const addWorkout = useCallback((workout: Workout) => {
-    setWorkouts((prev) => [...prev, workout]);
-  }, []);
-
   return (
-    <BrowserRouter>
-      <ErrorBoundary FallbackComponent={Fallback}>
-        <Suspense fallback={<Loading />}>
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route
-                index
-                element={
-                  <Home />
-                }
-              />
-              <Route
-                path="/add"
-                element={<AddWorkout onAdd={addWorkout} workouts={workouts} />}
-              />
-              <Route path="/workout/:id" element={<WorkoutDetails />} />
-              <Route path="*" element={<NotFound />} />
-            </Route>
-          </Routes>
-        </Suspense>
-      </ErrorBoundary>
-    </BrowserRouter>
+    <WorkoutsProvider>
+      <BrowserRouter>
+        <ErrorBoundary FallbackComponent={Fallback}>
+          <Suspense fallback={<Loading />}>
+            <Routes>
+              <Route path="/" element={<Layout />}>
+                <Route index element={<Home />} />
+                <Route path="/add" element={<AddWorkout />} />
+                <Route path="/workout/:id" element={<WorkoutDetails />} />
+                <Route path="*" element={<NotFound />} />
+              </Route>
+            </Routes>
+          </Suspense>
+        </ErrorBoundary>
+      </BrowserRouter>
+    </WorkoutsProvider>
   );
 }
 

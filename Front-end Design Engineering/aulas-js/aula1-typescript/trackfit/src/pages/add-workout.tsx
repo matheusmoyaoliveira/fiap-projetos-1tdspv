@@ -1,13 +1,12 @@
-import { useMemo } from "react";
+import { useContext, useMemo } from "react";
 import { WorkoutForm } from "../components/workout-form";
-import type { Workout } from "../types/workout";
+import { WorkoutsContext } from "../context/workout-context";
 
-interface AddWorkoutProps {
-  workouts: Workout[];
-  onAdd: (workout: Workout) => void;
-}
+export function AddWorkout() {
+  const { workouts } = useContext(WorkoutsContext);
 
-export function AddWorkout({ onAdd, workouts }: AddWorkoutProps) {
+  console.log(workouts);
+
   // Renderiza somente uma vez
   const workoutTotal = useMemo(() => {
     return workouts.length;
@@ -38,7 +37,7 @@ export function AddWorkout({ onAdd, workouts }: AddWorkoutProps) {
 
       <p>Tempo de treino: {workoutMinutes} horas</p>
 
-      <WorkoutForm onAdd={onAdd} />
+      <WorkoutForm />
     </>
   );
 }
