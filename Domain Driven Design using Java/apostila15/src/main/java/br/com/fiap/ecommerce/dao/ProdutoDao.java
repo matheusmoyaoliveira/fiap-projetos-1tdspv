@@ -55,7 +55,7 @@ public class ProdutoDao {
         }
     }
 
-    public void atualizar(Produto produto) throws SQLException, EntidadeNaoEncontradaException {
+    public Object atualizar(Produto produto) throws SQLException, EntidadeNaoEncontradaException {
         try (Connection conexao = dataSource.getConnection();
             PreparedStatement stmt = conexao.prepareStatement("update t_tdspv_produto " +
                     "set nm_produto = ?, qt_produto = ?, vl_produto = ?, dt_validade = ? " +
@@ -70,6 +70,7 @@ public class ProdutoDao {
                 throw new EntidadeNaoEncontradaException("Produto não encontrado: " + produto.getCodigo());
 
         }
+        return null;
     }
 
     private static void setarParametros(Produto produto, PreparedStatement stmt) throws SQLException {
