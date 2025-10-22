@@ -4,9 +4,9 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { Fallback } from "./components/fallback";
 import { Layout } from "./components/layout";
 import { Loading } from "./components/loading";
-import { AuthContext, AuthProvider } from "../src/context/auth-context";
+import { AuthContext, AuthProvider } from "./context/auth-context";
 import { WorkoutsProvider } from "./context/workout-context";
-import { Login } from "../src/pages/login";
+import { Login } from "./pages/login";
 
 const Home = lazy(() =>
   import("./pages/home").then((m) => ({ default: m.Home }))
