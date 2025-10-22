@@ -1,12 +1,39 @@
 {
-    "workouts": [
+  "workouts": [
     {
-        "id": "1", 
-        "title": "Corrida", 
-        "intensity": 4, 
-        "duration": 50, 
-        "date": "2025-10-10", 
-        "notes": "Corrida no parque"
+      "id": "cf47e610-a198-4a93-addb-2f131f14cc1e",
+      "title": "Muay thai",
+      "duration": 60,
+      "intensity": 5,
+      "date": "2026-02-02",
+      "notes": "aula de muay thai a noite",
+      "userId": "1"
+    },
+    {
+      "id": "dfe4c4d0-dbe0-4d64-8ed9-03533d894605",
+      "title": "Muay thai",
+      "duration": 50,
+      "intensity": 5,
+      "date": "2026-02-02",
+      "notes": "teste",
+      "userId": "2"
     }
-    ]
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "leandro",
+      "type": "Personal"
+    },
+    {
+      "id": "2",
+      "name": "kiko",
+      "type": "gymmember"
+    },
+    {
+      "id": "3",
+      "name": "Madruga",
+      "type": "Personal"
+    }
+  ]
 }
