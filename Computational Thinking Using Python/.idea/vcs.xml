@@ -3,7 +3,9 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
     <mapping directory="$PROJECT_DIR$/cp02-python" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/cp04-python" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/gs-python" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/python-sprint-privado" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/python-sprint-privado-3" vcs="Git" />
   </component>
 </project>
