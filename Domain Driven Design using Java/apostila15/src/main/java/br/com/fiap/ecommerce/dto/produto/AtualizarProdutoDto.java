@@ -4,19 +4,19 @@ import jakarta.validation.constraints.*;
 
 import java.time.LocalDate;
 
-public class CadastroProdutoDto {
+public class AtualizarProdutoDto {
 
-    @NotBlank(message = "Nome é obrigatório")
-    @Size(max = 10)
+    @Size(max = 80)
+    @NotBlank
     private String nome;
 
-    @Positive
+    @PositiveOrZero
     private int quantidade;
 
     @Positive
     private double valor;
 
-    @Future(message = "A data deve estar no futuro")
+    @Future
     private LocalDate dataValidade;
 
     public String getNome() {

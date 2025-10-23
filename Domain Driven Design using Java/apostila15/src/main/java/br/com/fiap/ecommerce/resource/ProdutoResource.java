@@ -1,11 +1,13 @@
 package br.com.fiap.ecommerce.resource;
 
 import br.com.fiap.ecommerce.dao.ProdutoDao;
-import br.com.fiap.ecommerce.dto.detalhes.DetalhesProdutoDto;
+import br.com.fiap.ecommerce.dto.produto.DetalhesProdutoDto;
+import br.com.fiap.ecommerce.dto.produto.AtualizarProdutoDto;
 import br.com.fiap.ecommerce.dto.produto.CadastroProdutoDto;
 import br.com.fiap.ecommerce.exception.EntidadeNaoEncontradaException;
 import br.com.fiap.ecommerce.model.Produto;
 import jakarta.inject.Inject;
+import jakarta.validation.Valid;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.*;
 import org.modelmapper.ModelMapper;
@@ -33,8 +35,10 @@ public class ProdutoResource {
     }
 
     @GET
-    public List<Produto> listar() throws SQLException {
-        return produtoDao.listar();
+    public List<DetalhesProdutoDto> listar() throws SQLException {
+        return produtoDao.listar().stream().map(
+                p -> modelMapper.map(p, DetalhesProdutoDto.class)
+        ).toList();
     }
 
     @GET
@@ -47,14 +51,15 @@ public class ProdutoResource {
 
     @PUT
     @Path("/{id}")
-    public Response atualizar(@PathParam("id") int codigo, Produto produto) throws SQLException, EntidadeNaoEncontradaException {
+    public Response atualizar(@PathParam("id") int codigo, AtualizarProdutoDto dto) throws SQLException, EntidadeNaoEncontradaException {
+        Produto produto = modelMapper.map(dto, Produto.class);
         produto.setCodigo(codigo);
         produtoDao.atualizar(produto);
-        return Response.ok().build();
+        return Response.ok(dto).build();
     }
 
     @POST
-    public Response create(CadastroProdutoDto dto, @Context UriInfo uriInfo) throws SQLException {
+    public Response create(@Valid CadastroProdutoDto dto, @Context UriInfo uriInfo) throws SQLException {
         Produto produto = modelMapper.map(dto, Produto.class);
 
         produtoDao.cadastrar(produto);
