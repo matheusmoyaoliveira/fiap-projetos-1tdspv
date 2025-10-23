@@ -1,4 +1,5 @@
 import { createContext, useCallback, useEffect, useState } from "react";
+import type { AuthUser } from "../types/auth-user";
 import type { Workout } from "../types/workout";
 
 interface WorkoutContextProps {
@@ -28,12 +29,29 @@ export function WorkoutsProvider({ children }: WorkoutsProviderProps) {
   }, []);
 
   const fetchWorkouts = useCallback(async () => {
-    const response = await fetch("http://localhost:4000/workouts", {
-      method: "GET",
-      headers: {
-        "Content-type": "application/json",
-      },
-    });
+    setTimeout(() => {
+      console.log("esperando");
+    }, 3000);
+
+    const storage = localStorage.getItem("user");
+
+    console.log("storage", storage);
+
+    if (!storage) {
+      throw new Error("Usuario não está autenticado");
+    }
+
+    const user: AuthUser = JSON.parse(storage);
+
+    const response = await fetch(
+      `http://localhost:4000/workouts?userId=${user.id}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-type": "application/json",
+        },
+      }
+    );
 
     const data = await response.json();
 
@@ -41,7 +59,7 @@ export function WorkoutsProvider({ children }: WorkoutsProviderProps) {
   }, []);
 
   useEffect(() => {
-    fetchWorkouts();
+    void fetchWorkouts();
   }, []);
 
   const removeWorkout = useCallback(async (id: string) => {
