@@ -15,7 +15,7 @@ def get_conexao():
 def insere_cliente(cliente):
     with get_conexao() as con:
         with con.cursor() as cur:
-            sql = "inserto into cliente(nome, telefone, documento) values (:nome, :telefone, :documento) returning id into :id"
+            sql = "insert into cliente(nome, telefone, documento) values (:nome, :telefone, :documento) returning id into :id"
 
             new_var = cur.var(oracledb.NUMBER)
             cliente['id'] = new_var
@@ -27,7 +27,7 @@ def insere_cliente(cliente):
 def insere_endereco(endereco, id_cliente):
     with get_conexao() as con:
         with con.cursor() as cur:
-            sql = "inserto into endereco(logradouro, bairro, cep, cidade, pessoa_id) values (:logradouro, :bairro, :cep, :cidade, :pessoa_id)"
+            sql = "insert into endereco(logradouro, bairro, cep, cidade, pessoa_id) values (:logradouro, :bairro, :cep, :cidade, :pessoa_id)"
 
             endereco['pessoa_id'] = id_cliente
             cur.execute(sql, endereco)
@@ -36,14 +36,35 @@ def insere_endereco(endereco, id_cliente):
 def insere_conta(cliente: dict):
     with get_conexao() as con:
         with con.cursor() as cur:
-            sql = "select sq_numero.nextval from dual;"
+            sql = "select sq_numero.nextval from dual"
             cur.execute(sql)
             registro = cur.fetchone()
             id_conta = registro[0]
             print(f"Conta: {id_conta}")
 
-            sql = "inserto into cliente(tipo, numero, senha, saldo, cliente_id) values ('corrente', :id_conta, 'admin', 0, :cliente_id)"
+            sql = "insert into cliente(tipo, numero, senha, saldo, cliente_id) values ('corrente', :id_conta, 'admin', 0, :cliente_id)"
 
             info = {"id_conta": id_conta, "cliente_id": cliente['id']}
             cur.execute(sql, info)
         con.commit()
+
+def insere_transacao(transacao: dict):
+    with get_conexao() as con:
+        with con.cursor() as cur:
+            sql = "INSERT INTO TRANSACAO(valor, data_hora, contraparte, tipo, conta_id) VALUES(:valor, current_timestamp, :contraparte, :tipo, :conta_id)"
+            cur.execute(sql, transacao)
+        con.commit()
+
+def atualiza_saldo(info: dict):
+    with get_conexao() as con:
+        with con.cursor() as cur:
+            sql = "UPDATE conta SET saldo = saldo + :valor WHERE id = :id"
+            cur.execute(sql, info)
+        con.commit()
+
+def consulta_conta(id: int):
+    with get_conexao() as con:
+        with con.cursor() as cur:
+            sql = "SELECT c.nome, c.telefone, cont.numero, cont.saldo, cont.tipo FROM conta cont join cliente c on cont.cliente_id = c.id WHERE c.id = :id"
+            cur.execute(sql)
+            return cur.fetchone()
