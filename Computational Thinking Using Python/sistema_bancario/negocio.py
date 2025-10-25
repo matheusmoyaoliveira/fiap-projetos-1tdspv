@@ -10,9 +10,10 @@ def consulta_viacep(cep: str) -> dict:
         "logradouro": dado['logradouro'],
         "bairro": dado['bairro'],
         "cep": dado['cep'],
-        "cidade": dado['localidade']
+        'cidade': dado['localidade']
     }
     return info
+
 
 def abertura_conta(cliente: dict, cep: str):
     try:
@@ -22,9 +23,10 @@ def abertura_conta(cliente: dict, cep: str):
         insere_endereco(endereco, cliente['id'])
         insere_conta(cliente)
     except Exception as erro:
-        msg = f"Erro na abertura do cliente {cliente['nome']}"
+        traceback.print_exc()
+        msg = f'Erro na abertura do cliente {cliente["nome"]}'
         raise Exception(msg)
-    
+
 def registra_transacao(transacao: dict):
     try:
         insere_transacao(transacao)
@@ -34,19 +36,7 @@ def registra_transacao(transacao: dict):
         traceback.print_exc()
         msg = f"Erro no registro da transacao"
         raise Exception(msg)
-    
-cli = {
-    "nome": "Viviane",
-    "telefone": "(11) 9873-9029",
-    "documento": "364.948.802-99"
-}
 
-# abertura_conta(cli, '01311000')
 
-tran = {
-    "valor": 580,
-    "contraparte": "Eduardo",
-    "tipo": "BOLETO",
-    "conta_id": 21
-}
-registra_transacao(tran)
+def recupera_clientes():
+    return recupera_clientes_banco(), 200 
