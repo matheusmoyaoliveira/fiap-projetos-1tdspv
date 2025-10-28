@@ -39,5 +39,4 @@ def cadastra_transacao():
     except Exception as erro:
         return {"erro": "Erro no cadatro da transacao"}, 400
 
-
 app.run(debug=True)
