@@ -1,6 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
+import { AuthContext } from "../context/auth-context";
 import { WorkoutsContext } from "../context/workout-context";
 import { workoutSchema, type WorkoutFormData } from "../schemas/workout-schema";
 import type { Intensity } from "../types/intensity";
@@ -8,6 +9,7 @@ import type { Workout } from "../types/workout";
 
 export function WorkoutForm() {
   const { saveWorkouts } = useContext(WorkoutsContext);
+  const { user } = useContext(AuthContext);
 
   const {
     register,
@@ -19,6 +21,10 @@ export function WorkoutForm() {
   });
 
   async function onSubmit(data: WorkoutFormData): Promise<void> {
+    if (!user) {
+      throw new Error("Usuario não está autenticado");
+    }
+
     const workout: Workout = {
       id: crypto.randomUUID(),
       title: data.title,
@@ -26,6 +32,7 @@ export function WorkoutForm() {
       intensity: data.intensity as Intensity,
       date: data.date,
       notes: data.notes,
+      userId: user.id,
     };
 
     await saveWorkouts(workout);

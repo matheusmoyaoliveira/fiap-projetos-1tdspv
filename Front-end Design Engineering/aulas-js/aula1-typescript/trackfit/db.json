@@ -1,21 +1,40 @@
+
 {
   "workouts": [
     {
       "id": "cf47e610-a198-4a93-addb-2f131f14cc1e",
-      "title": "Muay thai",
+      "title": "Yoga",
       "duration": 60,
       "intensity": 5,
       "date": "2026-02-02",
-      "notes": "aula de muay thai a noite",
+      "notes": "aula de yoga",
       "userId": "1"
     },
     {
       "id": "dfe4c4d0-dbe0-4d64-8ed9-03533d894605",
-      "title": "Muay thai",
+      "title": "Jiu-jitsu",
       "duration": 50,
       "intensity": 5,
       "date": "2026-02-02",
       "notes": "teste",
+      "userId": "2"
+    },
+    {
+      "id": "a653dcbf-6036-4116-8c7d-b0320d9a6d75",
+      "title": "Fitdance",
+      "duration": 50,
+      "intensity": 5,
+      "date": "2026-02-20",
+      "notes": "aula de fitdance",
+      "userId": "1"
+    },
+    {
+      "id": "b5472fe6-639f-41b0-b4aa-61b8fbbe8afb",
+      "title": "Corrida",
+      "duration": 60,
+      "intensity": 5,
+      "date": "2026-02-20",
+      "notes": "aula de corrida intensa",
       "userId": "2"
     }
   ],
