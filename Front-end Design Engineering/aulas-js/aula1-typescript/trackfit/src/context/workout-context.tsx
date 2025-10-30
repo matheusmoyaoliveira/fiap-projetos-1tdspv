@@ -1,4 +1,6 @@
+import Cookies from "js-cookie";
 import { createContext, useCallback, useState } from "react";
+import { API_WORKOUT } from "../api/workouts-api";
 import type { AuthUser } from "../types/auth-user";
 import type { Workout } from "../types/workout";
 
@@ -21,7 +23,7 @@ export function WorkoutsProvider({ children }: WorkoutsProviderProps) {
   const [workouts, setWorkouts] = useState<Workout[]>([]);
 
   const saveWorkouts = useCallback(async (value: Workout) => {
-    await fetch("http://localhost:4000/workouts", {
+    await fetch(`${API_WORKOUT}/workouts`, {
       method: "POST",
       body: JSON.stringify(value),
     });
@@ -30,7 +32,9 @@ export function WorkoutsProvider({ children }: WorkoutsProviderProps) {
   }, []);
 
   const fetchWorkouts = useCallback(async () => {
-    const storage = localStorage.getItem("user");
+    // const storage = localStorage.getItem("user");
+
+    const storage = Cookies.get("user");
 
     if (!storage) {
       throw new Error("Usuario não está autenticado");
@@ -38,15 +42,12 @@ export function WorkoutsProvider({ children }: WorkoutsProviderProps) {
 
     const user: AuthUser = JSON.parse(storage);
 
-    const response = await fetch(
-      `http://localhost:4000/workouts?userId=${user.id}`,
-      {
-        method: "GET",
-        headers: {
-          "Content-type": "application/json",
-        },
-      }
-    );
+    const response = await fetch(`${API_WORKOUT}/workouts?userId=${user.id}`, {
+      method: "GET",
+      headers: {
+        "Content-type": "application/json",
+      },
+    });
 
     const data = await response.json();
 
@@ -54,7 +55,7 @@ export function WorkoutsProvider({ children }: WorkoutsProviderProps) {
   }, []);
 
   const removeWorkout = useCallback(async (id: string) => {
-    await fetch(`http://localhost:4000/workouts/${id}`, {
+    await fetch(`${API_WORKOUT}/workouts/${id}`, {
       method: "DELETE",
     });
 
