@@ -7,4 +7,4 @@ nome = st.text_input("Nome: ")
 idade = st.number_input("Idade: ", min_value=0, max_value=140)
 
 if st.button("cadastra"):
-    st.write(f"Seu nome é {nome} e tem {idade} anos")
+    st.write(f"SEu nome é {nome} e tem {idade} anos")
