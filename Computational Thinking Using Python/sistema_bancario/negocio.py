@@ -45,7 +45,21 @@ def recupera_clientes():
         info = {
             "nome": reg[0],
             "telefone": reg[1],
-            "documento": reg[2]
+            "documento": reg[2],
+            "id": reg[3]
         }
         clientes.append(info)
     return clientes
+
+def recupera_transacoes(id_conta):
+    dados = listar_transacoes(id_conta)
+    transacoes = []
+    for reg in dados:
+        transacoes.append({
+            "id": reg[0],
+            "valor": reg[1],
+            "data": str(reg[2]),
+            "contraparte": reg[3],
+            "tipo": reg[4]
+        })
+    return transacoes

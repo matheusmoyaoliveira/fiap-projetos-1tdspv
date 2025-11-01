@@ -49,6 +49,18 @@ def insere_transacao(transacao: dict):
             cur.execute(sql, transacao)
         con.commit()
 
+def listar_transacoes(id_conta):
+    with get_conexao() as con:
+        with con.cursor() as cur:
+            sql = """
+                SELECT id, valor, data_hora, contraparte, tipo
+                FROM transacao
+                WHERE conta_id = :id_conta
+                ORDER BY data_hora DESC
+            """
+            cur.execute(sql, {"id_conta": id_conta})
+            return cur.fetchall()
+
 def atualiza_saldo(info: dict):
     with get_conexao() as con:
         with con.cursor() as cur:
@@ -68,7 +80,7 @@ def recupera_clientes_banco():
     clientes = []
     with get_conexao() as con:
         with con.cursor() as cur:
-            sql = "SELECT c.nome, c.telefone, c.documento FROM cliente c"
+            sql = "SELECT c.nome, c.telefone, c.documento, conta.id FROM cliente c join conta conta on c.id=conta.cliente_id ORDER BY c.nome"
             cur.execute(sql)
             dados = cur.fetchall()
         return dados

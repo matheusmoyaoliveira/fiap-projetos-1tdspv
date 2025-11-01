@@ -40,6 +40,16 @@ def cadastra_transacao():
         return transacao, 201
     except Exception as erro:
         return {"erro": "Erro no cadatro da transacao"}, 400
+    
+@app.route("/banco/transacoes/<int:id_conta>", methods=['GET'])
+@cross_origin()
+def listar_transacoes(id_conta):
+    try:
+        transacoes = neg.recupera_transacoes(id_conta)
+        return jsonify(transacoes), 200
+    except Exception as erro:
+        traceback.print_exc()
+        return {"erro": "Erro ao listar transações"}, 400
 
 
 app.run(debug=True)
