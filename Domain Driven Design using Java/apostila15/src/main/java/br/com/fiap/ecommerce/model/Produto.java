@@ -10,6 +10,8 @@ public class Produto {
     private double valor;
     private LocalDate dataValidade;
 
+    private Categoria categoria;
+
     public Produto() {
     }
 
@@ -21,6 +23,22 @@ public class Produto {
         this.dataValidade = dataValidade;
     }
 
+    public Produto(int codigo, String nome, int quantidade, double valor, LocalDate dataValidade, Categoria categoria) {
+        this.codigo = codigo;
+        this.nome = nome;
+        this.quantidade = quantidade;
+        this.valor = valor;
+        this.dataValidade = dataValidade;
+        this.categoria = categoria;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
     public int getCodigo() {
         return codigo;
     }
@@ -60,4 +78,6 @@ public class Produto {
     public void setDataValidade(LocalDate dataValidade) {
         this.dataValidade = dataValidade;
     }
+
+
 }

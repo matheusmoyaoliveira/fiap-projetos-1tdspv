@@ -1,17 +1,10 @@
-package br.com.fiap.ecommerce.model;
+package br.com.fiap.ecommerce.dto.categoria;
 
-public class Categoria {
+public class DetalhesCategoriaDto {
 
     private int codigo;
+
     private String nome;
-
-    public Categoria(int codigo, String nome) {
-        this.codigo = codigo;
-        this.nome = nome;
-    }
-
-    public Categoria() {
-    }
 
     public int getCodigo() {
         return codigo;

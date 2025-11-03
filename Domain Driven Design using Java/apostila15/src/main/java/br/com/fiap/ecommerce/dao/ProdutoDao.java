@@ -1,6 +1,7 @@
 package br.com.fiap.ecommerce.dao;
 
 import br.com.fiap.ecommerce.exception.EntidadeNaoEncontradaException;
+import br.com.fiap.ecommerce.model.Categoria;
 import br.com.fiap.ecommerce.model.Produto;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
@@ -16,20 +17,58 @@ public class ProdutoDao {
     @Inject
     private DataSource dataSource;
 
-    public void deletar(int codigo) throws SQLException, EntidadeNaoEncontradaException {
-        try (Connection conexao = dataSource.getConnection()) {
-            PreparedStatement stmt = conexao.prepareStatement("delete from t_tdspv_produto where cd_produto = ?");
-
-            stmt.setInt(1, codigo);
+    public void deletar(int id) throws SQLException, EntidadeNaoEncontradaException {
+        try (Connection conexao = dataSource.getConnection()){
+            PreparedStatement stmt = conexao.prepareStatement("delete from " +
+                    "t_tdspv_produto where cd_produto = ?");
+            stmt.setInt(1, id);
             if (stmt.executeUpdate() == 0)
                 throw new EntidadeNaoEncontradaException("Não tem produto para apagar");
+        }
+    }
 
+    public void atualizar(Produto produto) throws SQLException, EntidadeNaoEncontradaException {
+        try (Connection conexao = dataSource.getConnection()){
+            PreparedStatement stmt = conexao.prepareStatement("update t_tdspv_produto set nm_produto = ?, " +
+                    "qt_produto = ?, vl_produto = ?, dt_validade =?, cd_categoria = ? where cd_produto = ?");
+            //Seta os parametros
+            setarParametros(produto, stmt);
+            stmt.setInt(6 , produto.getCodigo());
+            //Executa a query e valida se deu bom
+            if (stmt.executeUpdate() == 0)
+                throw new EntidadeNaoEncontradaException("Produto não existe para ser atualizado");
+        }
+    }
+
+    private static void setarParametros(Produto produto, PreparedStatement stmt) throws SQLException {
+        stmt.setString(1, produto.getNome());
+        stmt.setInt(2, produto.getQuantidade());
+        stmt.setDouble(3, produto.getValor());
+        stmt.setObject(4, produto.getDataValidade());
+        stmt.setInt(5, produto.getCategoria().getCodigo());
+    }
+
+    public Produto buscar(int codigo) throws SQLException, EntidadeNaoEncontradaException {
+        try (Connection conexao = dataSource.getConnection()){
+            PreparedStatement stmt = conexao.prepareStatement("select p.cd_produto, p.nm_produto, p.qt_produto, p.vl_produto, p.dt_validade, p.cd_categoria, c.nm_categoria from t_tdspv_produto p " +
+                    " left join t_tdspv_categoria c on p.cd_categoria = c.cd_categoria where cd_produto = ?");
+            //Seta o id na query
+            stmt.setInt(1, codigo);
+            //Executa a query
+            ResultSet rs = stmt.executeQuery();
+            //Validar se encontrou o produto
+            //se não encontrou lança exception
+            if (!rs.next())
+                throw new EntidadeNaoEncontradaException("Produto não encontrado");
+            //se encontrou recupera os valores e retorna
+            return parseProduto(rs);
         }
     }
 
     public List<Produto> listar() throws SQLException {
         try (Connection conexao = dataSource.getConnection()){
-            PreparedStatement stmt = conexao.prepareStatement("select * from t_tdspv_produto");
+            PreparedStatement stmt = conexao.prepareStatement("select p.cd_produto, p.nm_produto, p.qt_produto, p.vl_produto, p.dt_validade, p.cd_categoria, c.nm_categoria from t_tdspv_produto p " +
+                    " left join t_tdspv_categoria c on p.cd_categoria = c.cd_categoria");
             ResultSet rs = stmt.executeQuery();
             List<Produto> lista = new ArrayList<>();
             while (rs.next()){
@@ -40,60 +79,26 @@ public class ProdutoDao {
         }
     }
 
-    public Produto buscar(int codigo) throws SQLException, EntidadeNaoEncontradaException {
-        try (Connection conexao = dataSource.getConnection();
-             PreparedStatement stmt = conexao.prepareStatement("select * from t_tdspv_produto where cd_produto = ?")) {
-
-            stmt.setInt(1, codigo);
-
-            ResultSet rs = stmt.executeQuery();
-
-            if (!rs.next())
-                throw new EntidadeNaoEncontradaException("Produto não encontrado");
-
-            return parseProduto(rs);
-        }
-    }
-
-    public Object atualizar(Produto produto) throws SQLException, EntidadeNaoEncontradaException {
-        try (Connection conexao = dataSource.getConnection();
-            PreparedStatement stmt = conexao.prepareStatement("update t_tdspv_produto " +
-                    "set nm_produto = ?, qt_produto = ?, vl_produto = ?, dt_validade = ? " +
-                    "where cd_produto = ?")) {
-
-            setarParametros(produto, stmt);
-            stmt.setInt(5, produto.getCodigo());
-
-            stmt.executeUpdate();
-
-            if (stmt.executeUpdate() == 0)
-                throw new EntidadeNaoEncontradaException("Produto não encontrado: " + produto.getCodigo());
-
-        }
-        return null;
-    }
-
-    private static void setarParametros(Produto produto, PreparedStatement stmt) throws SQLException {
-        stmt.setString(1, produto.getNome());
-        stmt.setInt(2, produto.getQuantidade());
-        stmt.setDouble(3, produto.getValor());
-        stmt.setObject(4, produto.getDataValidade());
-    }
-
     private Produto parseProduto(ResultSet rs) throws SQLException {
         int codigo = rs.getInt("cd_produto");
         String nome = rs.getString("nm_produto");
         int quantidade = rs.getInt("qt_produto");
         double valor = rs.getDouble("vl_produto");
         LocalDate dataValidade = rs.getObject("dt_validade", LocalDate.class);
-        return new Produto(codigo, nome, quantidade, valor, dataValidade);
+
+        int codigoCategoria = rs.getInt("cd_categoria");
+        String nomeCategoria = rs.getString("nm_categoria");
+
+        Categoria categoria = new Categoria(codigoCategoria, nomeCategoria);
+        return new Produto(codigo, nome, quantidade, valor, dataValidade, categoria);
     }
 
     public void cadastrar(Produto produto) throws SQLException {
         try (Connection conexao = dataSource.getConnection()) {
 
             PreparedStatement stmt = conexao.prepareStatement("insert into t_tdspv_produto (cd_produto, nm_produto, " +
-                    "qt_produto, vl_produto, dt_validade) values (sq_tdspv_produto.nextval, ?, ?, ?, ? )", new String[] {"cd_produto"});
+                    "qt_produto, vl_produto, dt_validade, cd_categoria) " +
+                    "values (sq_tdspv_produto.nextval, ?, ?, ?, ?, ? )", new String[] {"cd_produto"});
 
             setarParametros(produto, stmt);
 

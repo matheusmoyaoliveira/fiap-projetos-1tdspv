@@ -7,7 +7,7 @@ import java.time.LocalDate;
 public class CadastroProdutoDto {
 
     @NotBlank(message = "Nome é obrigatório")
-    @Size(max = 10)
+    @Size(max = 80, min = 2)
     private String nome;
 
     @Positive
@@ -18,6 +18,17 @@ public class CadastroProdutoDto {
 
     @Future(message = "A data deve estar no futuro")
     private LocalDate dataValidade;
+
+    @Positive
+    private int categoria;
+
+    public int getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(int categoria) {
+        this.categoria = categoria;
+    }
 
     public String getNome() {
         return nome;

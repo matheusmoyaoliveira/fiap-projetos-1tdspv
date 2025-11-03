@@ -6,9 +6,10 @@ import org.modelmapper.ModelMapper;
 
 public class ModelMapperProducer {
 
-    @Produces
     @ApplicationScoped
-    public ModelMapper modelMapper() {
+    @Produces
+    public ModelMapper modelMapper(){
         return new ModelMapper();
     }
+
 }
